@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import z from "zod";
-import { postSignup } from "../api/post-signup";
+import postSignup from "../api/post-signup";
 
 const signupSchema = z.object({
     username: z.string().min(1, { message: "Username is required" }),
