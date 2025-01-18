@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
   const login = async ({ username, password }) => {
     try {
       console.log("Login payload:", { username, password });
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch("http://localhost:3000/api-token-auth/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

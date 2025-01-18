@@ -48,7 +48,7 @@ function LoginPage() {
             ) : (
               <div className="signup-form">
                 <h1>Sign Up</h1>
-                <SignupForm />
+                <SignUpForm />
               </div>
             )}
             <p>
