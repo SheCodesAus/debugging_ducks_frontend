@@ -12,7 +12,7 @@ function LoginForm() {
     const navigate = useNavigate();
     const { login } = useAuth();
     const [isLoading, setIsLoading] = useState(false);
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState("");
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -30,7 +30,7 @@ function LoginForm() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log("Handle submit triggered");
-        setErrors({});
+        setErrors("");
 
         console.log("Submitting login form with credentials:", credentials);
       

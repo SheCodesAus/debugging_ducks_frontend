@@ -28,7 +28,7 @@ function NavBar() {
         <Link to="/">Home</Link>
         <Link to="/signup">Sign Up</Link>
         <Link to="/login">Login</Link>
-        <Link to="/lists">Lists</Link>
+        {/* <Link to="/lists">Lists</Link> */}
       </nav>
       <Outlet />
     </div>
