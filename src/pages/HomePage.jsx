@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link, Outlet} from "react-router-dom";
 import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
-import Image from "../img/banner-img.jpg"
-import Image from "../img/Logo.svg.svg";
+import BannerImage from "../img/banner-img.jpg"
+import LogoImage from "../img/Logo.svg.svg";
 import z from "zod";
 
 const contactformSchema = z.object({
@@ -14,7 +14,6 @@ const contactformSchema = z.object({
 
 function HomePage() {
     const {auth, setAuth} = useAuth();
-    const { projects } = useProjects();
     const [credentials, setCredentials] = useState({
       name: "",
       email: "",
@@ -49,7 +48,7 @@ function HomePage() {
     <div>
     <div className="banner">
     <img 
-          src={Image}
+          src={BannerImage}
           alt="banner" 
           className="banner-image" 
         />
@@ -102,7 +101,7 @@ function HomePage() {
 {/* Contact Section */}
       <div className="feedback-form">
        <img 
-          src={Image}
+          src={LogoImage}
           alt="logo" 
           className="logo-image" 
          />
