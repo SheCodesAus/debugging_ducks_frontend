@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-// import ListLandingPage from "./pages/ListLandingPage";
+import ListLandingPage from "./pages/ListLandingPage";
 // Here we import components
 import NavBar from "./components/NavBar";
 import { AuthProvider } from "./components/AuthProvider";
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         { path: "/", element: <HomePage /> },
         { path: "/signup", element: <SignUpPage /> },
         { path: "/login", element: <LoginPage /> },
-        // { path: "/lists", element: <ListLandingPage /> },
+        { path: "/lists", element: <ListLandingPage /> },
     ],
   },
 ]);
