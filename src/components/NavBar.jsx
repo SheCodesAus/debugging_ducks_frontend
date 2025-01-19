@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import { useState } from "react";
+import Image from "../img/Logo.svg.svg";
 
 function NavBar() {
   const { auth, logout } = useAuth();
@@ -25,10 +26,22 @@ function NavBar() {
   return (
     <div>
       <nav className="navbar" role="navigation" aria-label="main navigation">
+      <img 
+          src={Image}
+          alt="logo" 
+          className="logo-image" 
+        />
         <Link to="/">Home</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/login">Login</Link>
-        {/* <Link to="/lists">Lists</Link> */}
+        {!auth.token && <Link to="/signup">Sign Up</Link>}  {/*singup will only show if the cust is not logged in*/}
+        {auth.token && <Link to="/lists">Lists</Link>}       {/*List link will only show if the cust is logged in*/}
+        {auth.token ? (
+            <Link to="/" onClick={handleLogout}>
+                LOGOUT
+            </Link>
+            ) : (
+            <Link to="/login">LOGIN</Link>
+        )}
+        
       </nav>
       <Outlet />
     </div>
