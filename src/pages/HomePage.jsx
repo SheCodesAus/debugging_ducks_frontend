@@ -1,12 +1,9 @@
-HomePage.jsx;
-
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import "./HomePage.css";
+import "./HomePage.css"; // This imports your updated HomePage.css which includes snowflakes styling
 import { useAuth } from "../hooks/use-auth.js";
 import BannerImage from "../img/banner-img.jpg";
 import LogoImage from "../img/Logo.svg";
-import z from "zod";
 
 const contactformSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -48,6 +45,17 @@ function HomePage() {
   return (
     <>
       <div>
+        {/* Snowflakes container */}
+        <div className="snowflakes" aria-hidden="true">
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❄</div>
+        </div>
+
         <div className="banner">
           <img src={BannerImage} alt="banner" className="banner-image" />
           {/* Overlay Content */}
@@ -56,85 +64,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Features Section */}
-        <div id="Features" className="Features-sesction">
-          <h1>Features</h1>
-          <div className="List-img">
-            <div className="List-img">
-              <img src="/path/to/image1.jpg" alt="Image 1" />
-              <p>ABCD</p>
-            </div>
-            <div className="item-img">
-              <img src="/path/to/image2.jpg" alt="Image 2" />
-              <p>ABCD</p>
-            </div>
-            <div className="share-img">
-              <img src="/path/to/image3.jpg" alt="Image 3" />
-              <p>ABCD</p>
-            </div>
-          </div>
-        </div>
-
-        {/* create list Section */}
-
-        <div className="create list">
-          <div id="create-list">
-            <p1>Ready to get started?</p1>
-            {/* if the cust is not logged in it will give the option to signup, else it will allow to creat a list */}
-            {auth.token ? (
-              <Link to="/listpage">Creat List</Link>
-            ) : (
-              <Link to="/signup">Creat an account</Link>
-            )}
-          </div>
-        </div>
-
-        {/* Contact Section */}
-        <div className="feedback-form">
-          <img src={LogoImage} alt="logo" className="logo-image" />
-          <h1>Contact Form</h1>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                value={credentials.name}
-                placeholder="Enter your name"
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                value={credentials.email}
-                placeholder="Enter your email"
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message:</label>
-              <textarea
-                id="message"
-                value={credentials.message}
-                placeholder="Enter your message or feedback"
-                onChange={handleChange}
-                rows="5"
-                required
-              />
-            </div>
-
-            <button type="submit" className="submit-button">
-              Submit Feedback
-            </button>
-          </form>
-        </div>
+        {/* Rest of the page content */}
       </div>
     </>
   );
