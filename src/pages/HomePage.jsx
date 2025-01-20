@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import "./HomePage.css"; // This imports your updated HomePage.css which includes snowflakes styling
+import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
 import BannerImage from "../img/banner-img.jpg";
-import LogoImage from "../img/Logo.svg";
+import LogoImage from "../img/Logo.svg"; // Ensure correct path
+import z from "zod";
 
 const contactformSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -44,27 +45,33 @@ function HomePage() {
 
   return (
     <>
-      <div>
-        {/* Snowflakes container */}
-        <div className="snowflakes" aria-hidden="true">
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❄</div>
-        </div>
+      {/* Navigation Bar */}
+      <nav className="navbar">
+        <Link to="/" className="nav-link">
+          Home
+        </Link>
+        {auth.token && (
+          <Link to="/listpage" className="nav-link">
+            List
+          </Link>
+        )}
+        <Link to="/logout" className="nav-link">
+          LOGOUT
+        </Link>
+      </nav>
 
+      <div>
         <div className="banner">
           <img src={BannerImage} alt="banner" className="banner-image" />
-          {/* Overlay Content */}
           <div className="banner-content">
             <h1>Welcome to your Christmas Shopping Companion</h1>
           </div>
         </div>
 
-        {/* Rest of the page content */}
+        {/* Features, List, and Contact sections */}
+        {/* Add other sections as needed... */}
+
+        <Outlet />
       </div>
     </>
   );
