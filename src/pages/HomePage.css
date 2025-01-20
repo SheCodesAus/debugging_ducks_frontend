@@ -1,7 +1,7 @@
 /* General page styles */
 body {
     background: #00173A; /* Darker background color for contrast */
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento globally */
+    font-family: 'Quattrocento', serif; /* Apply Quattrocento font globally */
     margin: 0;
     padding: 0;
     overflow: visible; /* Allow content to overflow */
@@ -13,28 +13,29 @@ body {
     display: flex;
     justify-content: space-evenly; /* Space out the links evenly */
     align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
     padding: 10px 0;
     background-color: #00173A; /* Match background color */
     z-index: 1000; /* Make sure the navbar stays on top */
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
+    font-family: 'Quattrocento', serif; /* Apply Quattrocento font to navbar */
 }
 
-.nav-link {
+.navbar .logo-image {
+    width: 50px; /* Size of your logo */
+    height: auto;
+}
+
+.navbar a {
+    font-family: 'Quattrocento', serif; /* Apply Quattrocento to all links in the navbar */
     font-size: 12px;
     color: #F8F8F8;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0 20px;
     transition: color 0.3s ease;
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
 }
 
-.nav-link:hover {
-    color: #D9BD80; /* Optional: Change color on hover */
+.navbar a:hover {
+    color: #D9BD80;
 }
 
 /* Banner Section */
@@ -56,7 +57,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #F8F8F8;
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
+    font-family: 'Quattrocento', serif; /* Apply Quattrocento to banner text */
     font-size: 2.5rem;
 }
 
@@ -130,7 +131,7 @@ body {
 }
 
 .Features-sesction h1 {
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
+    font-family: 'Quattrocento', serif;
     font-size: 23.73px;
     color: #D9BD80;
 }
@@ -142,7 +143,7 @@ body {
 }
 
 #create-list p1 {
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
+    font-family: 'Quattrocento', serif;
     font-size: 22px;
     color: #D9BD80;
 }
@@ -151,7 +152,7 @@ body {
     display: inline-block;
     background-color: #D9BD80;
     color: #081F43;
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
+    font-family: 'Quattrocento', serif;
     font-size: 16px;
     padding: 12px 30px;
     text-decoration: none;
@@ -170,7 +171,7 @@ body {
 }
 
 .feedback-form h1 {
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
+    font-family: 'Quattrocento', serif;
     font-size: 20px;
     color: #D9BD80;
 }
@@ -185,7 +186,7 @@ textarea {
     height: 36px;
     padding: 0.5rem;
     background-color: #FFFDFD;
-    font-family: 'Lato', sans-serif; /* Fallback font */
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: #00173A;
     border: 1px solid #D9BD80;
@@ -200,7 +201,7 @@ textarea {
     display: inline-block;
     background-color: #D9BD80;
     color: #081F43;
-    font-family: 'Quattrocento', serif; /* Apply Quattrocento font */
+    font-family: 'Quattrocento', serif;
     font-size: 16px;
     padding: 12px 30px;
     text-decoration: none;
