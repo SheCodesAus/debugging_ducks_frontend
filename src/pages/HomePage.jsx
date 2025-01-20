@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
 import BannerImage from "../img/banner-img.jpg";
-import LogoImage from "../img/Logo.svg.svg";
+import LogoImage from "../img/Logo.svg";
 import z from "zod";
 
 const contactformSchema = z.object({
