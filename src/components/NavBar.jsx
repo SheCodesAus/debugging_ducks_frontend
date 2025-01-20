@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import { useState } from "react";
-import Image from "../img/Logo.svg.svg";
+import Image from "../img/Logo.svg";
 
 function NavBar() {
   const { auth, logout } = useAuth();
