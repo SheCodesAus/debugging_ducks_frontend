@@ -1,35 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import NotFoundPage from "./pages/NotFoundPage";
 
-// Here we import pages
+// Import pages (components for different views)
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import ListLandingPage from "./pages/ListLandingPage";
-// Here we import components
+
+// Import components (navbar, etc.)
 import NavBar from "./components/NavBar";
 import { AuthProvider } from "./components/AuthProvider";
 
-// Here we create the router
+// Create the router with paths
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavBar />,
+    element: <NavBar />, // NavBar is used here
     children: [
-        { path: "/", element: <HomePage /> },
-        { path: "/signup", element: <SignUpPage /> },
-        { path: "/login", element: <LoginPage /> },
-        { path: "/lists", element: <ListLandingPage /> },
+      { path: "/", element: <HomePage /> },
+      { path: "/signup", element: <SignUpPage /> },
+      { path: "/login", element: <LoginPage /> },
+      { path: "/lists", element: <ListLandingPage /> },
     ],
   },
 ]);
 
+// Render the application
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </AuthProvider>
   </React.StrictMode>
 );
