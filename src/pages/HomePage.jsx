@@ -4,7 +4,6 @@ import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
 import BannerImage from "../img/banner-img.jpg";
 import LogoImage from "../img/logo.svg";
-import FlourishIcon from "../img/flourish-icon-left.svg";
 import z from "zod";
 
 const contactformSchema = z.object({
@@ -59,15 +58,6 @@ function HomePage() {
         <div id="Features" className="Features-section">
           <div className="features-header">
             <h1>Features</h1>
-            <svg
-              className="flourish-logo"
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 100 100"
-            >
-              <path d="M10 10 L50 50 L10 90 Z" fill="#D9BD80" />
-            </svg>
           </div>
           <div className="List-img">
             <div className="item-img">
@@ -88,7 +78,7 @@ function HomePage() {
         {/* Create list Section */}
         <div className="create list">
           <div id="create-list">
-            <p1>Ready to get started?</p1>
+            <p>Ready to get started?</p>
             {auth.token ? (
               <Link to="/listpage">Create List</Link>
             ) : (
