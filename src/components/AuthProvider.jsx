@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
     try {
         console.log("Signup payload:", payload);
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/signup/`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
