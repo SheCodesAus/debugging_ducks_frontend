@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
     try {
         console.log("Signup payload:", payload);
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/signup/`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/signup/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +109,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={contextValue}>
-        {console.log("AuthProvider rendered with:", contextValue)}
+      {console.log("AuthProvider rendered with:", contextValue)}
       {children || null}
     </AuthContext.Provider>
   );
