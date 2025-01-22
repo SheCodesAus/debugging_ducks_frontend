@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
 import BannerImage from "../img/Banner-img.jpg";
-import LogoImage from "../img/logo.svg";
+import LogoImage from "../img/Logo.svg";
 import z from "zod";
 
 const contactformSchema = z.object({
