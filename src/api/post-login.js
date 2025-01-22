@@ -19,10 +19,12 @@ async function postLogin(username, password) {
 
         const fallbackError = `Error trying to login`;
         console.error("Login error response:", response.status, response.statusText);
-        const data = await response.json().catch(() => {
-          console.error("Error parsing login error response.");
-          throw new Error(fallbackError);
-        });
+        
+        const data = await response.json();
+        if (!data.user || typeof data.user !== "object") {
+          console.error("Invalid user data in login response:", data);
+          throw new Error("Failed to login: Invalid user data received.");
+        }
     
         console.error("Login error response:", data);
         const errorMessage = data?.detail ?? fallbackError;
