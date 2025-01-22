@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
     try {
         console.log("Signup payload:", payload);
 
-      const response = await fetch("http://localhost:3000/signup/auth/signup", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
   const login = async ({ username, password }) => {
     try {
       console.log("Login payload:", { username, password });
-      const response = await fetch("http://localhost:3000/api-token-auth/", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api-token-auth/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +109,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={contextValue}>
-        {console.log("AuthProvider rendered with:", contextValue)}
+      {console.log("AuthProvider rendered with:", contextValue)}
       {children || null}
     </AuthContext.Provider>
   );
