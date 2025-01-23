@@ -7,6 +7,7 @@ import Image from "../img/Logo.svg";
 function NavBar() {
   const { auth, setAuth } = useAuth();
   const navigate = useNavigate();
+  console.log("useAuth output in Navbar:", { auth, setAuth });
 
   const handleLogout = (e) => {
     e.preventDefault();

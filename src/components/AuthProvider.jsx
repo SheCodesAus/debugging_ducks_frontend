@@ -122,7 +122,7 @@ export const AuthProvider = ({ children }) => {
     console.log("User logged out.");
   }, []);
 
-  const contextValue = useMemo(() => ({ auth, login, logout, signup }), [auth, login, logout, signup]);
+  const contextValue = useMemo(() => ({ auth, setAuth,login, logout, signup }), [auth, login, logout, signup]);
 
   return (
     <AuthContext.Provider value={contextValue}>
