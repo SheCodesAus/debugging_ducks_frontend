@@ -48,11 +48,15 @@ function LoginForm() {
 
     try {
         await login(credentials);
+        const user = localStorage.getItem("user");
+        if (!user) {
+          throw new Error("Login succeeded but user data is missing.");
+        }
         navigate("/");
-    } catch (error) {
+      } catch (error) {
         console.error("Login failed:", error);
-        setErrors(error.message); // Set login error
-    } finally {
+        setErrors(error.message);      
+      } finally {
         setIsLoading(false);
     }
   };

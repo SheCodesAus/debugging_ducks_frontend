@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import ListCard from "../components/ListCard";
 import useLists from "../hooks/use-lists";
-import useAuth from "../hooks/use-auth";
+import { useAuth } from "../hooks/use-auth";
 
 function ListLandingPage() {
   const { id } = useParams();
