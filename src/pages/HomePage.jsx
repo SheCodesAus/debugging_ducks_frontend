@@ -4,6 +4,7 @@ import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
 import BannerImage from "../img/Banner-img.jpg";
 import LogoImage from "../img/Logo.svg";
+import FeaturesImage from "../img/features-stand-in.webp";
 import z from "zod";
 
 const contactformSchema = z.object({
@@ -77,15 +78,15 @@ function HomePage() {
           </div>
           <div className="List-img">
             <div className="item-img">
-              <img src="/path/to/image1.jpg" alt="Image 1" />
+              <img src={FeaturesImage} alt="Feature 1" />
               <p>Accompanying Text Here</p>
             </div>
             <div className="item-img">
-              <img src="/path/to/image2.jpg" alt="Image 2" />
+              <img src={FeaturesImage} alt="Feature 2" />
               <p>Accompanying Text Here</p>
             </div>
             <div className="item-img">
-              <img src="/path/to/image3.jpg" alt="Image 3" />
+              <img src={FeaturesImage} alt="Feature 3" />
               <p>Accompanying Text Here</p>
             </div>
           </div>
