@@ -16,6 +16,13 @@ function NavBar() {
         {/* Links container */}
         <div className="links">
           <Link to="/">Home</Link>
+          {!auth.token && <Link to="/signup">Sign Up</Link>}{" "}
+        {/*signup will only show if the user is not logged in*/}
+
+        {/* {auth.token && <Link to="/lists">Lists</Link>}{" "} */}
+        <Link to="/listlanding">Lists</Link>
+        
+        {/*List link will only show if the user is logged in*/}
           {auth.token ? (
             <Link to="/login" onClick={() => setAuth({})}>
               LOGOUT
@@ -23,7 +30,10 @@ function NavBar() {
           ) : (
             <Link to="/login">Login</Link>
           )}
+        
         </div>
+
+
       </nav>
 
       {/* This Outlet will render the HomePage, or any other nested routes */}
