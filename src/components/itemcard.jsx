@@ -9,7 +9,7 @@ function ItemCard({ memberName, itemName, cost, rank, isFavorite, onToggleFavori
   };
 
   const handleFavoriteToggle = () => {
-    onToggleFavorite && onToggleFavorite(itemName); // Call the parent handler if provided
+    onToggleFavorite && onToggleFavorite(itemName); 
   };
 
   return (
