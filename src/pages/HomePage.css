@@ -17,11 +17,11 @@ p {
   display: flex;
   justify-content: space-between; /* This will push logo to the left and links to the right */
   align-items: center;
-  padding: 40px 120px 40px 120px;
+  padding: 30px 120px 30px 120px;
 }
 
 .navbar .logo-image {
-  width: 180px; /* Adjust the width to make the logo bigger */
+  width: 150px; /* Adjust the width to make the logo bigger */
   height: auto; /* Maintain the aspect ratio */
 }
 
@@ -49,14 +49,17 @@ p {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 800px; /* Fixed height for the banner */
+  padding-left: 1cm;
+  padding-right: 1cm;
+  height: 600px;
+  padding-bottom: 40px;
 }
 
 .banner-image {
   width: 100%;
   max-width: none;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
@@ -68,13 +71,18 @@ p {
   font-size: 20px;
   text-align: center;
   z-index: 1;
+  top: 40%;
+  left: 35%;
+  transform: translate(-40%, -35%);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
 }
 
 /* Features Section */
 #Features {
   text-align: center;
   font-family: "Quattrocento", serif;
-  font-size: 18px;
+  font-size: 17px;
   color: #d9bd80;
   margin-top: 30px;
 }
@@ -88,6 +96,33 @@ p {
 
 .features-header h1 {
   margin: 0;
+  font-size: 2em; /* Optional: Adjust the font size of the entire h1 */
+  display: inline-flex; /* Makes the h1 content a flex container */
+  align-items: center; /* Vertically align the icons with the text */
+  margin-bottom: 20px;
+}
+
+/* Target the feature icons within the h1 */
+.features-header h1 .icon {
+  font-size: 0.6em; /* Adjust the size of the icons */
+  margin: 0 5px; /* Adds space between the icons and the text */
+}
+
+/* Flip only the second icon */
+.features-header h1 .flip-icon {
+  transform: scaleX(-1); /* Flip the icon horizontally */
+  display: inline-block; /* Ensure the element can be transformed */
+  margin-left: 10px; /* Adds space between the flipped icon and 'Features' text */
+}
+
+/* Adds margin to the left icon as well to ensure both sides have space */
+.features-header h1 .icon:first-child {
+  margin-right: 10px; /* Space between the left icon and 'Features' text */
+}
+
+/* Ensures the icons are vertically aligned with the text */
+.features-header h1 span {
+  vertical-align: middle; /* Vertically align the icon to the middle of the text */
 }
 
 .List-img {
@@ -109,7 +144,7 @@ p {
 
 .List-img img {
   width: 100%;
-  max-width: 265px;
+  max-width: 500px;
   height: auto;
   object-fit: cover;
 }
@@ -119,6 +154,8 @@ p {
   font-family: Lato, sans-serif;
   font-size: 16px;
   margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 25px;
 }
 
 /* Create List Section */
@@ -153,100 +190,123 @@ p {
   background-color: #b08c5e;
 }
 
-/* Feedback Form Section */
 .feedback-form {
   background-color: #00173a;
   padding: 30px;
   margin: 60px auto;
   width: 90%;
-  max-width: 1000px;
+  max-width: 950px; /* Keep this for the form container */
   border-radius: 0px;
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Keeps the content in the center */
   justify-content: center;
-  text-align: left;
+  text-align: center;
+}
+
+.feedback-form .logo-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .feedback-form h1 {
   font-family: "Quattrocento", serif;
   color: #d9bd80;
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.feedback-form img {
-  width: 140px;
-  height: auto;
-  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center; /* This centers the heading */
+  margin-bottom: 40px; /* Increase this value to add more space below the heading */
+  margin-top: 20px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
+/* Form Layout */
 .feedback-form form {
   display: grid;
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
+  gap: 20px; /* Space between form elements */
+  width: 100%; /* Ensures the form stretches across the container */
+  max-width: 600px; /* Constrain form width to center content properly */
+  grid-template-columns: 1fr; /* One column layout */
+  justify-items: center; /* Centers the form fields horizontally */
 }
 
+/* Align the form group to the left side */
 .form-group {
   display: flex;
   flex-direction: column;
+  width: 100%; /* Ensure input group stretches across the form */
+  align-items: flex-start; /* Align items to the left */
 }
 
-label {
+/* Adjust label position to align with the left edge of the form box */
+.feedback-form form .form-group label {
   font-family: Lato, sans-serif;
   font-size: 16px;
   color: #d9bd80;
   margin-bottom: 5px;
+  text-align: left; /* Ensure label is left-aligned */
+  width: 100%; /* Ensure label takes up full width */
 }
 
-input,
-textarea {
+/* Adjust input fields */
+.feedback-form form .form-group input,
+.feedback-form form .form-group textarea {
   font-family: Lato, sans-serif;
   font-size: 16px;
   color: #00173a;
   background-color: #fffdfd;
   border: none;
   padding: 10px;
-  width: 100%;
-  max-width: 1000px;
-  height: 36px;
-  margin: 0 auto;
+  width: 100%; /* Ensures the fields stretch across the form */
+  max-width: 600px; /* Set max width for the form fields */
+  min-width: 150px; /* Set minimum width for the form fields */
+  margin: 0; /* Remove margin to align them properly */
+  text-align: left;
+  height: 40px;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
+/* Adjust text area */
 textarea {
   resize: vertical;
-  min-height: 80px;
+  min-height: 120px; /* Increase minimum height for textarea */
 }
 
-button {
+.feedback-form form button {
   background-color: #d9bd80;
   color: #081f43;
+  padding: 10px 20px;
   border: none;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
-  width: 100%;
-  max-width: 160px;
-  height: 38px;
-  cursor: pointer;
   border-radius: 5px;
-  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Ensures button doesn’t stretch */
+  justify-self: end; /* Aligns the button to the right */
+  margin-top: 20px; /* Adds space between the form fields and the button */
 }
 
-button:hover {
+/* Hover effect for the button */
+.feedback-form form button:hover {
   background-color: #b08c5e;
 }
 
-/* Media Query for Mobile and Smaller Screens (768px and below) */
 @media (max-width: 768px) {
-  input,
-  textarea {
-    max-width: 90%; /* Allow input to be 90% of the screen width on mobile */
+  .feedback-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .feedback-form .logo-image {
+    width: 120px;
+  }
+
+  .feedback-form h1 {
+    font-size: 20px;
   }
 }
 
@@ -265,10 +325,11 @@ button:hover {
 .snowflake {
   position: absolute;
   top: -10px;
-  color: #F8F8F8; /* Light snowflake color */
+  color: #f8f8f8; /* Light snowflake color */
   font-size: 2em; /* Default size */
   user-select: none;
-  animation: fall 12s linear infinite, drift 15s ease-in-out infinite, rotate 20s linear infinite;
+  animation: fall 12s linear infinite, drift 15s ease-in-out infinite,
+    rotate 20s linear infinite;
   opacity: 0.8;
 }
 
@@ -362,4 +423,3 @@ button:hover {
   animation-duration: 13s, 14s, 18s;
   animation-delay: 8s, 13s, 7s;
 }
-

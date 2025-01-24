@@ -74,7 +74,10 @@ function HomePage() {
         {/* Features Section */}
         <div id="Features" className="Features-section">
           <div className="features-header">
-            <h1>Features</h1>
+            <h1>
+              <span class="icon">꧁</span> Features{" "}
+              <span class="icon flip-icon">꧁</span>
+            </h1>
           </div>
           <div className="List-img">
             <div className="item-img">
