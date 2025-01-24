@@ -17,7 +17,7 @@ p {
   display: flex;
   justify-content: space-between; /* This will push logo to the left and links to the right */
   align-items: center;
-  padding: 60px 120px 60px 120px;
+  padding: 40px 120px 40px 120px;
 }
 
 .navbar .logo-image {
@@ -124,7 +124,7 @@ p {
 /* Create List Section */
 .create.list {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 #create-list p {
@@ -155,27 +155,42 @@ p {
 
 /* Feedback Form Section */
 .feedback-form {
-  background-color: #f8f8f8;
+  background-color: #00173a;
   padding: 30px;
-  margin-top: 40px;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 0px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
 }
 
 .feedback-form h1 {
   font-family: "Quattrocento", serif;
   color: #d9bd80;
-  font-size: 20px;
-  text-align: left;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .feedback-form img {
-  width: 50px;
+  width: 140px;
   height: auto;
   margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feedback-form form {
   display: grid;
-  gap: 20px;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
 }
 
 .form-group {
@@ -186,7 +201,7 @@ p {
 label {
   font-family: Lato, sans-serif;
   font-size: 16px;
-  color: #00173a;
+  color: #d9bd80;
   margin-bottom: 5px;
 }
 
@@ -196,10 +211,12 @@ textarea {
   font-size: 16px;
   color: #00173a;
   background-color: #fffdfd;
-  border: 1px solid #d9bd80;
+  border: none;
   padding: 10px;
-  width: 277px;
+  width: 100%;
+  max-width: 1000px;
   height: 36px;
+  margin: 0 auto;
 }
 
 textarea {
@@ -213,7 +230,8 @@ button {
   border: none;
   font-family: "Quattrocento", serif;
   font-size: 16px;
-  width: 77px;
+  width: 100%;
+  max-width: 160px;
   height: 38px;
   cursor: pointer;
   border-radius: 5px;
@@ -226,11 +244,8 @@ button:hover {
 
 /* Media Query for Mobile and Smaller Screens (768px and below) */
 @media (max-width: 768px) {
-  .List-img {
-    flex-direction: column !important; /* Stack items vertically on smaller screens */
-    align-items: center !important; /* Center items */
-  }
-  .List-img .item-img {
-    margin-bottom: 20px !important; /* Add space between items */
+  input,
+  textarea {
+    max-width: 90%; /* Allow input to be 90% of the screen width on mobile */
   }
 }

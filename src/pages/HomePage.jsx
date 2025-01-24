@@ -98,7 +98,7 @@ function HomePage() {
                 type="text"
                 id="name"
                 value={credentials.name}
-                placeholder="Enter your name"
+                placeholder="Name"
                 onChange={handleChange}
                 required
               />
@@ -110,7 +110,7 @@ function HomePage() {
                 type="email"
                 id="email"
                 value={credentials.email}
-                placeholder="Enter your email"
+                placeholder="Email Address"
                 onChange={handleChange}
                 required
               />
@@ -121,7 +121,7 @@ function HomePage() {
               <textarea
                 id="message"
                 value={credentials.message}
-                placeholder="Enter your message or feedback"
+                placeholder="Message or Feedback"
                 onChange={handleChange}
                 rows="5"
                 required
@@ -129,7 +129,7 @@ function HomePage() {
             </div>
 
             <button type="submit" className="submit-button">
-              Submit Feedback
+              Send
             </button>
           </form>
         </div>
