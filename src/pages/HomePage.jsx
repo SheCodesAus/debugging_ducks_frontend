@@ -62,7 +62,11 @@ function HomePage() {
           <img src={BannerImage} alt="banner" className="banner-image" />
           {/* Overlay Content */}
           <div className="banner-content">
-            <h1>Welcome to your Christmas Shopping Companion</h1>
+            <h1>
+              Welcome to your <br />
+              Christmas Shopping <br />
+              Companion
+            </h1>
           </div>
         </div>
 
