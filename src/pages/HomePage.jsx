@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
-import BannerImage from "../img/banner-img.jpg";
-import LogoImage from "../img/logo.svg";
+import BannerImage from "../img/Banner-img.jpg";
+import LogoImage from "../img/Logo.svg";
 import z from "zod";
 
 const contactformSchema = z.object({
@@ -46,6 +46,18 @@ function HomePage() {
   return (
     <>
       <div>
+        {/* Snowflakes Section */}
+        <div className="snowflakes" aria-hidden="true">
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+        </div>
+
         <div className="banner">
           <img src={BannerImage} alt="banner" className="banner-image" />
           {/* Overlay Content */}

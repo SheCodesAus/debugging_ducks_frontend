@@ -2,7 +2,7 @@ async function postLogin(username, password) {
     try {
         console.log("Login payload:", { username, password });
 
-        const response = await fetch("http://localhost:3000/api-token-auth/", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api-token-auth/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -19,10 +19,12 @@ async function postLogin(username, password) {
 
         const fallbackError = `Error trying to login`;
         console.error("Login error response:", response.status, response.statusText);
-        const data = await response.json().catch(() => {
-          console.error("Error parsing login error response.");
-          throw new Error(fallbackError);
-        });
+        
+        const data = await response.json();
+        if (!data.user || typeof data.user !== "object") {
+          console.error("Invalid user data in login response:", data);
+          throw new Error("Failed to login: Invalid user data received.");
+        }
     
         console.error("Login error response:", data);
         const errorMessage = data?.detail ?? fallbackError;

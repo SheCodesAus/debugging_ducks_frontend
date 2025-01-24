@@ -47,7 +47,7 @@ function SignUpForm() {
             result.error.errors.forEach((error) => {
                 errorMessages[error.path[0]] = error.message;
             });
-            setError(errorMessages);
+            setErrors(errorMessages);
             return;
         }
 
