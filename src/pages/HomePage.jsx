@@ -4,6 +4,7 @@ import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
 import BannerImage from "../img/Banner-img.jpg";
 import LogoImage from "../img/Logo.svg";
+import FeaturesImage from "../img/features-stand-in.webp";
 import z from "zod";
 
 const contactformSchema = z.object({
@@ -46,11 +47,27 @@ function HomePage() {
   return (
     <>
       <div>
+        {/* Snowflakes Section */}
+        <div className="snowflakes" aria-hidden="true">
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+        </div>
+
         <div className="banner">
           <img src={BannerImage} alt="banner" className="banner-image" />
           {/* Overlay Content */}
           <div className="banner-content">
-            <h1>Welcome to your Christmas Shopping Companion</h1>
+            <h1>
+              Welcome to your <br />
+              Christmas Shopping <br />
+              Companion
+            </h1>
           </div>
         </div>
 
@@ -69,19 +86,22 @@ function HomePage() {
         {/* Features Section */}
         <div id="Features" className="Features-section">
           <div className="features-header">
-            <h1>Features</h1>
+            <h1>
+              <span class="icon">꧁</span> Features{" "}
+              <span class="icon flip-icon">꧁</span>
+            </h1>
           </div>
           <div className="List-img">
             <div className="item-img">
-              <img src="/path/to/image1.jpg" alt="Image 1" />
+              <img src={FeaturesImage} alt="Feature 1" />
               <p>Accompanying Text Here</p>
             </div>
             <div className="item-img">
-              <img src="/path/to/image2.jpg" alt="Image 2" />
+              <img src={FeaturesImage} alt="Feature 2" />
               <p>Accompanying Text Here</p>
             </div>
             <div className="item-img">
-              <img src="/path/to/image3.jpg" alt="Image 3" />
+              <img src={FeaturesImage} alt="Feature 3" />
               <p>Accompanying Text Here</p>
             </div>
           </div>
@@ -110,7 +130,7 @@ function HomePage() {
                 type="text"
                 id="name"
                 value={credentials.name}
-                placeholder="Enter your name"
+                placeholder="Name"
                 onChange={handleChange}
                 required
               />
@@ -122,7 +142,7 @@ function HomePage() {
                 type="email"
                 id="email"
                 value={credentials.email}
-                placeholder="Enter your email"
+                placeholder="Email Address"
                 onChange={handleChange}
                 required
               />
@@ -133,7 +153,7 @@ function HomePage() {
               <textarea
                 id="message"
                 value={credentials.message}
-                placeholder="Enter your message or feedback"
+                placeholder="Message or Feedback"
                 onChange={handleChange}
                 rows="5"
                 required
@@ -141,7 +161,7 @@ function HomePage() {
             </div>
 
             <button type="submit" className="submit-button">
-              Submit Feedback
+              Send
             </button>
           </form>
         </div>
