@@ -71,6 +71,18 @@ function HomePage() {
           </div>
         </div>
 
+        {/* About Section */}
+        <div id="about" className="about-section">
+          <h1>About Us</h1>
+          <p>
+            Discover the ultimate shopping companion for the festive season. 
+            Our platform is designed to make your Christmas shopping 
+            experience seamless and enjoyable. Whether you’re planning gifts, 
+            creating lists, or exploring ideas, we’re here to help you 
+            every step of the way!
+          </p>
+        </div>
+
         {/* Features Section */}
         <div id="Features" className="Features-section">
           <div className="features-header">

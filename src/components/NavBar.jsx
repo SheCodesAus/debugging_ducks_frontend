@@ -34,7 +34,10 @@ function NavBar() {
           ) : (
             <Link to="/login">Login</Link>
           )}
+        
         </div>
+
+
       </nav>
 
       {/* This Outlet will render the HomePage, or any other nested routes */}
