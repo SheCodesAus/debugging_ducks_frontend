@@ -80,7 +80,7 @@ function HomePage() {
           <div id="create-list">
             <p>Ready to get started?</p>
             {auth.token ? (
-              <Link to="/listpage">Create List</Link>
+              <Link to="/category">Create List</Link>
             ) : (
               <Link to="/signup">Create an account</Link>
             )}

@@ -34,11 +34,19 @@ export const AuthProvider = ({ children }) => {
 
   console.log("AuthContext.Provider initialized with:", { auth });
 
-  const signup = async (payload) => {
+  const signup = useCallback(async (payload) => {
     try {
-        console.log("Signup payload:", payload);
+      console.log("Signup payload:", payload);
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/`, {
+      // const response = await fetch(`${import.meta.env.VITE_API_URL}/users/`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(payload),
+      // });
+
+      const response = await fetch(`http://127.0.0.1:8000/users/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,12 +78,20 @@ export const AuthProvider = ({ children }) => {
       console.error("Error during signup:", error.message);
       throw error;
     }
-  };
+  }, []);
 
-  const login = async ({ username, password }) => {
+  const login = useCallback(async ({ username, password }) => {
     try {
       console.log("Login payload:", { username, password });
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api-token-auth/`, {
+      // const response = await fetch(`${import.meta.env.VITE_API_URL}/api-token-auth/`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ username, password }),
+      // });
+
+      const response = await fetch(`http://127.0.0.1:8000/api-token-auth/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,12 +124,11 @@ export const AuthProvider = ({ children }) => {
     });
 
       console.log("Login successful:", data.user);
-      setAuth
     } catch (error) {
       console.error("Error during login:", error.message);
       throw error;
     }
-  };
+  }, [setAuth]);
 
   const logout = useCallback(() => {
     setAuth({ token: null, user: null });

@@ -1,6 +1,6 @@
-async function getListCategories(id = null) {
+async function getCategory(id = null) {
     // const url = `${import.meta.env.VITE_API_URL}/lists`;
-    const url = id ? `http://127.0.0.1:8000/listcategory/${id}` : `http://127.0.0.1:8000/listcategory`;
+    const url = id ? `http://127.0.0.1:8000/category/${id}` : `http://127.0.0.1:8000/category`;
     const token = window.localStorage.getItem("token");
 
 
@@ -15,15 +15,15 @@ async function getListCategories(id = null) {
     
         if (!response.ok) {
             const errorMessage = await response.text();
-            throw new Error(errorMessage || `Error fetching categories`);
+            throw new Error(errorMessage || `Error fetching category`);
         }
 
         return await response.json();
     } catch (error) {
-        console.error(`Error fetching categories`, error);
+        console.error(`Error fetching category`, error);
         throw error;
     }
 }
 
-export default getCategories;
+export default getCategory;
   
