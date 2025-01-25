@@ -4,15 +4,18 @@ import SignUpForm from "../components/SignUpForm";
 import { useAuth } from "../hooks/use-auth";
 
 function SignUpPage() {
-    console.log("SignUpPage rendered");
-    const navigate = useNavigate();
-    const { auth } = useAuth();
+  console.log("SignUpPage rendered");
+  const navigate = useNavigate();
+  const { auth } = useAuth();
 
-    if (auth?.token) {
+  if (auth?.token) {
     return (
-        <div className="signup-page">
+      <div className="signup-page">
         <h2>You are already logged in!</h2>
-        <p>Log out if you wish to create a new account. Otherwise, explore the site!</p>
+        <p>
+          Log out if you wish to create a new account. Otherwise, explore the
+          site!
+        </p>
         <button onClick={() => navigate("/")}>Go Home</button>
       </div>
     );
