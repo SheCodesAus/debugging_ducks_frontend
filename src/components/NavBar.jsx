@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import { Link, useNavigate } from "react-router-dom";
-import Image from "../img/Logo.svg";
+import Image from "../img/Logo.png";
 
 function NavBar() {
   const { auth, setAuth } = useAuth();
@@ -26,15 +26,17 @@ function NavBar() {
         {/* Links container */}
         <div className="links">
           <Link to="/">Home</Link>
-          <Link to="/lists">Lists</Link>
-          {auth.token && auth.user ? (
-            <Link to="#" onClick={handleLogout}>
-            LOGOUT
-          </Link>
+          {auth.token ? (
+            <Link to="/login" onClick={() => setAuth({})}>
+              LOGOUT
+            </Link>
           ) : (
             <Link to="/login">Login</Link>
           )}
+        
         </div>
+
+
       </nav>
 
       {/* This Outlet will render the HomePage, or any other nested routes */}
