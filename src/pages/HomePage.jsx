@@ -73,13 +73,16 @@ function HomePage() {
 
         {/* About Section */}
         <div id="about" className="about-section">
-          <h1>About Us</h1>
+          <h1>
+            <span className="icon">꧁</span> About Us{" "}
+            <span className="icon flip-icon">꧁</span>
+          </h1>
           <p>
-            Discover the ultimate shopping companion for the festive season. 
-            Our platform is designed to make your Christmas shopping 
-            experience seamless and enjoyable. Whether you’re planning gifts, 
-            creating lists, or exploring ideas, we’re here to help you 
-            every step of the way!
+            Discover the ultimate shopping companion for the festive season. Our
+            platform is designed to make your Christmas shopping experience
+            seamless and enjoyable. Whether you’re planning gifts, creating
+            lists, or exploring ideas, we’re here to help you every step of the
+            way!
           </p>
         </div>
 
