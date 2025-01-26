@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +6,7 @@ import Image from "../img/Logo.svg";
 function NavBar() {
   const { auth, setAuth } = useAuth();
   const navigate = useNavigate();
+  console.log("useAuth output in Navbar:", { auth, setAuth });
 
   const handleLogout = (e) => {
     e.preventDefault();
@@ -33,7 +33,10 @@ function NavBar() {
           ) : (
             <Link to="/login">Login</Link>
           )}
+        
         </div>
+
+
       </nav>
 
       {/* This Outlet will render the HomePage, or any other nested routes */}

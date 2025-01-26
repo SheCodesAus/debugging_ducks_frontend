@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
   font-family: Lato, sans-serif;
   margin: 0;
@@ -12,23 +11,21 @@ p {
   margin: 0;
 }
 
-/* Navbar Styles */
 .navbar {
   display: flex;
-  justify-content: space-between; /* This will push logo to the left and links to the right */
+  justify-content: space-between; 
   align-items: center;
-  padding: 60px 120px 60px 120px;
+  padding: 30px 120px 30px 120px;
 }
 
 .navbar .logo-image {
-  width: 180px; /* Adjust the width to make the logo bigger */
-  height: auto; /* Maintain the aspect ratio */
+  width: 150px; 
+  height: auto; 
 }
 
-/* Add a container for the links, and ensure they are aligned to the right */
 .navbar .links {
   display: flex;
-  gap: 80px; /* Add space between the links */
+  gap: 80px; 
 }
 
 .navbar a {
@@ -42,21 +39,23 @@ p {
   color: #d9bd80;
 }
 
-/* Banner Section */
 .banner {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 800px; /* Fixed height for the banner */
+  padding-left: 1cm;
+  padding-right: 1cm;
+  height: 600px;
+  padding-bottom: 40px;
 }
 
 .banner-image {
   width: 100%;
   max-width: none;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
@@ -68,13 +67,17 @@ p {
   font-size: 20px;
   text-align: center;
   z-index: 1;
+  top: 40%;
+  left: 35%;
+  transform: translate(-40%, -35%);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
 }
 
-/* Features Section */
 #Features {
   text-align: center;
   font-family: "Quattrocento", serif;
-  font-size: 18px;
+  font-size: 17px;
   color: #d9bd80;
   margin-top: 30px;
 }
@@ -88,6 +91,29 @@ p {
 
 .features-header h1 {
   margin: 0;
+  font-size: 2em; 
+  display: inline-flex; 
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.features-header h1 .icon {
+  font-size: 0.6em;
+  margin: 0 5px; 
+}
+
+.features-header h1 .flip-icon {
+  transform: scaleX(-1); 
+  display: inline-block; 
+  margin-left: 10px; 
+}
+
+.features-header h1 .icon:first-child {
+  margin-right: 10px; 
+}
+
+.features-header h1 span {
+  vertical-align: middle; 
 }
 
 .List-img {
@@ -109,7 +135,7 @@ p {
 
 .List-img img {
   width: 100%;
-  max-width: 265px;
+  max-width: 500px;
   height: auto;
   object-fit: cover;
 }
@@ -119,12 +145,13 @@ p {
   font-family: Lato, sans-serif;
   font-size: 16px;
   margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 25px;
 }
 
-/* Create List Section */
 .create.list {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 #create-list p {
@@ -153,84 +180,224 @@ p {
   background-color: #b08c5e;
 }
 
-/* Feedback Form Section */
 .feedback-form {
-  background-color: #f8f8f8;
+  background-color: #00173a;
   padding: 30px;
-  margin-top: 40px;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 950px; 
+  border-radius: 0px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}
+
+.feedback-form .logo-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .feedback-form h1 {
   font-family: "Quattrocento", serif;
   color: #d9bd80;
-  font-size: 20px;
-  text-align: left;
-}
-
-.feedback-form img {
-  width: 50px;
-  height: auto;
-  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center; 
+  margin-bottom: 40px; 
+  margin-top: 20px;
+  display: block;
+  width: 100%;
 }
 
 .feedback-form form {
   display: grid;
-  gap: 20px;
+  gap: 20px; 
+  width: 100%; 
+  max-width: 600px; 
+  grid-template-columns: 1fr; 
+  justify-items: center; 
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  width: 100%; 
+  align-items: flex-start; 
 }
 
-label {
+.feedback-form form .form-group label {
   font-family: Lato, sans-serif;
   font-size: 16px;
-  color: #00173a;
+  color: #d9bd80;
   margin-bottom: 5px;
+  text-align: left; 
+  width: 100%; 
 }
 
-input,
-textarea {
+.feedback-form form .form-group input,
+.feedback-form form .form-group textarea {
   font-family: Lato, sans-serif;
   font-size: 16px;
   color: #00173a;
   background-color: #fffdfd;
-  border: 1px solid #d9bd80;
+  border: none;
   padding: 10px;
-  width: 277px;
-  height: 36px;
+  width: 100%; 
+  max-width: 600px; 
+  min-width: 150px; 
+  margin: 0; 
+  text-align: left;
+  height: 40px;
+  box-sizing: border-box; 
 }
 
 textarea {
   resize: vertical;
-  min-height: 80px;
+  min-height: 120px; 
 }
 
-button {
+.feedback-form form button {
   background-color: #d9bd80;
   color: #081f43;
+  padding: 10px 20px;
   border: none;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
-  width: 77px;
-  height: 38px;
-  cursor: pointer;
   border-radius: 5px;
-  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; 
+  justify-self: end; 
+  margin-top: 20px; 
 }
 
-button:hover {
+.feedback-form form button:hover {
   background-color: #b08c5e;
 }
 
-/* Media Query for Mobile and Smaller Screens (768px and below) */
 @media (max-width: 768px) {
-  .List-img {
-    flex-direction: column !important; /* Stack items vertically on smaller screens */
-    align-items: center !important; /* Center items */
+  .feedback-form {
+    width: 100%;
+    padding: 20px;
   }
-  .List-img .item-img {
-    margin-bottom: 20px !important; /* Add space between items */
+
+  .feedback-form .logo-image {
+    width: 120px;
   }
+
+  .feedback-form h1 {
+    font-size: 20px;
+  }
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 1000; 
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: #f8f8f8; 
+  font-size: 2em; 
+  user-select: none;
+  animation: fall 12s linear infinite, drift 15s ease-in-out infinite,
+    rotate 20s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    top: -10px;
+    opacity: 0.8;
+  }
+  100% {
+    top: 100vh; 
+    opacity: 0.3;
+  }
+}
+
+@keyframes drift {
+  0% {
+    left: 0%;
+  }
+  25% {
+    left: 10%;
+  }
+  50% {
+    left: 20%;
+  }
+  75% {
+    left: 30%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.snowflake:nth-child(1) {
+  font-size: 1.5em;
+  opacity: 0.5;
+  animation-duration: 12s, 15s, 20s;
+  animation-delay: 0s, 5s, 0s;
+}
+.snowflake:nth-child(2) {
+  font-size: 1.8em;
+  opacity: 0.7;
+  animation-duration: 14s, 16s, 22s;
+  animation-delay: 3s, 8s, 1s;
+}
+.snowflake:nth-child(3) {
+  font-size: 2.2em;
+  opacity: 0.9;
+  animation-duration: 16s, 18s, 24s;
+  animation-delay: 5s, 10s, 2s;
+}
+.snowflake:nth-child(4) {
+  font-size: 1.6em;
+  opacity: 0.6;
+  animation-duration: 13s, 17s, 21s;
+  animation-delay: 2s, 6s, 3s;
+}
+.snowflake:nth-child(5) {
+  font-size: 2em;
+  opacity: 1;
+  animation-duration: 17s, 20s, 26s;
+  animation-delay: 7s, 12s, 4s;
+}
+.snowflake:nth-child(6) {
+  font-size: 2.4em;
+  opacity: 0.95;
+  animation-duration: 15s, 18s, 20s;
+  animation-delay: 4s, 9s, 5s;
+}
+.snowflake:nth-child(7) {
+  font-size: 1.4em;
+  opacity: 0.4;
+  animation-duration: 18s, 20s, 30s;
+  animation-delay: 6s, 11s, 6s;
+}
+.snowflake:nth-child(8) {
+  font-size: 2.6em;
+  opacity: 1;
+  animation-duration: 13s, 14s, 18s;
+  animation-delay: 8s, 13s, 7s;
 }
