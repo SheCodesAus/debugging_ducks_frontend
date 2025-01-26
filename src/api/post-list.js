@@ -4,8 +4,8 @@ async function postList(listData) {
         console.log("Token being used:", token);
         console.log("List data being sent:", listData);
 
-        // const url = `${import.meta.env.VITE_API_URL}/lists/`;
-        const url = 'http://127.0.0.1:8000/lists/';
+        const url = `${import.meta.env.VITE_API_URL}/lists/`;
+        // const url = 'http://127.0.0.1:8000/lists/';
 
         const response = await fetch(url, {
             method: "POST",
