@@ -4,7 +4,7 @@ async function postCategory(categoryData) {
         console.log(categoryData);
         console.log(token);
         
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/category/`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/category/`, {
         // const response = await fetch(`http://127.0.0.1:8000/category/`, {
             method: "POST",
             headers: {
