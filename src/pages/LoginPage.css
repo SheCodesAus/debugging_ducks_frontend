@@ -41,6 +41,36 @@ p {
   color: #d9bd80;
 }
 
+
+.login-heading {
+  margin: 0;
+  font-size: 2em;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Quattrocento", serif;
+  color: #d9bd80; /* Golden color */
+}
+
+.login-heading .icon {
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+
+.login-heading .flip-icon {
+  transform: scaleX(-1); /* Flip the icon */
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.login-heading .icon:first-child {
+  margin-right: 10px;
+}
+
+.login-heading .icon, .login-heading .flip-icon {
+  vertical-align: middle;
+}
+
 .login-container p {
   font-family: Lato, sans-serif;
   color: #f8f8f8; /* Light color for normal text */

@@ -316,14 +316,17 @@ textarea {
 .feedback-form form button {
   background-color: #d9bd80;
   color: #081f43;
-  padding: 10px 20px;
+  padding: 10px 60px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: auto;
-  justify-self: end;
   margin-top: 20px;
+  margin-bottom: 20px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feedback-form form button:hover {

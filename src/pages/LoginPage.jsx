@@ -41,7 +41,10 @@ function LoginPage() {
       <div className="login-container">
         {isLoginForm ? (
           <div>
-            <h1>Login</h1>
+            <h1 className="login-heading">
+              <span className="icon">꧁</span> Login{" "}
+              <span className="icon flip-icon">꧁</span>
+            </h1>
             <LoginForm />
           </div>
         ) : (
