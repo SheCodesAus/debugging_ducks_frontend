@@ -4,60 +4,62 @@ import { useAuth } from "../hooks/use-auth";
 import z from "zod";
 
 const loginSchema = z.object({
-    username: z.string().min(1, { message: "Username is required" }),
-    password: z.string().min(8, { message: "Password must be at least 8 characters" }),
+  username: z.string().min(1, { message: "Username is required" }),
+  password: z
+    .string()
+    .min(8, { message: "Password must be at least 8 characters" }),
 });
 
 function LoginForm() {
-    const navigate = useNavigate();
-    const { login } = useAuth();
-    const [isLoading, setIsLoading] = useState(false);
-    const [errors, setErrors] = useState("");
-    const [credentials, setCredentials] = useState({
-        username: "",
-        password: "",
-    });
-    
-    const handleChange = (event) => {
-        const { id, value } = event.target;
-        setCredentials((prev) => ({
-            ...prev,
-            [id]: value,  
-        }));
-        console.log("Updated credentials:", { ...credentials, [id]: value }); 
+  const navigate = useNavigate();
+  const { login } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState("");
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleChange = (event) => {
+    const { id, value } = event.target;
+    setCredentials((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+    console.log("Updated credentials:", { ...credentials, [id]: value });
   };
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        console.log("Handle submit triggered");
-        setErrors("");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log("Handle submit triggered");
+    setErrors("");
 
-        console.log("Submitting login form with credentials:", credentials);
-      
-        const result = loginSchema.safeParse(credentials); // Validate credentials
-        if (!result.success) {
-            const error = result.error.errors?.[0];
-            if (error) {
-                console.error("Validation error:", error.message);
-                setErrors(error.message); // Set validation error
-            }
+    console.log("Submitting login form with credentials:", credentials);
+
+    const result = loginSchema.safeParse(credentials); // Validate credentials
+    if (!result.success) {
+      const error = result.error.errors?.[0];
+      if (error) {
+        console.error("Validation error:", error.message);
+        setErrors(error.message); // Set validation error
+      }
       return;
     }
 
     setIsLoading(true);
 
     try {
-        await login(credentials);
-        const user = localStorage.getItem("user");
-        if (!user) {
-          throw new Error("Login succeeded but user data is missing.");
-        }
-        navigate("/");
-      } catch (error) {
-        console.error("Login failed:", error);
-        setErrors(error.message);      
-      } finally {
-        setIsLoading(false);
+      await login(credentials);
+      const user = localStorage.getItem("user");
+      if (!user) {
+        throw new Error("Login succeeded but user data is missing.");
+      }
+      navigate("/");
+    } catch (error) {
+      console.error("Login failed:", error);
+      setErrors(error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -81,7 +83,8 @@ function LoginForm() {
         onChange={handleChange}
         autoComplete="current-password"
       />
-      {errors && <p className="error">{errors}</p>} {/* Display error messages */}
+      {errors && <p className="error">{errors}</p>}{" "}
+      {/* Display error messages */}
       <button type="submit" disabled={isLoading}>
         {isLoading ? "Logging in..." : "Login"}
       </button>

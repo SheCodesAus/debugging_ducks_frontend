@@ -13,19 +13,19 @@ p {
 
 .navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   padding: 30px 120px 30px 120px;
 }
 
 .navbar .logo-image {
-  width: 150px; 
-  height: auto; 
+  width: 150px;
+  height: auto;
 }
 
 .navbar .links {
   display: flex;
-  gap: 80px; 
+  gap: 80px;
 }
 
 .navbar a {
@@ -74,6 +74,57 @@ p {
   letter-spacing: 0.05em;
 }
 
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centers the text inside */
+  padding: 50px 20px;
+}
+
+/* About Section Header */
+.about-section h1 {
+  padding-top: 25px;
+  font-family: "Quattrocento", serif;
+  color: #d9bd80;
+  font-size: 2em; /* Same font size as the Features heading */
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Icon Styling */
+.about-section h1 .icon {
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+
+.about-section h1 .flip-icon {
+  transform: scaleX(-1);
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.about-section h1 .icon:first-child {
+  margin-right: 10px;
+}
+
+.about-section h1 span {
+  vertical-align: middle;
+}
+
+.about-section p {
+  font-family: lato, sans-serif;
+  font-size: 1.2em; /* Optional, adjust as necessary */
+  color: #f8f8f8;
+  max-width: 800px; /* Optional, helps to prevent overly wide text */
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+
 #Features {
   text-align: center;
   font-family: "Quattrocento", serif;
@@ -91,29 +142,29 @@ p {
 
 .features-header h1 {
   margin: 0;
-  font-size: 2em; 
-  display: inline-flex; 
-  align-items: center; 
+  font-size: 2em;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .features-header h1 .icon {
   font-size: 0.6em;
-  margin: 0 5px; 
+  margin: 0 5px;
 }
 
 .features-header h1 .flip-icon {
-  transform: scaleX(-1); 
-  display: inline-block; 
-  margin-left: 10px; 
+  transform: scaleX(-1);
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .features-header h1 .icon:first-child {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .features-header h1 span {
-  vertical-align: middle; 
+  vertical-align: middle;
 }
 
 .List-img {
@@ -185,12 +236,12 @@ p {
   padding: 30px;
   margin: 60px auto;
   width: 90%;
-  max-width: 950px; 
+  max-width: 950px;
   border-radius: 0px;
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -208,8 +259,8 @@ p {
   font-family: "Quattrocento", serif;
   color: #d9bd80;
   font-size: 26px;
-  text-align: center; 
-  margin-bottom: 40px; 
+  text-align: center;
+  margin-bottom: 40px;
   margin-top: 20px;
   display: block;
   width: 100%;
@@ -217,18 +268,18 @@ p {
 
 .feedback-form form {
   display: grid;
-  gap: 20px; 
-  width: 100%; 
-  max-width: 600px; 
-  grid-template-columns: 1fr; 
-  justify-items: center; 
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  width: 100%; 
-  align-items: flex-start; 
+  width: 100%;
+  align-items: flex-start;
 }
 
 .feedback-form form .form-group label {
@@ -236,8 +287,8 @@ p {
   font-size: 16px;
   color: #d9bd80;
   margin-bottom: 5px;
-  text-align: left; 
-  width: 100%; 
+  text-align: left;
+  width: 100%;
 }
 
 .feedback-form form .form-group input,
@@ -248,18 +299,18 @@ p {
   background-color: #fffdfd;
   border: none;
   padding: 10px;
-  width: 100%; 
-  max-width: 600px; 
-  min-width: 150px; 
-  margin: 0; 
+  width: 100%;
+  max-width: 600px;
+  min-width: 150px;
+  margin: 0;
   text-align: left;
   height: 40px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 textarea {
   resize: vertical;
-  min-height: 120px; 
+  min-height: 120px;
 }
 
 .feedback-form form button {
@@ -270,9 +321,9 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: auto; 
-  justify-self: end; 
-  margin-top: 20px; 
+  width: auto;
+  justify-self: end;
+  margin-top: 20px;
 }
 
 .feedback-form form button:hover {
@@ -300,15 +351,15 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; 
-  z-index: 1000; 
+  pointer-events: none;
+  z-index: 1000;
 }
 
 .snowflake {
   position: absolute;
   top: -10px;
-  color: #f8f8f8; 
-  font-size: 2em; 
+  color: #f8f8f8;
+  font-size: 2em;
   user-select: none;
   animation: fall 12s linear infinite, drift 15s ease-in-out infinite,
     rotate 20s linear infinite;
@@ -321,7 +372,7 @@ textarea {
     opacity: 0.8;
   }
   100% {
-    top: 100vh; 
+    top: 100vh;
     opacity: 0.3;
   }
 }
