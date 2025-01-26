@@ -15,8 +15,9 @@ function CreateListPage() {
     };
 
     const handleListCreated = (list) => {
-        // Navigate to the list page or wherever you want after list creation
-        navigate(`/lists/${list.id}`);
+        console.log("List created:", list);
+        // Redirect to the lists page
+        navigate('/lists');
     };
 
     return (

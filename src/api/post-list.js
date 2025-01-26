@@ -1,60 +1,36 @@
-async function postPledge(amount, comment, projectID, isanonymous) {
-    const url = `${import.meta.env.VITE_API_URL}/pledges/`;
-    const token = window.localStorage.getItem("token");
-    const supporter = window.localStorage.getItem("userID");
-
-
-    const response = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Authorization": `Token ${token}`,
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            "amount": amount,
-            "comment": comment,
-            "anonymous": isanonymous,
-            "project": projectID,
-        }),
-
-    });
-
-    if (!response.ok) {
-        const fallbackError = `Error trying to add pledge`;
-
-        const data = await response.json().catch(() => {
-            throw new Error(fallbackError);
-        });
-
-        const errorMessage = data?.detail ?? fallbackError;
-        throw new Error(errorMessage);
-    }
-
-    return await response.json();
-}
-
 async function postList(listData) {
     try {
-        const token = localStorage.getItem("token");
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/lists/`, {
+        const token = window.localStorage.getItem("token");
+        console.log("Token being used:", token);
+        console.log("List data being sent:", listData);
+
+        // const url = `${import.meta.env.VITE_API_URL}/lists/`;
+        const url = 'http://127.0.0.1:8000/lists/';
+
+        const response = await fetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
                 "Authorization": `Token ${token}`,
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(listData),
         });
 
+        console.log("Response status:", response.status);
+
         if (!response.ok) {
             const data = await response.json();
+            console.error("Error response data:", data);
             throw new Error(data.detail || "Failed to create list");
         }
 
-        return await response.json();
+        const responseData = await response.json();
+        console.log("Success response:", responseData);
+        return responseData;
     } catch (error) {
         console.error("Error in postList:", error);
         throw error;
     }
 }
 
-export default { postPledge, postList };
+export default postList;

@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 function AddCategoryForm({ onCategoryCreated }) {
 
     const [categoryData, setCategoryData] = useState({
-        name: "",
-        budget: ""
+        category_name: "",
+        category_budget: ""
     });
     const [errors, setErrors] = useState({});
 
@@ -14,7 +14,7 @@ function AddCategoryForm({ onCategoryCreated }) {
         const { name, value } = event.target;
         setCategoryData({
             ...categoryData,
-            [name]: name === 'budget' ? parseFloat(value) || '' : value
+            [name]: name === 'category_budget' ? parseFloat(value) || '' : value
         });
     };
 
@@ -35,21 +35,21 @@ function AddCategoryForm({ onCategoryCreated }) {
                 <label htmlFor="name">Category Name:</label>
                 <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={categoryData.name}
+                    id="category_name"
+                    name="category_name"
+                    value={categoryData.category_name}
                     onChange={handleChange}
                     required
                 />
             </div>
             
             <div className="form-group">
-                <label htmlFor="budget">Budget ($):</label>
+                <label htmlFor="category_budget">Budget ($):</label>
                 <input
                     type="number"
-                    id="budget"
-                    name="budget"
-                    value={categoryData.budget}
+                    id="category_budget"
+                    name="category_budget"
+                    value={categoryData.category_budget}
                     onChange={handleChange}
                     step="0.01"
                     min="0"
