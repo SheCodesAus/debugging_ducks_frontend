@@ -3,13 +3,14 @@ async function postLogin(username, password) {
         console.log("Login payload:", { username, password });
 
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api-token-auth/`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
+        // const response = await fetch(`http://127.0.0.1:8000/api-token-auth/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
-            "username": username,
-            "password": password,
+          "username": username,
+          "password": password,
         }),
     });
 
