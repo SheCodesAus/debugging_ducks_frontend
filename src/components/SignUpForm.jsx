@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import z from "zod";
 import postSignup from "../api/post-signup";
+import "../pages/SignUpPage.css";
 
 const signupSchema = z
   .object({
@@ -125,7 +126,9 @@ function SignUpForm() {
           <span className="error">{errors.confirmPassword}</span>
         )}
       </div>
-      <button type="submit" className="signup-button">Sign Up</button>
+      <button type="submit" className="signup-button">
+        Sign Up
+      </button>
       {errors.api && <span className="error">{errors.api}</span>}
     </form>
   );
