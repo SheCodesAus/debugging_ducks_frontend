@@ -124,7 +124,7 @@ p {
 }
 
 /* Buttons */
-button {
+.login-form .login-button {
   background-color: #d9bd80;
   color: #081f43;
   padding: 10px 60px;
@@ -140,7 +140,7 @@ button {
   margin-right: auto;
 }
 
-button:hover {
+.login-form.login-button:hover {
   background-color: #b08c5e;
 }
 

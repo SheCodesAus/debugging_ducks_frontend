@@ -125,7 +125,7 @@ function SignUpForm() {
           <span className="error">{errors.confirmPassword}</span>
         )}
       </div>
-      <button type="submit">Sign Up</button>
+      <button type="submit" className="signup-button">Sign Up</button>
       {errors.api && <span className="error">{errors.api}</span>}
     </form>
   );
