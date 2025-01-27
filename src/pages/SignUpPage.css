@@ -12,21 +12,21 @@ p {
   margin: 0;
 }
 
-/* Login Page Container */
+/* Sign Up Page Container */
 .signup-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: pink;
+  background-color: #00173a;
 }
 
-/* Login Container */
-.login-container {
+/* Sign Up Container */
+.signup-container {
   width: 90%;
   max-width: 300px;
   padding: 40px 50px 40px 40px;
-  background-color: yellow; /* Dark background for the form */
+  background-color: #081f43; /* Dark background for the form */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -34,14 +34,14 @@ p {
 }
 
 /* Title and Text */
-.login-container h1,
-.login-container h2 {
+.signup-container h1,
+.signup-container h2 {
   font-family: "Quattrocento", serif;
   margin-bottom: 20px;
-  color: pink;
+  color: #d9bd80;
 }
 
-.login-heading {
+.signup-heading {
   margin: 0;
   font-size: 2em;
   display: inline-flex;
@@ -51,33 +51,34 @@ p {
   color: #d9bd80; /* Golden color */
 }
 
-.login-heading .icon {
+.signup-heading .icon {
   font-size: 0.6em;
   margin: 0 5px;
 }
 
-.login-heading .flip-icon {
+.signup-heading .flip-icon {
   transform: scaleX(-1); /* Flip the icon */
   display: inline-block;
   margin-left: 10px;
 }
 
-.login-heading .icon:first-child {
+.signup-heading .icon:first-child {
   margin-right: 10px;
 }
 
-.login-heading .icon,
-.login-heading .flip-icon {
+.signup-heading .icon,
+.signup-heading .flip-icon {
   vertical-align: middle;
 }
 
-.login-container p {
+.signup-container p {
   font-family: Lato, sans-serif;
   color: #f8f8f8; /* Light color for normal text */
   margin-top: 15px;
 }
 
-.login-container form {
+/* Form Styling */
+.signup-container form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -86,7 +87,7 @@ p {
 }
 
 /* Label Style */
-.login-container form label {
+.signup-container form label {
   font-family: Lato, sans-serif;
   font-size: 16px;
   color: #d9bd80; /* Changed label color to #d9bd80 */
@@ -96,7 +97,7 @@ p {
 }
 
 /* Input Style */
-.login-container form input {
+.signup-container form input {
   padding: 0 5px; /* Adjust padding to ensure total height is 40px */
   font-size: 16px;
   border-radius: 5px;
@@ -105,22 +106,6 @@ p {
   width: 100%; /* Ensure inputs are full-width */
   margin-bottom: 10px; /* Space between inputs */
   height: 40px; /* Set the height to 40px */
-}
-/* Password Group Styling */
-.login-container .password-group {
-  display: flex;
-  flex-direction: row; /* Align label and input horizontally */
-  align-items: center; /* Vertically align label and input */
-  gap: 10px; /* Space between label and input */
-}
-
-.login-container .password-group label {
-  width: auto; /* Let the label take only necessary space */
-  margin-bottom: 0; /* Remove bottom margin for label */
-}
-
-.login-container .password-group input {
-  width: 100%; /* Make input take the rest of the available width */
 }
 
 /* Buttons */
@@ -152,40 +137,19 @@ button:hover {
   text-align: center;
 }
 
-/* Toggle Form Button */
-.toggle-form-button {
-  background: none;
-  border: none;
-  color: #d9bd80;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
+/* Sign Up Link */
+.sign-up-link {
+  margin-top: 20px;
+  text-align: center;
 }
 
-.toggle-form-button:hover {
-  color: #b08c5e;
-}
-
-/* Display "Don't have an account" and "Sign up here" inline */
-.sign-up-container {
-  display: flex; /* Flexbox layout */
-  align-items: center; /* Ensure vertical centering */
-  gap: 10px; /* Space between the text and button */
-  margin-top: 15px; /* Adjust space from the form */
-  justify-content: center;
-}
-
-.sign-up-text {
+.sign-up-link p {
   font-family: Lato, sans-serif;
   color: #d9bd80;
   font-size: 16px;
-  margin: 0; /* Remove any margin */
-  line-height: 1;
-  margin-bottom: 17px;
 }
 
-.toggle-form-button {
+.sign-up-link button {
   background: none;
   border: none;
   color: #d9bd80;
@@ -193,7 +157,9 @@ button:hover {
   font-size: 16px;
   cursor: pointer;
   transition: color 0.3s ease;
-  margin: 0;
-  padding: 5px 10px;
-  line-height: 1;
+  text-decoration: underline;
+}
+
+.sign-up-link button:hover {
+  color: #b08c5e;
 }
