@@ -1,8 +1,7 @@
-/* Global Styles */
 body {
   font-family: Lato, sans-serif;
   background-color: #00173a;
-  color: #f8f8f8; /* Light text for better contrast */
+  color: #f8f8f8; 
   margin: 0;
   padding: 0;
 }
@@ -12,7 +11,6 @@ p {
   margin: 0;
 }
 
-/* Sign Up Page Container */
 .signup-page {
   display: flex;
   justify-content: center;
@@ -21,19 +19,17 @@ p {
   background-color: #00173a;
 }
 
-/* Sign Up Container */
 .signup-container {
   width: 90%;
   max-width: 300px;
   padding: 40px 50px 40px 40px;
-  background-color: #081f43; /* Dark background for the form */
+  background-color: #081f43; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-top: -30px; /* Move the form up by roughly 1cm */
+  margin-top: -30px; 
 }
 
-/* Title and Text */
 .signup-container h1,
 .signup-container h2 {
   font-family: "Quattrocento", serif;
@@ -57,7 +53,7 @@ p {
 }
 
 .signup-heading .flip-icon {
-  transform: scaleX(-1); /* Flip the icon */
+  transform: scaleX(-1); 
   display: inline-block;
   margin-left: 10px;
 }
@@ -73,42 +69,38 @@ p {
 
 .signup-container p {
   font-family: Lato, sans-serif;
-  color: #f8f8f8; /* Light color for normal text */
+  color: #f8f8f8; 
   margin-top: 15px;
 }
 
-/* Form Styling */
 .signup-container form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   text-align: left;
-  align-items: flex-start; /* Keep form fields left-aligned */
+  align-items: flex-start; 
 }
 
-/* Label Style */
 .signup-container form label {
   font-family: Lato, sans-serif;
   font-size: 16px;
-  color: #d9bd80; /* Changed label color to #d9bd80 */
-  margin-bottom: 5px; /* Space between label and input */
-  display: inline-block; /* Ensures label is on its own line */
+  color: #d9bd80; 
+  margin-bottom: 5px;
+  display: inline-block; 
   width: auto;
 }
 
-/* Input Style */
 .signup-container form input {
-  padding: 0 5px; /* Adjust padding to ensure total height is 40px */
+  padding: 0 5px; 
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid #d9bd80; /* Golden border */
+  border: 1px solid #d9bd80;
   background-color: #d9bd80;
-  width: 100%; /* Ensure inputs are full-width */
-  margin-bottom: 10px; /* Space between inputs */
-  height: 40px; /* Set the height to 40px */
+  width: 100%; 
+  margin-bottom: 10px; 
+  height: 40px; 
 }
 
-/* Buttons */
 button {
   background-color: #d9bd80;
   color: #081f43;
@@ -129,7 +121,6 @@ button:hover {
   background-color: #b08c5e;
 }
 
-/* Error Message */
 .error {
   color: #ff4d4d;
   font-size: 14px;
@@ -137,7 +128,6 @@ button:hover {
   text-align: center;
 }
 
-/* Sign Up Link */
 .sign-up-link {
   margin-top: 20px;
   text-align: center;
