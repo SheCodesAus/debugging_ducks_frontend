@@ -13,12 +13,12 @@ p {
 }
 
 /* Login Page Container */
-.login-page {
+.signup-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #00173a;
+  background-color: pink;
 }
 
 /* Login Container */
@@ -26,7 +26,7 @@ p {
   width: 90%;
   max-width: 300px;
   padding: 40px 50px 40px 40px;
-  background-color: #081f43; /* Dark background for the form */
+  background-color: yellow; /* Dark background for the form */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -38,7 +38,7 @@ p {
 .login-container h2 {
   font-family: "Quattrocento", serif;
   margin-bottom: 20px;
-  color: #d9bd80;
+  color: pink;
 }
 
 .login-heading {
