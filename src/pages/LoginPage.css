@@ -168,7 +168,7 @@ p {
 }
 
 /* Display "Don't have an account" and "Sign up here" inline */
-.sign-up-container {
+.login-sign-up-container {
   display: flex; /* Flexbox layout */
   align-items: center; /* Ensure vertical centering */
   gap: 10px; /* Space between the text and button */
@@ -176,7 +176,7 @@ p {
   justify-content: center;
 }
 
-.sign-up-text {
+.login-sign-up-text {
   font-family: Lato, sans-serif;
   color: #d9bd80;
   font-size: 16px;

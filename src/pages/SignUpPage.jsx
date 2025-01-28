@@ -37,7 +37,7 @@ function SignUpPage() {
         <SignUpForm />
         <div className="sign-up-link">
           <p>
-            Already have an account?{" "}
+            Test have an account?{" "}
             <button onClick={() => navigate("/login")}>Login here</button>
           </p>
         </div>
