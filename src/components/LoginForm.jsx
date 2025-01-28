@@ -55,7 +55,7 @@ function LoginForm() {
       if (!user) {
         throw new Error("Login succeeded but user data is missing.");
       }
-      navigate("/");
+      navigate("/lists");
     } catch (error) {
       console.error("Login failed:", error);
       setErrors(error.message);

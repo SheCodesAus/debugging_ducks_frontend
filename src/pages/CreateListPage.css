@@ -1,56 +1,249 @@
+/* Global Styles */
+body {
+    font-family: Lato, sans-serif;
+    background-color: #00173a;
+    color: #f8f8f8;
+    /* Light text for better contrast */
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+/* Create List Page Container */
 .create-list-page {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #00173a;
 }
 
-.create-list-page h2 {
+/* Create List Container */
+.create-list-container {
+    width: 90%;
+    max-width: 300px;
+    padding: 40px 50px 40px 40px;
+    background-color: #081f43;
+    /* Dark background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: -30px;
+    /* Move the form up by roughly 1cm */
+}
+
+/* Title and Text */
+.create-list-container h1,
+.create-list-container h2 {
+    font-family: "Quattrocento", serif;
     margin-bottom: 20px;
-    color: #333;
+    color: #d9bd80;
 }
 
-.create-list-page form {
+.create-list-heading {
+    margin: 0;
+    font-size: 2em;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: "Quattrocento", serif;
+    color: #d9bd80;
+    /* Golden color */
+}
+
+.create-list-heading .icon {
+    font-size: 0.6em;
+    margin: 0 5px;
+}
+
+.create-list-heading .flip-icon {
+    transform: scaleX(-1);
+    /* Flip the icon */
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.create-list-heading .icon:first-child {
+    margin-right: 10px;
+}
+
+.create-list-heading .icon,
+.create-list-heading .flip-icon {
+    vertical-align: middle;
+}
+
+.create-list-container p {
+    font-family: Lato, sans-serif;
+    color: #f8f8f8;
+    /* Light color for normal text */
+    margin-top: 15px;
+}
+
+.create-list-container form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
+    /* Keep form fields left-aligned */
 }
 
-.create-list-page label {
-    font-weight: bold;
+/* Label Style */
+.create-list-container form label {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: #d9bd80;
+    /* Changed label color to #d9bd80 */
+    margin-bottom: 5px;
+    /* Space between label and input */
+    display: inline-block;
+    /* Ensures label is on its own line */
+    width: auto;
 }
 
-.create-list-page input,
-.create-list-page textarea {
+/* Input Style */
+.create-list-container form input {
+    padding: 0 5px;
+    /* Adjust padding to ensure total height is 40px */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #d9bd80;
+    /* Golden border */
+    background-color: #d9bd80;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    /* Ensure inputs are full-width */
+    margin-bottom: 10px;
+    /* Space between inputs */
+    height: 40px;
+    /* Set the height to 40px */
 }
 
-.create-list-page button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+/* Buttons */
+.create-list-container .create-list-button {
+    background-color: #d9bd80;
+    color: #081f43;
+    padding: 10px 60px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.create-list-page button:hover {
-    background-color: #0056b3;
+.create-list-container .create-list-button:hover {
+    background-color: #b08c5e;
 }
 
+/* Error Message */
 .error {
-    color: red;
-    margin-top: 5px;
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Toggle Form Button */
+.toggle-form-button {
+    background: none;
+    border: none;
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-form-button:hover {
+    color: #b08c5e;
 }
 
 /* Add these styles to your existing CSS */
-.category-form {
-    background-color: white;
+.form-section {
+    border-bottom: 1px solid #d9bd80;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.create-list-container textarea {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #d9bd80;
+    background-color: #d9bd80;
+    width: 100%;
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Global Styles */
+.list-form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #00173a;
     padding: 20px;
+}
+
+.list-form-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #081f43;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-form-heading {
+    margin: 0 0 30px;
+    font-size: 2em;
+    text-align: center;
+    font-family: "Quattrocento", serif;
+    color: #d9bd80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 0.6em;
+}
+
+.flip-icon {
+    transform: scaleX(-1);
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+.form-section h3 {
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
 .form-group {
@@ -60,40 +253,46 @@
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
+    color: #d9bd80;
+    font-family: Lato, sans-serif;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #d9bd80;
+    background-color: #d9bd80;
+    color: #081f43;
 }
 
 .form-group textarea {
-    min-height: 100px;
+    min-height: 80px;
+    resize: vertical;
 }
 
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: #d9bd80;
+    color: #081f43;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #b08c5e;
 }
 
 .error {
-    color: #dc3545;
-    margin-top: 5px;
+    color: #ff4d4d;
     font-size: 14px;
-} 
+    margin-top: 10px;
+    text-align: center;
+}

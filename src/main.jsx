@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       { path: "/signup", element: <SignUpPage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/lists", element: <ListLandingPage /> },
-      { path: "/category", element: <CreateListPage /> },
+      { path: "/create-list", element: <CreateListPage /> },
     ],
   },
 ]);
