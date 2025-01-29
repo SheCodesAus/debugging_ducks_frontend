@@ -13,6 +13,7 @@ import CreateCategoryPage from "./pages/CreateCategoryPage";
 // Import components (navbar, etc.)
 import NavBar from "./components/NavBar";
 import { AuthProvider } from "./components/AuthProvider";
+import NotFoundPage from "./pages/NotFoundPage";
 
 // Create the router with paths
 const router = createBrowserRouter([
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: "/lists", element: <ListLandingPage /> },
       { path: "/create-list", element: <CreateListPage /> },
       { path: "/create-category", element: <CreateCategoryPage /> },
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ]);

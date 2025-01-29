@@ -25,20 +25,21 @@ function SignUpPage() {
   }
 
   return (
-    <div className="signup-page">
-      <div className="signup-container">
-        <h1 className="login-heading">
+    <div id="signup-page" className="signup-page">
+      <div id="signup-container" className="signup-container">
+        <h1 className="signup-heading">
           <span className="icon">꧁</span> Sign Up{" "}
           <span className="icon flip-icon">꧁</span>
         </h1>
-
-        <h2>Sign Up</h2>
-        <p>Sign up to create a new account</p>
+        <h2>Sign up to create a new account </h2>
         <SignUpForm />
-        <div className="sign-up-link">
-          <p>
+        <div className="sign-up-login-container">
+          <p className="sign-up-login-text">
             Already have an account?{" "}
-            <button onClick={() => navigate("/login")}>Login here</button>
+            <button 
+              className="login-button"
+              onClick={() => navigate("/login")}>Login here
+              </button>
           </p>
         </div>
       </div>

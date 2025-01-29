@@ -169,21 +169,19 @@ p {
 }
 
 /* Display "Don't have an account" and "Sign up here" inline */
-.sign-up-container {
+.login-sign-up-container {
   display: flex; /* Flexbox layout */
   align-items: center; /* Ensure vertical centering */
   gap: 10px; /* Space between the text and button */
   margin-top: 15px; /* Adjust space from the form */
   justify-content: center;
 }
-
-.sign-up-text {
+#login-container > div.login-sign-up-container > p {
   font-family: Lato, sans-serif;
   color: #d9bd80;
   font-size: 16px;
   margin: 0; /* Remove any margin */
   line-height: 1;
-  margin-bottom: 17px;
 }
 
 .toggle-form-button {
