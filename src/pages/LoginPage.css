@@ -175,14 +175,12 @@ p {
   margin-top: 15px; /* Adjust space from the form */
   justify-content: center;
 }
-
-.login-sign-up-text {
+#login-container > div.login-sign-up-container > p {
   font-family: Lato, sans-serif;
   color: #d9bd80;
   font-size: 16px;
   margin: 0; /* Remove any margin */
   line-height: 1;
-  margin-bottom: 17px;
 }
 
 .toggle-form-button {

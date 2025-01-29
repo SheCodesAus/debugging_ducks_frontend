@@ -11,7 +11,7 @@ p {
   margin: 0;
 }
 
-.signup-page {
+#signup-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ p {
   background-color: #00173a;
 }
 
-.signup-container {
+#signup-container {
   width: 90%;
   max-width: 300px;
   padding: 40px 50px 40px 40px;
@@ -30,14 +30,14 @@ p {
   margin-top: -30px; 
 }
 
-.signup-container h1,
-.signup-container h2 {
+#signup-container h1,
+#signup-container h2 {
   font-family: "Quattrocento", serif;
   margin-bottom: 20px;
   color: #d9bd80;
 }
 
-.signup-container h1 {
+#signup-container h1 {
   margin: 0;
   font-size: 2em;
   display: inline-flex;
@@ -47,30 +47,31 @@ p {
   color: #d9bd80; /* Golden color */
 }
 
-.signup-heading .icon {
+#signup-container .signup-heading .icon {
   font-size: 0.6em;
   margin: 0 5px;
 }
 
-.signup-heading .flip-icon {
+#signup-container .signup-heading .flip-icon {
   transform: scaleX(-1); 
   display: inline-block;
   margin-left: 10px;
 }
 
-.signup-heading .icon:first-child {
+#signup-container .signup-heading .icon:first-child {
   margin-right: 10px;
 }
 
-.signup-heading .icon,
-.signup-heading .flip-icon {
+#signup-container .signup-heading .icon,
+#signup-container .signup-heading .flip-icon {
   vertical-align: middle;
 }
 
-.signup-container p {
+#signup-container p {
   font-family: Lato, sans-serif;
   color: #f8f8f8; 
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #signup-container > div.signup-form > form {
@@ -80,6 +81,14 @@ p {
   text-align: left;
   align-items: stretch; 
 }
+#signup-container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  align-items: stretch;
+}
+
 #signup-container > div.signup-form > form > label {
   font-family: Lato, sans-serif;
   font-size: 16px;
@@ -88,11 +97,23 @@ p {
   display: inline-block; 
   width: auto;
 }
-#signup-container > div.signup-form > form > div:nth-child(1) > input[type=text],
-#signup-container > div.signup-form > form > div:nth-child(2) > input[type=email],
-#signup-container > div.signup-form > form > div:nth-child(3) > input[type=password],
-#signup-container > div.signup-form > form > div:nth-child(4) > input[type=password] {
 
+#signup-container > form > div:nth-child(1) > label,
+#signup-container > form > div:nth-child(2) > label,
+#signup-container > form > div:nth-child(3) > label,
+#signup-container > form > div:nth-child(4) > label {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  color: #d9bd80; 
+  margin-bottom: 5px;
+  display: inline-block; 
+  width: auto;
+}
+
+#signup-container > form > div:nth-child(1) > input[type=text],
+#signup-container > form > div:nth-child(2) > input[type=email],
+#signup-container > form > div:nth-child(3) > input[type=password],
+#signup-container > form > div:nth-child(4) > input[type=password] {
   padding: 0 5px; 
   font-size: 16px;
   border-radius: 5px;
@@ -102,7 +123,22 @@ p {
   margin-bottom: 10px; 
   height: 40px; 
 }
-#signup-container > div.signup-form > form > button {
+
+#signup-container > div.signup-form > form > div:nth-child(1) > input[type=text],
+#signup-container > div.signup-form > form > div:nth-child(2) > input[type=email],
+#signup-container > div.signup-form > form > div:nth-child(3) > input[type=password],
+#signup-container > div.signup-form > form > div:nth-child(4) > input[type=password] {
+  padding: 0 5px; 
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #d9bd80;
+  background-color: #d9bd80;
+  width: 100%; 
+  margin-bottom: 10px; 
+  height: 40px; 
+}
+
+#signup-container > form > button {
   background-color: #d9bd80;
   color: #081f43;
   padding: 10px 60px;
@@ -118,6 +154,25 @@ p {
   margin-right: auto;
 }
 
+#signup-container > div.signup-form > form > button {
+  background-color: #d9bd80;
+  color: #081f43;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#signup-container > form > button:hover {
+  background-color: #b08c5e;
+}
+
 #signup-container > div.signup-form > form > button:hover {
   background-color: #b08c5e;
 }
@@ -128,16 +183,37 @@ p {
   margin-top: 10px;
   text-align: center;
 }
+#signup-container > div.sign-up-login-container {
+  text-align: center;
+  margin-top: 20px;
+}
 
 #signup-container > div.login-sign-up-container {
   margin-top: 20px;
   text-align: center;
 }
 
+#signup-container > div.sign-up-login-container > p {
+  font-family: Lato, sans-serif;
+  color: #d9bd80;
+  font-size: 16px;
+}
+
 #signup-container > div.login-sign-up-container > p {
   font-family: Lato, sans-serif;
   color: #d9bd80;
   font-size: 16px;
+}
+
+#signup-container > div.login-sign-up-container > p > button {
+  background: none;
+  border: none;
+  color: #d9bd80;
+  font-family: "Quattrocento", serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: underline;
 }
 
 #signup-container > div.login-sign-up-container > button {
