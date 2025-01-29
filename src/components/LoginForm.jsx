@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import z from "zod";
+import "../pages/LoginPage.css";
 
 const loginSchema = z.object({
   username: z.string().min(1, { message: "Username is required" }),
@@ -54,7 +55,7 @@ function LoginForm() {
       if (!user) {
         throw new Error("Login succeeded but user data is missing.");
       }
-      navigate("/");
+      navigate("/lists");
     } catch (error) {
       console.error("Login failed:", error);
       setErrors(error.message);
@@ -64,7 +65,7 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="login-form">
       <label htmlFor="username">Username:</label>
       <input
         type="text"
@@ -85,7 +86,7 @@ function LoginForm() {
       />
       {errors && <p className="error">{errors}</p>}{" "}
       {/* Display error messages */}
-      <button type="submit" disabled={isLoading}>
+      <button type="submit" className="login-button" disabled={isLoading}>
         {isLoading ? "Logging in..." : "Login"}
       </button>
     </form>

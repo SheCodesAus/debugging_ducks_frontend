@@ -25,10 +25,9 @@ function NavBar() {
         {/* Links container */}
         <div className="links">
           <Link to="/">Home</Link>
-          <Link to="/lists">Lists</Link>
           {auth.token && auth.user ? (
             <Link to="#" onClick={handleLogout}>
-            LOGOUT
+            Logout
           </Link>
           ) : (
             <Link to="/login">Login</Link>

@@ -1,0 +1,285 @@
+/* Global Styles */
+body {
+    font-family: Lato, sans-serif;
+    background-color: #00173a;
+    color: #f8f8f8;
+    /* Light text for better contrast */
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+/* List Landing Page Container */
+.list-landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #00173a;
+}
+
+/* List Landing Container */
+.list-landing-container {
+    width: 90%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #081f43;
+    /* Dark background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    text-align: left;  /* Align all content left */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Title and Text */
+.list-landing-container h1,
+.list-landing-container h2 {
+    font-family: "Quattrocento", serif;
+    margin-bottom: 20px;
+    color: #d9bd80;
+}
+
+.list-landing-heading {
+    margin: 0;
+    font-size: 2em;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: "Quattrocento", serif;
+    color: #d9bd80;
+    /* Golden color */
+}
+
+.list-landing-heading .icon {
+    font-size: 0.6em;
+    margin: 0 5px;
+}
+
+.list-landing-heading .flip-icon {
+    transform: scaleX(-1);
+    /* Flip the icon */
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.list-landing-heading .icon:first-child {
+    margin-right: 10px;
+}
+
+.list-landing-heading .icon,
+.list-landing-heading .flip-icon {
+    vertical-align: middle;
+}
+
+.list-landing-container p {
+    font-family: Lato, sans-serif;
+    color: #f8f8f8;
+    /* Light color for normal text */
+    margin-top: 15px;
+}
+
+.list-landing-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
+    /* Keep form fields left-aligned */
+}
+
+/* Label Style */
+.list-landing-container form label {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: #d9bd80;
+    /* Changed label color to #d9bd80 */
+    margin-bottom: 5px;
+    /* Space between label and input */
+    display: inline-block;
+    /* Ensures label is on its own line */
+    width: auto;
+}
+
+/* Input Style */
+.list-landing-container form input {
+    padding: 0 5px;
+    /* Adjust padding to ensure total height is 40px */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #d9bd80;
+    /* Golden border */
+    background-color: #d9bd80;
+    width: 100%;
+    /* Ensure inputs are full-width */
+    margin-bottom: 10px;
+    /* Space between inputs */
+    height: 40px;
+    /* Set the height to 40px */
+}
+
+/* Buttons */
+.list-landing-container .create-list-button {
+    background-color: #d9bd80;
+    color: #081f43;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: auto;
+    display: block;
+    margin-left: 0 !important;  /* Override previous styles */
+}
+
+.list-landing-container .create-list-button:hover {
+    background-color: #b08c5e;
+}
+
+/* Error Message */
+.error {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Toggle Form Button */
+.toggle-form-button {
+    background: none;
+    border: none;
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-form-button:hover {
+    color: #b08c5e;
+}
+
+/* Update categories section and button styles */
+.categories-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Align items to the left */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.categories-section {
+    margin: 20px 0;
+    padding-left: 10px;
+}
+
+.create-category-button {
+    background-color: #d9bd80;
+    color: #081f43;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-left: 20px;  /* Add left margin to align with category content */
+    align-self: flex-start;  /* Ensure button aligns left */
+}
+
+.create-category-button:hover {
+    background-color: #b08c5e;
+    color: #081f43;
+    opacity: 0.9;
+}
+
+/* Add these styles to your existing CSS */
+
+.categories-section h2 {
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 1.8em;
+}
+
+.categories-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.category-card {
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+/* Remove the bullet point and line */
+.category-card::before {
+    display: none;
+}
+
+.category-card h3 {
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.category-card p {
+    color: #f8f8f8;
+    font-family: Lato, sans-serif;
+    font-size: 0.9em;
+}
+
+.lists-section h2 {
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    margin-bottom: 20px;
+}
+
+/* Add styles for the lists within categories */
+.category-lists {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Align list items to the left */
+}
+
+.list-item {
+    background: none;
+    border: none;
+    padding: 8px 0;
+    margin-bottom: 5px;
+}
+
+/* Remove the connecting line */
+.list-item::before {
+    display: none;
+}
+
+.list-item h4 {
+    color: #f8f8f8;
+    font-size: 1em;
+    margin-bottom: 4px;
+}
+
+.list-notes {
+    color: rgba(248, 248, 248, 0.6) !important;
+    font-size: 0.85em;
+    margin-top: 2px;
+}
+

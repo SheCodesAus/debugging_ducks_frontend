@@ -37,23 +37,29 @@ function LoginPage() {
   }
 
   return (
-    <div className="login-page">
-      <div className="login-container">
+    <div id={isLoginForm ? "login-page" : "signup-page"} className="login-page">
+    <div id={isLoginForm ? "login-container" : "signup-container"} className="login-container">
         {isLoginForm ? (
           <div>
-            <h1>Login</h1>
+            <h1 className="login-heading">
+              <span className="icon">꧁</span> Login{" "}
+              <span className="icon flip-icon">꧁</span>
+            </h1>
             <LoginForm />
           </div>
         ) : (
           <div className="signup-form">
-            <h1>Sign Up</h1>
+            <h1 className="signup-heading">
+              <span className="icon">꧁</span> Sign Up{" "}
+              <span className="icon flip-icon">꧁</span>
+            </h1>
             <SignUpForm />
           </div>
         )}
 
         {/* Move "Don't have an account" and "Sign up here" onto the same line */}
-        <div className="sign-up-container">
-          <p className="sign-up-text">
+        <div className="login-sign-up-container">
+          <p className="login-sign-up-text">
             {isLoginForm
               ? "Don't have an account?"
               : "Already have an account?"}
