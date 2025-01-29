@@ -165,6 +165,7 @@ p {
 
 .toggle-form-button:hover {
   color: #b08c5e;
+  text-decoration: underline;
 }
 
 /* Display "Don't have an account" and "Sign up here" inline */
@@ -194,4 +195,12 @@ p {
   margin: 0;
   padding: 5px 10px;
   line-height: 1;
+}
+
+/* Update button hover styles */
+.login-container button:hover {
+    background-color: #b08c5e;  /* Darker gold */
+    color: #081f43;  /* Keep dark blue text on hover */
+    opacity: 0.9;    /* Slight opacity for hover effect */
+    transition: all 0.3s ease;
 }

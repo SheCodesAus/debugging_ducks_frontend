@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
+import useLists from "../hooks/use-lists";
 import BannerImage from "../img/Banner-img.jpg";
 import LogoImage from "../img/Logo.svg";
 import FeaturesImage from "../img/features-stand-in.webp";
@@ -15,6 +16,8 @@ const contactformSchema = z.object({
 
 function HomePage() {
   const { auth, setAuth } = useAuth();
+  const navigate = useNavigate();
+  const { lists } = useLists();
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -41,6 +44,20 @@ function HomePage() {
     } else {
       alert("Thank you for your feedback!");
       setCredentials({ name: "", email: "", message: "" }); // Reset form
+    }
+  };
+
+  const getButtonText = () => {
+    if (!auth.token) return "Login / Signup";
+    if (!lists || lists.length === 0) return "Create List";
+    return "View Lists";
+  };
+
+  const handleCreateList = () => {
+    if (auth.token) {
+      navigate('/lists');
+    } else {
+      navigate('/login');
     }
   };
 
@@ -80,8 +97,8 @@ function HomePage() {
           <p>
             Discover the ultimate shopping companion for the festive season. Our
             platform is designed to make your Christmas shopping experience
-            seamless and enjoyable. Whether you’re planning gifts, creating
-            lists, or exploring ideas, we’re here to help you every step of the
+            seamless and enjoyable. Whether you're planning gifts, creating
+            lists, or exploring ideas, we're here to help you every step of the
             way!
           </p>
         </div>
@@ -114,11 +131,9 @@ function HomePage() {
         <div className="create list">
           <div id="create-list">
             <p>Ready to get started?</p>
-            {auth.token ? (
-              <Link to="/category">Create List</Link>
-            ) : (
-              <Link to="/signup">Create an account</Link>
-            )}
+            <button onClick={handleCreateList} className="create-list-button">
+              {getButtonText()}
+            </button>
           </div>
         </div>
 
