@@ -212,22 +212,25 @@ p {
   margin-bottom: 20px;
 }
 
-#create-list a {
-  display: block;
-  max-width: 140px;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
+#create-list button.create-list-button {
   background-color: #d9bd80;
   color: #081f43;
-  text-decoration: none;
+  padding: 10px 60px;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
-  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
 }
 
-#create-list a:hover {
+#create-list button.create-list-button:hover {
   background-color: #b08c5e;
 }
 
