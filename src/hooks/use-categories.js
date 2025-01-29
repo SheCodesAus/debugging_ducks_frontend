@@ -1,17 +1,24 @@
 import { useState, useEffect } from "react";
+import { useAuth } from "./use-auth";
 
 function useCategories() {
     const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const { auth } = useAuth();
 
     useEffect(() => {
         const fetchCategories = async () => {
+            if (!auth.token) {
+                setCategories([]);
+                setIsLoading(false);
+                return;
+            }
+
             try {
-                const token = localStorage.getItem("token");
                 const response = await fetch(`${import.meta.env.VITE_API_URL}/category/`, {
                     headers: {
-                        "Authorization": `Token ${token}`,
+                        "Authorization": `Token ${auth.token}`,
                     },
                 });
 
@@ -29,7 +36,7 @@ function useCategories() {
         };
 
         fetchCategories();
-    }, []);
+    }, [auth.token]);
 
     return { categories, isLoading, error };
 }
