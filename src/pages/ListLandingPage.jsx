@@ -58,12 +58,6 @@ function ListLandingPage() {
                             onCreateList={handleCreateList}
                             getListsByCategory={getListsByCategory}
                         />
-                        <button 
-                            onClick={handleCreateCategory}
-                            className="create-category-button"
-                        >
-                            Create New Category
-                        </button>
                     </div>
                 </>
             )}

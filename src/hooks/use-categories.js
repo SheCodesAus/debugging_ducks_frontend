@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "./use-auth";
+import getCategory from "../api/get-category";
 
 function useCategories() {
     const [categories, setCategories] = useState([]);
@@ -16,17 +17,7 @@ function useCategories() {
             }
 
             try {
-                const response = await fetch(`${import.meta.env.VITE_API_URL}/category/`, {
-                    headers: {
-                        "Authorization": `Token ${auth.token}`,
-                    },
-                });
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch categories");
-                }
-
-                const data = await response.json();
+                const data = await getCategory();
                 setCategories(data);
                 setIsLoading(false);
             } catch (err) {
