@@ -78,7 +78,7 @@ function SignUpForm() {
   };
 
   return (
-    <form className="signup-form" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="username">Username:</label>
         <input
@@ -125,7 +125,7 @@ function SignUpForm() {
           <span className="error">{errors.confirmPassword}</span>
         )}
       </div>
-      <button type="submit" className="signup-button">Sign Up</button>
+      <button type="submit" >Sign Up</button>
       {errors.api && <span className="error">{errors.api}</span>}
     </form>
   );
