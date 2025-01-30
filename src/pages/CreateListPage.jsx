@@ -1,40 +1,30 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import AddCategoryForm from "../components/AddCategoryForm";
+import { useNavigate, useLocation } from "react-router-dom";
 import AddListForm from "../components/AddListForm";
 import "./CreateListPage.css";
 
 function CreateListPage() {
-    const [step, setStep] = useState('category'); // 'category' or 'list'
-    const [createdCategory, setCreatedCategory] = useState(null);
     const navigate = useNavigate();
-
-    const handleCategoryCreated = (category) => {
-        setCreatedCategory(category);
-        setStep('list');
-    };
+    const location = useLocation();
+    const categoryId = location.state?.categoryId;
+    const categoryName = location.state?.categoryName;
 
     const handleListCreated = (list) => {
         console.log("List created:", list);
-        // Redirect to the lists page
         navigate('/lists');
     };
 
+    if (!categoryId) {
+        navigate('/lists');
+        return null;
+    }
+
     return (
         <div className="create-list-page">
-            {step === 'category' ? (
-                <div>
-                    <AddCategoryForm onCategoryCreated={handleCategoryCreated} />
-                </div>
-            ) : (
-                <div>
-                    <h2>Now, Create Your List</h2>
-                    <AddListForm 
-                        categoryId={createdCategory.id} 
-                        onListCreated={handleListCreated}
-                    />
-                </div>
-            )}
+            <AddListForm 
+                categoryId={categoryId} 
+                categoryName={categoryName}
+                onListCreated={handleListCreated} 
+            />
         </div>
     );
 }

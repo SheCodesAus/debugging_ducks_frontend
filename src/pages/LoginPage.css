@@ -155,23 +155,31 @@ p {
 
 .toggle-form-button:hover {
   color: #b08c5e;
+  text-decoration: underline;
 }
 
+<<<<<<< HEAD
 .sign-up-container {
   display: flex; 
   align-items: center; 
   gap: 10px; 
   margin-top: 15px; 
+=======
+/* Display "Don't have an account" and "Sign up here" inline */
+.login-sign-up-container {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Ensure vertical centering */
+  gap: 10px; /* Space between the text and button */
+  margin-top: 15px; /* Adjust space from the form */
+>>>>>>> develop
   justify-content: center;
 }
-
-.sign-up-text {
+#login-container > div.login-sign-up-container > p {
   font-family: Lato, sans-serif;
   color: #d9bd80;
   font-size: 16px;
   margin: 0; 
   line-height: 1;
-  margin-bottom: 17px;
 }
 
 .toggle-form-button {
@@ -185,4 +193,12 @@ p {
   margin: 0;
   padding: 5px 10px;
   line-height: 1;
+}
+
+/* Update button hover styles */
+.login-container button:hover {
+    background-color: #b08c5e;  /* Darker gold */
+    color: #081f43;  /* Keep dark blue text on hover */
+    opacity: 0.9;    /* Slight opacity for hover effect */
+    transition: all 0.3s ease;
 }

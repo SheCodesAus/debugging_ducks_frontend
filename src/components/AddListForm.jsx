@@ -2,19 +2,18 @@ import { useState } from "react";
 import PropTypes from 'prop-types';
 import postList from "../api/post-list";
 
-function AddListForm({ categoryId, onListCreated }) {
-    const [listData, setListData] = useState({
+function AddListForm({ categoryId, categoryName, onListCreated }) {
+    const [formData, setFormData] = useState({
         list_name: "",
         notes: "",
-        category_id: categoryId,
-        individual_budget: 0,
+        individual_budget: null,
     });
     const [errors, setErrors] = useState({});
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setListData({
-            ...listData,
+        setFormData({
+            ...formData,
             [name]: name === 'individual_budget' ? parseFloat(value) || 0 : value,
         });
     };
@@ -22,12 +21,12 @@ function AddListForm({ categoryId, onListCreated }) {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const formData = {
-                ...listData,
-                category_id: categoryId
+            const listData = {
+                ...formData,
+                category_id: categoryId,
             };
             
-            const newList = await postList(formData);
+            const newList = await postList(listData);
             onListCreated(newList);
         } catch (err) {
             console.error("Error creating list:", err);
@@ -36,50 +35,61 @@ function AddListForm({ categoryId, onListCreated }) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="list_name">List Name:</label>
-                <input
-                    type="text"
-                    id="list_name"
-                    name="list_name"
-                    value={listData.list_name}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div>
-                <label htmlFor="notes">Notes:</label>
-                <textarea
-                    id="notes"
-                    name="notes"
-                    value={listData.notes}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="individual_budget">Individual Budget ($):</label>
-                <input
-                    type="number"
-                    id="individual_budget"
-                    name="individual_budget"
-                    value={listData.individual_budget}
-                    onChange={handleChange}
-                    step="0.01"
-                    min="0"
-                    required
-                />
-            </div>
+        <div className="list-form-page">
+            <div className="list-form-container">
+                <h2 className="list-form-heading">
+                    <span className="icon">🎄</span>
+                    New List for {categoryName}
+                    <span className="icon flip-icon">🎄</span>
+                </h2>
+                
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label htmlFor="list_name">List Name:</label>
+                        <input
+                            type="text"
+                            id="list_name"
+                            name="list_name"
+                            value={formData.list_name}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="notes">Notes:</label>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            value={formData.notes}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="individual_budget">Individual Budget ($):</label>
+                        <input
+                            type="number"
+                            id="individual_budget"
+                            name="individual_budget"
+                            value={formData.individual_budget}
+                            onChange={handleChange}
+                            step="0.01"
+                            min="0"
+                            required
+                        />
+                    </div>
 
-            {errors.submit && <p className="error">{errors.submit}</p>}
-            
-            <button type="submit">Create List</button>
-        </form>
+                    {errors.submit && <p className="error">{errors.submit}</p>}
+                    
+                    <button type="submit">Create List</button>
+                </form>
+            </div>
+        </div>
     );
 }
 
 AddListForm.propTypes = {
     categoryId: PropTypes.number.isRequired,
+    categoryName: PropTypes.string.isRequired,
     onListCreated: PropTypes.func.isRequired
 };
 
