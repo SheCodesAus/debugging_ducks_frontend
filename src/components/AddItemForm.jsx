@@ -7,7 +7,6 @@ function AddItemForm({ onSubmit, onCancel, currentRanking }) {
         name: "",
         store: "",
         link: "",
-        image: "",
         ranking: currentRanking,
         cost: "",
         comments: ""
@@ -63,18 +62,6 @@ function AddItemForm({ onSubmit, onCancel, currentRanking }) {
                         id="link"
                         name="link"
                         value={formData.link}
-                        onChange={handleChange}
-                        placeholder="https://..."
-                    />
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="image">Image URL</label>
-                    <input
-                        type="url"
-                        id="image"
-                        name="image"
-                        value={formData.image}
                         onChange={handleChange}
                         placeholder="https://..."
                     />
