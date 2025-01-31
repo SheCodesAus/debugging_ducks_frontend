@@ -172,4 +172,40 @@ div.not-found-card a:hover {
     animation-duration: 13s, 14s, 18s;
     animation-delay: 8s, 13s, 7s;
   }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .not-found-card {
+      padding: 15px 20px;
+      max-width: 90%; /* Allow more space on smaller screens */
+  }
+
+  .not-found-card h1 {
+      font-size: 2rem; /* Slightly smaller font size for mobile */
+  }
+
+  .not-found-card p {
+      font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  div.not-found-card > a {
+      font-size: 1rem; /* Smaller font for the link */
+      padding: 8px 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-card h1 {
+      font-size: 1.5rem; /* Smaller title font size for extra small screens */
+  }
+
+  .not-found-card p {
+      font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  div.not-found-card > a {
+      font-size: 0.9rem; /* Adjust link font size */
+      padding: 6px 15px; /* Reduce padding */
+  }
+}
   

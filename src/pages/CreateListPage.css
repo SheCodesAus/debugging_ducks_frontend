@@ -166,6 +166,21 @@ p {
     color: #b08c5e;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .create-list-container {
+        padding: 30px;
+    }
+
+    .create-list-heading {
+        font-size: 1.5em;
+    }
+
+    .create-list-container .create-list-button {
+        padding: 10px 40px;
+    }
+}
+
 /* Add these styles to your existing CSS */
 .form-section {
     border-bottom: 1px solid #d9bd80;
@@ -295,4 +310,16 @@ button[type="submit"]:hover {
     font-size: 14px;
     margin-top: 10px;
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .list-form-container {
+        padding: 30px;
+    }
+    .list-form-heading {
+        font-size: 1.5em;
+    }
+    button[type="submit"] {
+        padding: 10px 40px;
+    }
 }

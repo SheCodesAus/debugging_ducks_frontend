@@ -283,3 +283,23 @@ p {
     margin-top: 2px;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .list-landing-container {
+        padding: 20px;
+        width: 100%;
+    }
+    .list-landing-heading {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .list-landing-heading {
+        font-size: 1.3em;
+    }
+    .list-landing-container form input, .create-category-button, .create-list-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
