@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import ItemCard from './itemcard';
+import ItemCard from './ItemCard';
 import AddItemForm from './AddItemForm';
 import useItems from '../hooks/use-items';
 
