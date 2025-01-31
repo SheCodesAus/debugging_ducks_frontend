@@ -20,10 +20,6 @@ function ListLandingPage() {
         return <div>Error: {listsError?.message || categoriesError?.message}</div>;
     }
 
-    if (!lists || lists.length === 0) {
-        return <div>No list found.</div>;
-    }
-
     const handleCreateList = (categoryId, categoryName) => {
         navigate('/create-list', { 
             state: { categoryId, categoryName }
@@ -36,7 +32,7 @@ function ListLandingPage() {
     };
 
     const getListsByCategory = (categoryId) => {
-        return lists.filter(list => list.category_id === categoryId);
+        return lists ? lists.filter(list => list.category_id === categoryId) : [];
     };
 
     return (
@@ -53,11 +49,24 @@ function ListLandingPage() {
                                 Create New Category
                             </button>
                         </div>
-                        <CategoryList 
-                            categories={categories}
-                            onCreateList={handleCreateList}
-                            getListsByCategory={getListsByCategory}
-                        />
+                        {categories && categories.length > 0 ? (
+                            <CategoryList 
+                                categories={categories}
+                                onCreateList={handleCreateList}
+                                getListsByCategory={getListsByCategory}
+                            />
+                        ) : (
+                            <div className="empty-categories">
+                                <p>You don&apos;t have any categories yet.</p>
+                                <p>Create your first category to get started!</p>
+                                <button 
+                                    onClick={handleCreateCategory}
+                                    className="create-first-category-button"
+                                >
+                                    Create Your First Category
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </>
             )}

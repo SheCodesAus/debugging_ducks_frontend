@@ -283,8 +283,6 @@ p {
     margin-top: 2px;
 }
 
-<<<<<<< Updated upstream
-=======
 /* List Item Styles */
 .list-item {
     background: none;
@@ -416,4 +414,40 @@ p {
         padding: 8px;
     }
 }
->>>>>>> Stashed changes
+
+.empty-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(217, 189, 128, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.empty-categories p {
+    color: #d9bd80;
+    font-family: Lato, sans-serif;
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.create-first-category-button {
+    background-color: #d9bd80;
+    color: #081f43;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    font-family: Lato, sans-serif;
+}
+
+.create-first-category-button:hover {
+    background-color: #b08c5e;
+    transform: translateY(-2px);
+}
