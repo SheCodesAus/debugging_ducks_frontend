@@ -1,0 +1,129 @@
+.item-component {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(217, 189, 128, 0.1);
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.item-component:hover {
+    background-color: rgba(217, 189, 128, 0.15);
+}
+
+.item-component.purchased {
+    opacity: 0.7;
+}
+
+.item-component.purchased .item-name {
+    text-decoration: line-through;
+}
+
+.item-checkbox {
+    margin-top: 4px;
+}
+
+.item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-name {
+    flex: 1;
+    margin: 0;
+    color: #d9bd80;
+    font-weight: bold;
+}
+
+.item-cost {
+    margin: 0;
+    color: #d9bd80;
+    min-width: 80px;
+}
+
+.item-rank {
+    margin: 0;
+    color: #d9bd80;
+    min-width: 70px;
+}
+
+.item-favorite {
+    background: none;
+    border: none;
+    color: #d9bd80;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.item-favorite:hover {
+    transform: scale(1.1);
+}
+
+.item-favorite.favorite {
+    color: #ff4d4d;
+}
+
+.item-details {
+    font-size: 0.9em;
+    color: #d9bd80;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(217, 189, 128, 0.3);
+}
+
+.item-store, .item-comments {
+    margin: 5px 0;
+}
+
+.item-link {
+    color: #d9bd80;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.item-link:hover {
+    text-decoration: underline;
+}
+
+.item-creator {
+    margin: 0;
+    color: rgba(217, 189, 128, 0.7);
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.item-member {
+    color: #d9bd80;
+    font-size: 0.9em;
+    min-width: 80px;
+}
+
+.add-item-button {
+    background-color: #d9bd80;
+    color: #081f43;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.add-item-button:hover {
+    background-color: #b08c5e;
+    opacity: 0.9;
+} 
