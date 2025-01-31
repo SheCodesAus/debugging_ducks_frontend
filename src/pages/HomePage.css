@@ -79,22 +79,20 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centers the text inside */
+  text-align: center; 
   padding: 50px 20px;
 }
 
-/* About Section Header */
 .about-section h1 {
   padding-top: 25px;
   font-family: "Quattrocento", serif;
   color: #d9bd80;
-  font-size: 2em; /* Same font size as the Features heading */
+  font-size: 2em; 
   display: inline-flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-/* Icon Styling */
 .about-section h1 .icon {
   font-size: 0.6em;
   margin: 0 5px;
@@ -116,9 +114,9 @@ p {
 
 .about-section p {
   font-family: lato, sans-serif;
-  font-size: 1.2em; /* Optional, adjust as necessary */
+  font-size: 1.2em; 
   color: #f8f8f8;
-  max-width: 800px; /* Optional, helps to prevent overly wide text */
+  max-width: 800px; 
   line-height: 1.6;
   letter-spacing: 0.05em;
   margin-left: 350px;

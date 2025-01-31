@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import z from "zod";
 import postSignup from "../api/post-signup";
+import "../pages/SignUpPage.css";
 
 const signupSchema = z
   .object({
