@@ -1,22 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
-import SignUpForm from "../components/SignUpForm";
-import "./SignUpPage.css";
+import LoginForm from "../components/LoginForm"; // assuming you have a LoginForm component
+import "./LoginPage.css";
 
-function SignUpPage() {
-  console.log("SignUpPage rendered");
+function LoginPage() {
+  console.log("LoginPage rendered");
   const navigate = useNavigate();
   const { auth } = useAuth();
 
   if (auth?.token) {
     return (
-      <div className="signup-page">
-        <div className="signup-container">
+      <div className="login-page">
+        <div className="login-container">
           <h2>You are already logged in!</h2>
           <p>
-            Log out if you wish to create a new account. Otherwise, explore the
-            site!
+            Log out if you wish to access a different account. Otherwise,
+            explore the site!
           </p>
           <button onClick={() => navigate("/")}>Go Home</button>
         </div>
@@ -25,21 +25,24 @@ function SignUpPage() {
   }
 
   return (
-    <div id="signup-page" className="signup-page">
-      <div id="signup-container" className="signup-container">
-        <h1 className="signup-heading">
-          <span className="icon">꧁</span> Sign Up{" "}
+    <div id="login-page" className="login-page">
+      <div id="login-container" className="login-container">
+        <h1 className="login-heading">
+          <span className="icon">꧁</span> Login{" "}
           <span className="icon flip-icon">꧁</span>
         </h1>
-        <h2>Sign up to create a new account </h2>
-        <SignUpForm />
-        <div className="sign-up-login-container">
-          <p className="sign-up-login-text">
-            Already have an account?{" "}
-            <button 
-              className="login-button"
-              onClick={() => navigate("/login")}>Login here
-              </button>
+        <h2>Login to your account</h2>
+        <LoginForm /> {/* Replace with your login form */}
+        {/* Sign Up Here Button */}
+        <div className="login-sign-up-container">
+          <p>
+            Don't have an account?{" "}
+            <button
+              className="login-button" // You can apply the same class as in other buttons
+              onClick={() => navigate("/signup")}
+            >
+              Sign Up Here
+            </button>
           </p>
         </div>
       </div>
@@ -47,4 +50,4 @@ function SignUpPage() {
   );
 }
 
-export default SignUpPage;
+export default LoginPage;

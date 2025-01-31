@@ -71,7 +71,7 @@ p {
 #signup-container p {
   font-family: Lato, sans-serif;
   color: #f8f8f8;
-  margin-top: 15px;
+  margin-top: 11px;
   margin-bottom: 15px;
 }
 
@@ -232,7 +232,7 @@ p {
   text-decoration: underline;
 }
 
-#signup-container > div.login-sign-up-container > button {
+.signup-button {
   background: none;
   border: none;
   color: #d9bd80;
@@ -240,17 +240,10 @@ p {
   font-size: 16px;
   cursor: pointer;
   transition: color 0.3s ease;
+  text-decoration: underline;
 }
 
-/* Update button hover styles */
-.signup-container button:hover {
-  background-color: #b08c5e; /* Darker gold */
-  color: #081f43; /* Keep dark blue text on hover */
-  opacity: 0.9; /* Slight opacity for hover effect */
-  transition: all 0.3s ease;
-}
-
-.toggle-form-button:hover {
-  color: #b08c5e; /* Darker gold for text button */
+.signup-button:hover {
+  color: #b08c5e; /* Darker gold on hover */
   text-decoration: underline;
 }
