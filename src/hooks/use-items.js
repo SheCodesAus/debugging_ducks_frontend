@@ -1,74 +1,112 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "./use-auth";
 import getItems from "../api/get-items";
-import postItem from "../api/post-item";
 import putItem from "../api/put-item";
 
 function useItems(listId) {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    const { auth } = useAuth();
+    const authContext = useAuth();
 
     useEffect(() => {
-        const fetchItems = async () => {
-            if (!auth.token || !listId) {
-                setItems([]);
-                setIsLoading(false);
-                return;
-            }
+        if (!listId) return;
 
+        const fetchItems = async () => {
             try {
+                setIsLoading(true);
                 const data = await getItems(listId);
-                setItems(data);
-                setIsLoading(false);
+                console.log('Items received from API:', data);
+                // Add a temporary filter to see if items are actually archived
+                const activeItems = data.filter(item => {
+                    if (item.archived_at) {
+                        console.log('Found archived item:', item);
+                        return false;
+                    }
+                    return true;
+                });
+                setItems(activeItems);
+                setError(null);
             } catch (err) {
                 setError(err);
+                console.error('Error fetching items:', err);
+            } finally {
                 setIsLoading(false);
             }
         };
 
         fetchItems();
-    }, [auth.token, listId]);
+    }, [listId]);
 
     const addItem = async (itemData) => {
-        try {
-            const newItem = await postItem({ ...itemData, list_id: listId });
-            setItems(prevItems => [...prevItems, newItem]);
-            return newItem;
-        } catch (err) {
-            setError(err);
-            throw err;
-        }
-    };
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/items/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Token ${authContext.auth.token}`,
+            },
+            body: JSON.stringify({ ...itemData, list_id: listId }),
+        });
 
-    const updateItem = async (itemId, itemData) => {
-        try {
-            const updatedItem = await putItem(itemId, itemData);
-            setItems(prevItems =>
-                prevItems.map(item =>
-                    item.id === itemId ? updatedItem : item
-                )
-            );
-            return updatedItem;
-        } catch (err) {
-            setError(err);
-            throw err;
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(JSON.stringify(errorData));
         }
+
+        const newItem = await response.json();
+        setItems(prevItems => [...prevItems, newItem]);
+        return newItem;
     };
 
     const toggleFavorite = async (itemId) => {
         const item = items.find(i => i.id === itemId);
-        if (item) {
-            await updateItem(itemId, { favourite: !item.favourite });
-        }
+        if (!item) return;
+
+        const updatedItem = await putItem(itemId, {
+            ...item,
+            favourite: !item.favourite
+        });
+        setItems(prevItems =>
+            prevItems.map(i => i.id === itemId ? updatedItem : i)
+        );
     };
 
     const togglePurchased = async (itemId) => {
         const item = items.find(i => i.id === itemId);
-        if (item) {
-            await updateItem(itemId, { purchased: !item.purchased });
+        if (!item) return;
+
+        const updatedItem = await putItem(itemId, {
+            ...item,
+            purchased: !item.purchased
+        });
+        setItems(prevItems =>
+            prevItems.map(i => i.id === itemId ? updatedItem : i)
+        );
+    };
+
+    const toggleArchived = async (itemId) => {
+        console.log('Current auth state:', authContext);
+        const userData = authContext.auth?.user;
+        console.log('User data:', userData);
+
+        if (!userData || !userData.id) {
+            console.log('Missing user data:', { authContext });
+            throw new Error('User must be logged in to archive items');
         }
+
+        const item = items.find(i => i.id === itemId);
+        if (!item || item.archived_at) return; // Don't allow unarchiving
+
+        await putItem(itemId, {
+            ...item,
+            archived_at: new Date().toISOString(),
+            archived_by: userData.id
+        });
+
+        // Remove the archived item from the list
+        setItems(prevItems =>
+            prevItems.filter(i => i.id !== itemId)
+        );
     };
 
     return {
@@ -76,9 +114,9 @@ function useItems(listId) {
         isLoading,
         error,
         addItem,
-        updateItem,
         toggleFavorite,
-        togglePurchased
+        togglePurchased,
+        toggleArchived
     };
 }
 

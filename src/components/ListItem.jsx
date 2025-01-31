@@ -13,7 +13,8 @@ function ListItem({ list }) {
         error, 
         addItem, 
         toggleFavorite,
-        togglePurchased 
+        togglePurchased,
+        toggleArchived 
     } = useItems(list.id);
 
     const handleToggleFavorite = async (itemId) => {
@@ -21,6 +22,7 @@ function ListItem({ list }) {
             await toggleFavorite(itemId);
         } catch (err) {
             console.error("Error toggling favorite:", err);
+            alert("Failed to update favorite status. Please try again.");
         }
     };
 
@@ -29,6 +31,20 @@ function ListItem({ list }) {
             await togglePurchased(itemId);
         } catch (err) {
             console.error("Error toggling purchased:", err);
+            alert("Failed to update purchased status. Please try again.");
+        }
+    };
+
+    const handleToggleArchived = async (itemId) => {
+        try {
+            await toggleArchived(itemId);
+        } catch (err) {
+            console.error("Error archiving item:", err);
+            if (err.message === 'User must be logged in to archive items') {
+                alert("You must be logged in to archive items.");
+            } else {
+                alert("Failed to archive item. Please try again.");
+            }
         }
     };
 
@@ -38,6 +54,7 @@ function ListItem({ list }) {
             setShowAddForm(false);
         } catch (err) {
             console.error("Error adding item:", err);
+            alert("Failed to add item. Please try again.");
         }
     };
 
@@ -65,11 +82,13 @@ function ListItem({ list }) {
                             rank={item.ranking}
                             isFavorite={item.favourite}
                             isPurchased={item.purchased}
+                            isArchived={!!item.archived_at}
                             store={item.store}
                             link={item.link}
                             comments={item.comments}
                             onToggleFavorite={() => handleToggleFavorite(item.id)}
                             onTogglePurchased={() => handleTogglePurchased(item.id)}
+                            onDelete={() => handleToggleArchived(item.id)}
                         />
                     ))}
                     

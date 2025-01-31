@@ -1,7 +1,7 @@
 async function getItems(listId = null) {
     const url = listId
-        ? `${import.meta.env.VITE_API_URL}/items/?list_id=${listId}`
-        : `${import.meta.env.VITE_API_URL}/items/`;
+        ? `${import.meta.env.VITE_API_URL}/items/?list_id=${listId}&archived=false`
+        : `${import.meta.env.VITE_API_URL}/items/?archived=false`;
     const token = window.localStorage.getItem("token");
 
     try {
