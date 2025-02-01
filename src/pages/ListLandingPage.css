@@ -27,9 +27,9 @@ h3 {
   width: 90%;
   max-width: 600px;
   padding: 40px 50px 40px 40px;
-  background-color: #081f43;
+  background-color: #00173a;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
   text-align: center;
   margin-top: 0px;
 }
@@ -107,22 +107,19 @@ h3 {
 }
 
 .list-landing-container .create-list-button {
-  background-color: #d9bd80;
-  color: #081f43;
-  padding: 10px 60px;
+  background: none;
   border: none;
-  border-radius: 5px;
+  color: #d9bd80;
+  font-family: "Quattrocento", serif;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  width: auto;
-  display: block;
-  margin-left: 0 !important; /* Override previous styles */
+  transition: color 0.3s ease;
+  margin: 20px 0px 10px 0px;
 }
 
 .list-landing-container .create-list-button:hover {
-  background-color: #b08c5e;
+  color: #b08c5e;
+  text-decoration: underline;
 }
 
 .error {
@@ -153,6 +150,8 @@ h3 {
 .flourish-design {
   width: 4rem;
   height: 1.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .categories-header {
@@ -178,7 +177,6 @@ h3 {
   font-size: 16px;
   transition: all 0.3s ease;
   width: fit-content;
-  margin-left: 20px;
   align-self: flex-start;
 }
 
@@ -197,12 +195,14 @@ h3 {
 }
 
 .category-card {
-  background: none;
+  background: #081f43;
   border: none;
-  padding: 0;
+  padding-bottom: 20px;
+  margin: 20px;
   position: relative;
   align-items: center;
   text-align: center;
+  border-radius: 8px;
 }
 
 .category-card::before {
@@ -230,12 +230,10 @@ h3 {
 }
 
 .category-lists {
-  margin-top: 10px;
-  margin-left: 20px;
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .list-item {
@@ -250,6 +248,7 @@ h3 {
 }
 
 .list-item h4 {
+  font-family: "Lato", sans-serif;
   color: #f8f8f8;
   font-size: 1em;
   margin-bottom: 4px;
@@ -285,9 +284,11 @@ h3 {
 
 .list-header h4 {
   color: #f8f8f8;
+  font-family: "Quattrocento", sans-serif;
   font-size: 1em;
   margin: 0;
-  flex-grow: 1;
+  text-align: center;
+  /* flex-grow: 1; */
 }
 
 .expand-icon {

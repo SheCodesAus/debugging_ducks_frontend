@@ -1,325 +1,303 @@
-/* Global Styles */
 body {
-    font-family: "Lato", sans-serif;
-    background-color: #00173a;
-    color: #f8f8f8;
-    /* Light text for better contrast */
-    margin: 0;
-    padding: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #00173a;
+  color: #f8f8f8;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
 p {
-    margin: 0;
+  margin: 0;
 }
 
-/* Create List Page Container */
 .create-list-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #00173a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #00173a;
 }
 
-/* Create List Container */
 .create-list-container {
-    width: 90%;
-    max-width: 300px;
-    padding: 40px 50px 40px 40px;
-    background-color: #081f43;
-    /* Dark background for the form */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin-top: -30px;
-    /* Move the form up by roughly 1cm */
+  width: 90%;
+  max-width: 300px;
+  padding: 40px 50px 40px 40px;
+  background-color: yellow;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 0px;
 }
 
-/* Title and Text */
 .create-list-container h1,
 .create-list-container h2 {
-    font-family: "Quattrocento", serif;
-    margin-bottom: 20px;
-    color: #d9bd80;
+  font-family: "Quattrocento", serif;
+  margin-bottom: 20px;
+  color: #d9bd80;
 }
 
 .create-list-heading {
-    margin: 0;
-    font-size: 2em;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 20px;
-    font-family: "Quattrocento", serif;
-    color: #d9bd80;
-    /* Golden color */
+  margin: 0;
+  font-size: 2em;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Quattrocento", serif;
+  color: #d9bd80;
 }
 
 .create-list-heading .icon {
-    font-size: 0.6em;
-    margin: 0 5px;
+  font-size: 0.6em;
+  margin: 0 5px;
 }
 
 .create-list-heading .flip-icon {
-    transform: scaleX(-1);
-    /* Flip the icon */
-    display: inline-block;
-    margin-left: 10px;
+  transform: scaleX(-1);
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .create-list-heading .icon:first-child {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .create-list-heading .icon,
 .create-list-heading .flip-icon {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .create-list-container p {
-    font-family: "Lato", sans-serif;
-    color: #f8f8f8;
-    /* Light color for normal text */
-    margin-top: 15px;
+  font-family: "Lato", sans-serif;
+  color: #f8f8f8;
+  margin-top: 15px;
 }
 
 .create-list-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: left;
-    align-items: flex-start;
-    /* Keep form fields left-aligned */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  align-items: flex-start;
 }
 
-/* Label Style */
 .create-list-container form label {
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    color: #d9bd80;
-    /* Changed label color to #d9bd80 */
-    margin-bottom: 5px;
-    /* Space between label and input */
-    display: inline-block;
-    /* Ensures label is on its own line */
-    width: auto;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #d9bd80;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: auto;
 }
 
-/* Input Style */
 .create-list-container form input {
-    padding: 0 5px;
-    /* Adjust padding to ensure total height is 40px */
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #d9bd80;
-    /* Golden border */
-    background-color: #d9bd80;
-    width: 100%;
-    /* Ensure inputs are full-width */
-    margin-bottom: 10px;
-    /* Space between inputs */
-    height: 40px;
-    /* Set the height to 40px */
+  padding: 0 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-/* Buttons */
 .create-list-container .create-list-button {
-    background-color: #d9bd80;
-    color: #081f43;
-    padding: 10px 60px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: #d9bd80;
+  color: #081f43;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .create-list-container .create-list-button:hover {
-    background-color: #b08c5e;
+  background-color: #b08c5e;
 }
 
-/* Error Message */
 .error {
-    color: #ff4d4d;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
 }
 
-/* Toggle Form Button */
 .toggle-form-button {
-    background: none;
-    border: none;
-    color: #d9bd80;
-    font-family: "Quattrocento", serif;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  background: none;
+  border: none;
+  color: #d9bd80;
+  font-family: "Quattrocento", serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .toggle-form-button:hover {
-    color: #b08c5e;
+  color: #b08c5e;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 600px) {
-    .create-list-container {
-        padding: 30px;
-    }
+  .create-list-container {
+    padding: 30px;
+  }
 
-    .create-list-heading {
-        font-size: 1.5em;
-    }
+  .create-list-heading {
+    font-size: 1.5em;
+  }
 
-    .create-list-container .create-list-button {
-        padding: 10px 40px;
-    }
+  .create-list-container .create-list-button {
+    padding: 10px 40px;
+  }
 }
 
-/* Add these styles to your existing CSS */
 .form-section {
-    border-bottom: 1px solid #d9bd80;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    width: 100%;
+  border-bottom: 1px solid #d9bd80;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .form-section:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .form-section h3 {
-    color: #d9bd80;
-    font-family: "Quattrocento", serif;
-    font-size: 1.2em;
-    margin-bottom: 15px;
+  color: #d9bd80;
+  font-family: "Quattrocento", serif;
+  font-size: 1.2em;
+  margin-bottom: 15px;
 }
 
 .create-list-container textarea {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #d9bd80;
-    background-color: #d9bd80;
-    width: 100%;
-    min-height: 80px;
-    resize: vertical;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #d9bd80;
+  background-color: #d9bd80;
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
 }
 
-/* Global Styles */
 .list-form-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #00173a;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #00173a;
+  padding: 20px;
 }
 
 .list-form-container {
-    width: 90%;
-    max-width: 400px;
-    padding: 40px;
-    background-color: #081f43;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #081f43;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .list-form-heading {
-    margin: 0 0 30px;
-    font-size: 2em;
-    text-align: center;
-    font-family: "Quattrocento", serif;
-    color: #d9bd80;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  margin: 0 0 30px;
+  font-size: 2em;
+  text-align: center;
+  font-family: "Quattrocento", serif;
+  color: #d9bd80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .icon {
-    font-size: 0.6em;
+  font-size: 0.6em;
 }
 
 .flip-icon {
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .form-section {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .form-section h3 {
-    color: #d9bd80;
-    font-family: "Quattrocento", serif;
-    font-size: 1.2em;
-    margin-bottom: 15px;
+  color: #d9bd80;
+  font-family: "Quattrocento", serif;
+  font-size: 1.2em;
+  margin-bottom: 15px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #d9bd80;
-    font-family: "Lato", sans-serif;
+  display: block;
+  margin-bottom: 5px;
+  color: #d9bd80;
+  font-family: "Lato", sans-serif;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #d9bd80;
-    background-color: #d9bd80;
-    color: #081f43;
+  padding: 0 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 40px;
+  color: #081f43;
 }
 
 .form-group textarea {
-    min-height: 80px;
-    resize: vertical;
+  min-height: 80px;
+  resize: vertical;
 }
 
 button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #d9bd80;
-    color: #081f43;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+  background-color: #d9bd80;
+  color: #081f43;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 26px;
+  margin-bottom: 4px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button[type="submit"]:hover {
-    background-color: #b08c5e;
+  background-color: #b08c5e;
 }
 
 .error {
-    color: #ff4d4d;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
-    .list-form-container {
-        padding: 30px;
-    }
-    .list-form-heading {
-        font-size: 1.5em;
-    }
-    button[type="submit"] {
-        padding: 10px 40px;
-    }
+  .list-form-container {
+    padding: 30px;
+  }
+  .list-form-heading {
+    font-size: 1.5em;
+  }
+  button[type="submit"] {
+    padding: 10px 40px;
+  }
 }
