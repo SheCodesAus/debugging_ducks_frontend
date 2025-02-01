@@ -17,6 +17,10 @@
   height: auto;
 }
 
+.navbar > a:hover {
+  background-color: transparent;
+}
+
 .navbar .links {
   display: flex;
   gap: 80px;
