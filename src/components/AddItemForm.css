@@ -1,0 +1,111 @@
+.add-item-form-container {
+    background-color: rgba(8, 31, 67, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #d9bd80;
+}
+
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-item-form h3 {
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    color: #d9bd80;
+    font-family: Lato, sans-serif;
+    font-size: 0.9em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #d9bd80;
+    background-color: #d9bd80;
+    color: #081f43;
+    font-family: Lato, sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b08c5e;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.submit-button,
+.cancel-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Lato, sans-serif;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.submit-button {
+    background-color: #d9bd80;
+    color: #081f43;
+}
+
+.submit-button:hover {
+    background-color: #b08c5e;
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: #d9bd80;
+    border: 1px solid #d9bd80;
+}
+
+.cancel-button:hover {
+    background-color: rgba(217, 189, 128, 0.1);
+}
+
+/* Error styles */
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #ff4d4d;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.8em;
+    margin-top: 2px;
+} 
