@@ -1,0 +1,97 @@
+/* --- BASE FONTS --- */
+
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento&family=Lato:wght@400;700&display=swap");
+
+:root {
+  --heading-font: Quattrocento;
+  --body-font: Lato;
+}
+
+/* --- BASE COLOURS --- */
+
+:root {
+  --white: #f8f8f8;
+  --navy: #00173a;
+  --lightnavy: #081f43;
+  --gold: #d9bd80;
+  --darkgold: #b08c5e;
+}
+
+/* --- CSS RESET --- */
+
+html {
+  font-family: var(--body-font), sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  background-color: var(--navy);
+  color: var(--white);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font), serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5 rem;
+}
+h2 {
+  font-size: 1.9 rem;
+}
+h3 {
+  font-size: 1.5 rem;
+}
+h4 {
+  font-size: 1.2 rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--darkgold);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
