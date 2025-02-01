@@ -21,14 +21,15 @@ function NotFoundPage() {
       {/* Card Container */}
       <div className="not-found-card">
         <h1>
-          <span className="icon">꧁</span>404 - Page Not Found{" "}
+          <span className="icon">꧁</span>404 - Page Not on The Good List!{" "}
           <span className="icon flip-icon">꧁</span>
         </h1>
         <p>
           {" "}
-          Oh no! It looks like this page didn’t make it onto The Good List.
-          Don’t worry, you can find your way back to the homepage using the link
-          below.
+          Looks like this page is on Santa's naughty list and disappeared into
+          thin air! Don't worry, we'll get you back on track! You can return to
+          your shopping list or head back home to continue your festive
+          adventure.
         </p>
         <Link to="/">Return to Homepage</Link>
       </div>
