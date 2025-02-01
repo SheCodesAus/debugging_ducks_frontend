@@ -53,11 +53,11 @@ function HomePage() {
     return "View Lists";
   };
 
-  const handleCreateList = () => {
+  const handleCallToAction = () => {
     if (auth.token) {
       navigate("/lists");
     } else {
-      navigate("/login");
+      navigate("/signup");
     }
   };
 
@@ -81,6 +81,7 @@ function HomePage() {
         <div className="banner-content">
           <h1>The Good List</h1>
           <p>Welcome to your Christmas shopping companion</p>
+          <button onClick={handleCallToAction}>Start Now</button>
         </div>
       </div>
 
@@ -115,16 +116,6 @@ function HomePage() {
             <img src={FeaturesImage} alt="Feature 3" />
             <p>Accompanying Text Here</p>
           </div>
-        </div>
-      </div>
-
-      {/* --- CALL TO ACTION --- */}
-      <div className="create list">
-        <div id="create-list">
-          <p>Ready to get started?</p>
-          <button onClick={handleCreateList} className="create-list-button">
-            {getButtonText()}
-          </button>
         </div>
       </div>
 

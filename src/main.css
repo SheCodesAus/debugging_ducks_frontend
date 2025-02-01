@@ -95,3 +95,23 @@ textarea,
 select {
   font: inherit;
 }
+
+/* Custom Button Styling */
+
+button {
+  font-family: var(--heading-font);
+  text-align: center;
+  background-color: var(--gold);
+  color: var(--lightnavy);
+  width: auto;
+  padding: 10px 60px;
+  margin: 15px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--darkgold);
+}
