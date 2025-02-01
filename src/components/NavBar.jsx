@@ -13,29 +13,28 @@ function NavBar() {
     setAuth({ token: null, user: null });
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    navigate("/");  // Redirect to home page after logout
+    navigate("/"); // Redirect to home page after logout
   };
 
   return (
     <>
       <nav className="navbar">
-        {/* Logo Image */}
-        <img src={Image} alt="Logo" className="logo-image" />
+        {/* Logo Image wrapped with Link */}
+        <Link to="/" className="logo-link">
+          <img src={Image} alt="Logo" className="logo-image" />
+        </Link>
 
         {/* Links container */}
         <div className="links">
           <Link to="/">Home</Link>
           {auth.token && auth.user ? (
             <Link to="#" onClick={handleLogout}>
-            Logout
-          </Link>
+              Logout
+            </Link>
           ) : (
             <Link to="/login">Login</Link>
           )}
-        
         </div>
-
-
       </nav>
 
       {/* This Outlet will render the HomePage, or any other nested routes */}

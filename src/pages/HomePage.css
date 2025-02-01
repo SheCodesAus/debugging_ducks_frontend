@@ -30,13 +30,13 @@ p {
 
 .navbar a {
   text-decoration: none;
-  color: #f8f8f8;
+  color: #d9bd80;
   font-family: "Quattrocento", serif;
   font-size: 18px;
 }
 
 .navbar a:hover {
-  color: #d9bd80;
+  color: #b08c5e;
 }
 
 .banner {
@@ -79,7 +79,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
   padding: 50px 20px;
 }
 
@@ -87,7 +87,7 @@ p {
   padding-top: 25px;
   font-family: "Quattrocento", serif;
   color: #d9bd80;
-  font-size: 2em; 
+  font-size: 2em;
   display: inline-flex;
   align-items: center;
   margin-bottom: 20px;
@@ -114,9 +114,9 @@ p {
 
 .about-section p {
   font-family: lato, sans-serif;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   color: #f8f8f8;
-  max-width: 800px; 
+  max-width: 800px;
   line-height: 1.6;
   letter-spacing: 0.05em;
   margin-left: 350px;
@@ -334,18 +334,39 @@ textarea {
   background-color: #b08c5e;
 }
 
+@media (max-width: 1024px) {
+  .navbar .links {
+    gap: 30px;
+  }
+  .banner-content {
+    font-size: 18px;
+  }
+  .List-img .item-img {
+    flex-basis: calc(100% - 20px);
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .banner-content {
+    font-size: 16px;
+  }
   .feedback-form {
-    width: 100%;
     padding: 20px;
   }
+}
 
-  .feedback-form .logo-image {
-    width: 120px;
-  }
-
-  .feedback-form h1 {
-    font-size: 20px;
+@media (max-width: 480px) {
+  .banner-content {
+    font-size: 14px;
   }
 }
 

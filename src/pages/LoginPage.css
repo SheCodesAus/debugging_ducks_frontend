@@ -70,7 +70,7 @@ p {
 .login-container p {
   font-family: Lato, sans-serif;
   color: #f8f8f8;
-  margin-top: 15px;
+  margin-top: 140px;
 }
 
 .login-container form {
@@ -195,3 +195,22 @@ p {
   opacity: 0.9; /* Slight opacity for hover effect */
   transition: all 0.3s ease;
 }
+
+@media (max-width: 480px) {
+    .login-container {
+      padding: 30px;
+      max-width: 90%;
+    }
+  
+    .login-form .login-button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-page {
+      height: auto;
+      padding: 40px 20px;
+    }
+  }
