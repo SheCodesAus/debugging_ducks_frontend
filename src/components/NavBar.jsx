@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import { Link, useNavigate } from "react-router-dom";
 import Image from "../img/Logo.svg";
+import "./NavBar.css";
 
 function NavBar() {
   const { auth, setAuth } = useAuth();
@@ -20,8 +21,8 @@ function NavBar() {
     <>
       <nav className="navbar">
         {/* Logo Image wrapped with Link */}
-        <Link to="/" className="logo-link">
-          <img src={Image} alt="Logo" className="logo-image" />
+        <Link to="/">
+          <img src={Image} alt="The Good List logo" className="logo-image" />
         </Link>
 
         {/* Links container */}

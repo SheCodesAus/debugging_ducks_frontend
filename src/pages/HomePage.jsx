@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import { useAuth } from "../hooks/use-auth.js";
 import useLists from "../hooks/use-lists";
-import BannerImage from "../img/Banner-img.jpg";
 import LogoImage from "../img/Logo.svg";
 import FeaturesImage from "../img/features-stand-in.webp";
 import z from "zod";
@@ -121,7 +120,7 @@ function HomePage() {
 
       {/* --- CONTACT FORM --- */}
       <div className="feedback-form">
-        <img src={LogoImage} alt="logo" className="logo-image" />
+        <img src={LogoImage} alt="The Good List logo" className="logo-image" />
         <h1>Contact Form</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
