@@ -9,6 +9,7 @@ import SignUpPage from "./pages/SignUpPage";
 import ListLandingPage from "./pages/ListLandingPage";
 import CreateListPage from "./pages/CreateListPage";
 import CreateCategoryPage from "./pages/CreateCategoryPage";
+import ListDetailsPage from "./pages/ListDetailsPage";
 
 // Import components (navbar, etc.)
 import NavBar from "./components/NavBar";
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "/signup", element: <SignUpPage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/lists", element: <ListLandingPage /> },
+      { path: "/list/:id", element: <ListDetailsPage /> },
       { path: "/create-list", element: <CreateListPage /> },
       { path: "/create-category", element: <CreateCategoryPage /> },
       { path: "*", element: <NotFoundPage /> },

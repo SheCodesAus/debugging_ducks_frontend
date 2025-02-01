@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import CategoryCard from './CategoryCard';
 
-function CategoryList({ categories, onCreateList, getListsByCategory }) {
+function CategoryList({ categories, onCreateList, getListsByCategory, onListClick }) {
     return (
         <div className="categories-grid">
             {categories.map((category) => (
@@ -10,6 +10,7 @@ function CategoryList({ categories, onCreateList, getListsByCategory }) {
                     category={category}
                     lists={getListsByCategory(category.id)}
                     onCreateList={onCreateList}
+                    onListClick={onListClick}
                 />
             ))}
         </div>
@@ -19,7 +20,8 @@ function CategoryList({ categories, onCreateList, getListsByCategory }) {
 CategoryList.propTypes = {
     categories: PropTypes.array.isRequired,
     onCreateList: PropTypes.func.isRequired,
-    getListsByCategory: PropTypes.func.isRequired
+    getListsByCategory: PropTypes.func.isRequired,
+    onListClick: PropTypes.func.isRequired
 };
 
 export default CategoryList; 
