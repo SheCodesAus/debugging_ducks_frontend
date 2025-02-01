@@ -40,41 +40,41 @@ function ListLandingPage() {
     };
 
     return (
-        <div className="list-landing-container">
+        <div className="list-landing-page">
+            <div className="list-landing-container">
             {auth.token && (
-                <div className="categories-section">
-                    <div className="categories-header">
-                        <h2>Your Categories</h2>
+                <>
+                    <div className="categories-section">
                         <button 
                             onClick={handleCreateCategory}
                             className="create-category-button"
                         >
                             Create New Category
                         </button>
+                        {categories && categories.length > 0 ? (
+                            <CategoryList 
+                                categories={categories}
+                                onCreateList={handleCreateList}
+                                getListsByCategory={getListsByCategory}
+                                onListClick={handleListClick}
+                            />
+                        ) : (
+                            <div className="empty-categories">
+                                <p>You don&apos;t have any categories yet.</p>
+                                <p>Create your first category to get started!</p>
+                                <button 
+                                    onClick={handleCreateCategory}
+                                    className="create-first-category-button"
+                                >
+                                    Create Your First Category
+                                </button>
+                            </div>
+                        )}
                     </div>
-                    {categories && categories.length > 0 ? (
-                        <CategoryList 
-                            categories={categories}
-                            onCreateList={handleCreateList}
-                            getListsByCategory={getListsByCategory}
-                            onListClick={handleListClick}
-                        />
-                    ) : (
-                        <div className="empty-categories">
-                            <p>You don&apos;t have any categories yet.</p>
-                            <p>Create your first category to get started!</p>
-                            <button 
-                                onClick={handleCreateCategory}
-                                className="create-first-category-button"
-                            >
-                                Create Your First Category
-                            </button>
-                        </div>
-                    )}
-                </div>
+                </>
             )}
         </div>
-    );
+    </div>);
 }
 
 export default ListLandingPage;

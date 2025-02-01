@@ -55,9 +55,9 @@ function HomePage() {
 
   const handleCreateList = () => {
     if (auth.token) {
-      navigate('/lists');
+      navigate("/lists");
     } else {
-      navigate('/login');
+      navigate("/login");
     }
   };
 
