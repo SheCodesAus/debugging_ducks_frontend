@@ -1,0 +1,32 @@
+/* --- NAV BAR ON DESKTOP --- */
+
+.navbar {
+  background-color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 120px;
+  border-bottom: 2px solid var(--gold);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-image {
+  width: 150px;
+  height: auto;
+}
+
+.navbar > a:hover {
+  background-color: transparent;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 80px;
+}
+
+.navbar a {
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+}

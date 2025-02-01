@@ -1,33 +1,18 @@
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #00173a;
-  color: #f8f8f8;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-p {
-  margin: 0;
-}
-
-#signup-page {
+.signup-page {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #00173a;
-  padding-top: 110px;
+  height: auto;
 }
 
-#signup-container {
-  width: 90%;
-  max-width: 300px;
-  padding: 40px 50px 40px 40px;
-  background-color: #081f43;
+.signup-container {
+  max-width: 400px;
+  padding: 40px;
+  margin: 40px;
+  background-color: var(--lightnavy);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+
   margin-top: 0px;
 }
 
@@ -152,23 +137,16 @@ p {
   width: 100%;
   margin-bottom: 10px;
   height: 40px;
+
 }
 
-#signup-container > form > button {
-  background-color: #d9bd80;
-  color: #081f43;
-  padding: 10px 60px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+.login-text-container {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Ensure vertical centering */
+  gap: 10px; /* Space between the text and button */
+  margin-top: 15px; /* Adjust space from the form */
+  justify-content: center;
 
 #signup-container > div.signup-form > form > button {
   background-color: #d9bd80;

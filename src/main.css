@@ -1,0 +1,159 @@
+/* --- BASE FONTS --- */
+
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento&family=Lato:wght@400;700&display=swap");
+
+:root {
+  --heading-font: Quattrocento;
+  --body-font: Lato;
+}
+
+/* --- BASE COLOURS --- */
+
+:root {
+  --white: #f8f8f8;
+  --navy: #00173a;
+  --lightnavy: #081f43;
+  --gold: #d9bd80;
+  --darkgold: #b08c5e;
+}
+
+/* --- CSS RESET --- */
+
+html {
+  font-family: var(--body-font), sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  background-color: var(--navy);
+  color: var(--white);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font), serif;
+  color: var(--gold);
+  display: inline-flex;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.9rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* --- CUSTOM GLOBAL STYLING --- */
+
+/* Links */
+a {
+  color: var(--gold);
+  text-decoration: none;
+  padding: 0px 5px;
+}
+a:hover {
+  background-color: var(--gold);
+  color: var(--lightnavy);
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  font-family: var(--heading-font);
+  text-align: center;
+  background-color: var(--gold);
+  color: var(--lightnavy);
+  width: auto;
+  padding: 10px 60px;
+  margin: 15px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--darkgold);
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+form label {
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+form input {
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Flourishes */
+.header-flourish {
+  margin: 0px 10px;
+  font-size: 0.6em;
+}
+.flip-flourish {
+  transform: scaleX(-1);
+}
+
+/* Errors */
+.error {
+  color: #ff4d4d;
+  text-align: center;
+}
