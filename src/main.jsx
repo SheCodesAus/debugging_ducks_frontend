@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./main.css";
 
 // Import pages (components for different views)
 import HomePage from "./pages/HomePage";
