@@ -96,9 +96,9 @@ p {
   border-radius: 5px;
   border: 1px solid #f8f8f8;
   background-color: #f8f8f8;
+  height: 40px;
   width: 100%;
   margin-bottom: 15px;
-  height: 40px;
 }
 
 .login-container .password-group {
