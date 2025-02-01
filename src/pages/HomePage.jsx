@@ -66,14 +66,14 @@ function HomePage() {
       <div>
         {/* Snowflakes Section */}
         <div className="snowflakes" aria-hidden="true">
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-          <div className="snowflake">❄</div>
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
+          <div className="snowflake left">❅</div>
+          <div className="snowflake right">❆</div>
+          <div className="snowflake left">❄</div>
+          <div className="snowflake right">❅</div>
+          <div className="snowflake left">❆</div>
+          <div className="snowflake right">❄</div>
+          <div className="snowflake left">❅</div>
+          <div className="snowflake right">❆</div>
         </div>
 
         <div className="banner">
