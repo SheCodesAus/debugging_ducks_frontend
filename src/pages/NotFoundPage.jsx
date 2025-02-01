@@ -1,7 +1,7 @@
 // src/pages/NotFoundPage.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NotFoundPage.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NotFoundPage.css";
 
 function NotFoundPage() {
   return (
@@ -17,14 +17,21 @@ function NotFoundPage() {
         <div className="snowflake">❅</div>
         <div className="snowflake">❆</div>
       </div>
-      
+
       {/* Card Container */}
       <div className="not-found-card">
-        <h1>❄️ 404 - Page Not Found ❄️</h1>
-        <p> Oh no! It looks like this page didn’t make it onto The Good List. 
-            Don’t worry, you can find your way back to the homepage using the link below.
+        <h1>
+          <span className="icon">꧁</span>404 - Page Not on The Good List!{" "}
+          <span className="icon flip-icon">꧁</span>
+        </h1>
+        <p>
+          {" "}
+          Looks like this page is on Santa's naughty list and disappeared into
+          thin air! Don't worry, we'll get you back on track! You can return to
+          your shopping list or head back home to continue your festive
+          adventure.
         </p>
-        <Link to="/">Go back to Homepage</Link>
+        <Link to="/">Return to Homepage</Link>
       </div>
     </div>
   );
