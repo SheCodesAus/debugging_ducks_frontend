@@ -1,270 +1,365 @@
-# Your Product Name
-> Your Group Name
-
-> [!NOTE]
-> This repo has been shared with your group. Use it to develop your group project.
->
-> Your group will have received two identical repos - one for your project's back-end, and another for the front-end. Although they are identical right now they are about to diverge, because you'll be using one to create a DRF project and the other to create a React project!
-
-> [!IMPORTANT]  
-> Use this `README.md` file to document your MVP using Markdown. Feel free to duplicate the product description aspects between the front-end README and the back-end README, but consider splitting out the technical design aspects to the specific repo that implements them. 
->
-> An example MVP spec (containing both front- and back-end descriptions) is set out below - you should replace it with your own content! (Remember to delete any "admonition" blocks like this `IMPORTANT` section, the `CAUTION` and `NOTE` sections, etc.)
-
-> [!CAUTION]  
-> In order to set up your project, **one** member of the group should clone this repo down, initialise a new React/DRF project, commit, and push. 
->
-> If more than one group member performs the setup, you'll have Git problems. Check out [the Git collaboration content](https://github.com/SheCodesAus/PlusLessonContent?tab=readme-ov-file#26---group-project) for more on how to use Git as a team.
+# The Good List
+> Debugging Ducks
 
 ## Table of Contents
 
-- [Your Product Name](#your-product-name)
+- [The Good List](#the-good-list)
   - [Table of Contents](#table-of-contents)
-  - [Mission Statement](#mission-statement)
-  - [Features](#features)
-    - [Summary](#summary)
-    - [Users](#users)
-    - [Sticky Notes](#sticky-notes)
-    - [Collections](#collections)
-    - [Pages/Endpoint Functionality](#pagesendpoint-functionality)
-    - [Nice To Haves](#nice-to-haves)
-  - [Technical Implementation](#technical-implementation)
-    - [Back-End](#back-end)
-    - [Front-End](#front-end)
-    - [Git \& Deployment](#git--deployment)
-  - [Target Audience](#target-audience)
-  - [Back-end Implementation](#back-end-implementation)
+  - [**Mission Statement**](#mission-statement)
+  - [**Features**](#features)
+  - [**MVP Features:**](#mvp-features)
+    - [Summary:](#summary)
+    - [Pages/endpoint functionality](#pagesendpoint-functionality)
+    - [Nice to haves:](#nice-to-haves)
+  - [**Technical Implementation**](#technical-implementation)
+  - [**Target Audience**](#target-audience)
+  - [**Backend Implementation**](#backend-implementation)
     - [API Specification](#api-specification)
-    - [Object Definitions](#object-definitions)
-      - [Users](#users-1)
-      - [Sticky Notes](#sticky-notes-1)
+    - [API Specification Object Definitions](#api-specification-object-definitions)
     - [Database Schema](#database-schema)
-  - [Front-end Implementation](#front-end-implementation)
+  - [****](#)
+  - [**Frontend Implementation**](#frontend-implementation)
     - [Wireframes](#wireframes)
       - [Home Page](#home-page)
-      - [Collection List Page](#collection-list-page)
+      - [Sign Up Page](#sign-up-page)
+      - [Login Page](#login-page)
+      - [Create Category Page](#create-category-page)
+      - [Shopping list page](#shopping-list-page)
+      - [Wish list page](#wish-list-page)
+      - [List landing page](#list-landing-page)
     - [Logo](#logo)
-    - [Colours](#colours)
-      - [Primary](#primary)
-      - [Secondary](#secondary)
-    - [Font](#font)
+    - [Fonts and Colours](#fonts-and-colours)
+      - [Font weights and usage guidelines](#font-weights-and-usage-guidelines)
 
+## **Mission Statement**
 
-## Mission Statement
+The Christmas Shopping List project is designed to simplify the holiday season by providing users with a seamless, stress-free way to organise their Christmas gift planning. Our mission is to create an intuitive and mobile-friendly platform that allows individuals, families, and groups to efficiently manage wish lists and shopping lists. By incorporating features such as group categorisation, budget tracking, ranking preferences, picking favourites, and marking items as purchased, we aim to transform the often chaotic task of holiday shopping into an enjoyable and collaborative experience.
 
-> [!NOTE]  
-> What is the purpose of your project? (approx 100-200 words). Example below.
+We are committed to delivering a stylish, user-friendly interface that reflects the festive spirit, blending functionality with an elegant Christmas aesthetic. Through responsive design and robust backend technology, the platform will cater to users’ diverse needs while ensuring data security and accessibility.
 
-Win-Wall is an online collaboration tool that provides organisers of SheCodes workshops as well as their attendees a visual workspace where they can add digital sticky notes to a blank digital wall in order to share wins with others during live events.
-This tool offers an unlimited number of digital win walls which are organised by event collection in order to facilitate collaboration during live events and easily bring all attendees’ wins to light in real time.
-Win-Wall comes packed full of features such as the ability to share a unique digital win wall to a live audience, easily approve and export win wall messages to upload on a WordPress website, manage user roles to give event organisers and attendees access to different functionalities, and many more.
+## **Features**
 
-## Features
+| *To meet the tight timelines for delivery, we proposed structuring the development into two focused phases: Phase 1: Core MVP Features This phase will focus on delivering the essential functionalities that form the backbone of the Christmas Shopping List platform. These features will enable the client and users to begin testing and using the platform effectively and providing feedback. By prioritising the absolute minimum viable features, we can ensure timely delivery while maintaining high standards of quality and usability. Phase 2: Enhanced Functionality  Once the core features are live, we will proceed to introduce additional functionalities that expand the platform’s capabilities. These features will be informed by client priorities and user feedback gathered during Phase 1 testing. Phase 3: Nice-to-have additional functionality We understand the importance of delivering a comprehensive product; however, given the project timeline, it is unlikely we will have sufficient time to incorporate the “nice-to-have” features.  To maximise the value delivered within Phase 1, our client identified the top three features that are most critical to the platform’s success. This allowed us to focus development efforts on what matters most to the client and users. Collaboration in this prioritisation ensured delivery of a high-impact product, with the flexibility to build on it further in subsequent phases.  The first three of the below features have been agreed upon for the MVP: Logged in users can create an individual shopping list in a category (e.g., family, friends) or their own wishlist and manually add/edit/remove items on the list. Rank items on an individual shopping list or wishlist and mark items as favourite options or purchased. Add a budget limit to a category or an individual list and compare estimated and actual costs. Create user groups and share lists with other people for collaboration. Pledging for joint presents. Search catalog of shopping sites for ideas to add to the shopping or wish list.  Secret Santa* |
+| :---- |
 
-> [!NOTE]  
-> Tell me the features your website will and will not have. Give detailed explanations, this is where you define the scope of your project. Example below.
+## **MVP Features:**
 
+### Summary: 
 
-### Summary 
-Provide Guest users ability to post sticky notes to a live event board. Once posted, users can view all posts for live event. Admin and approver access will allow events boards to be created, sticky notes to be edited, approved and exported.
+Allow users to create secure accounts to create and manage Christmas wish lists and shopping lists. Logged in users will be able to **create wish lists and shopping lists** and will be able to **add and remove items**. Items can be **marked as purchased**.
 
-### Users
+Enhanced functionality may include:
 
-| Type               | Access                                                                                                                                                                                                                                                                                             | Role type assignment                                |
-| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------- |
-| Superuser or admin | <br> - All access   <br> - Can log in  <br> - Can log out  <br> - Create and manage events  <br> - Create and manage collections  <br> - Create and manage other users  <br> - Approve, archive and edit notes  <br> - Export notes as CSV  <br> - Can See and edit their details via profile page | Kate                                                |
-| Approver           | <br> - Can log in  <br> - Can log out  <br> - Approve, archive and edit notes  <br> - Can See and edit their details via profile page                                                                                                                                                              | Mentors, volunteers, shecodes11507 staff            |
-| Guest              | <br> - Create post it notes  <br> - Submit post it notes  <br> - View Live event board with all post it notes  <br> - can post with and without including their name                                                                                                                               | Public: Users who attend events, workshops, courses |
+* Items can be ranked and highlighted favourite.  
+* Ability to create groups and share lists with group members to collaborate.  
+* Ability to set budget limits per group or individual and compare actual costs.  
+* Responsiveness across different screen sizes (priority is mobile first, tablet and desktop sizes fall under enhanced functionality.)  
+* Ability to search for example Amazon via the shopping list platform (APIs that allow access to product databases) to add items to the wish/shopping list.   
+* Ability to search more than one site (e.g. Amazon, Ebay, wish, etc.) requires an additional layer of formatting to append results to lists.  
+* To test search functionality, a site such as [https://fakestoreapi.com/](https://fakestoreapi.com/) could be used.
 
-### Sticky Notes
+Nice to have may include:
 
-| Feature                                        | Access                                                                                                                                                                                                           | Notes/Conditions                                                                                              |
-| :--------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| Create                                         | Can be created by anyone with URL                                                                                                                                                                                | <br> - Limit length of sticky note text  <br> - option to add hashtag (TBC: as main text or additional field) |
-| Post                                           | Post as Guest                                                                                                                                                                                                    | <br> - Submits Sticky note to Live event board                                                                |
-| View                                           | Guests, Approvers and Admin can view posts via Live event board Admin and Approvers can view once status updated from Live                                                                                       |                                                                                                               |
-| Edit                                           | Can be edited by Admin and Approvers                                                                                                                                                                             | <br> - Edit sticky note text, eg: for spelling errors before Status is set to approved                        |
-| Statuses: Live, Unapproved, Approved, Archived | <br> - Auto status of notes will be ‘live’ based on linked event  <br> - Auto status of notes will be unapproved based on closure of linked event  <br> - Update to Approved and Archived by Admin and Approvers |                                                                                                               |
-| Export                                         | <br> - Export as Admin only                                                                                                                                                                                      | <br> - CSV file  <br> - Format: collection, event, sticky note text                                           |
-| Flag- Is Exported                              | <br> - Auto flag based on whether Admin has exported the sticky note                                                                                                                                             | <br> - Boolean                                                                                                |
-| Link to Collection                             | <br> - Controlled by Admin                                                                                                                                                                                       | <br> - Based on type of event, eg: shecodes flash, plus, other event types.                                   |
-| Link to Event                                  | <br> - Auto link based on event URL  <br> - Link to event can be edited by Admin                                                                                                                                 |                                                                                                               |
-| Link to Approver                               | <br> - Controlled by Admin and Approver who creates the event                                                                                                                                                    | <br> - Approver is User who is managing or associated with admin of the event                                 |
+* Users will be able to use a Secret Santa generator, with the ability to set target values.
 
-### Collections
+**Users**
 
-| Feature                           | Access                     | Notes/Conditions           |
-| :-------------------------------- | :------------------------- | :------------------------- |
-| Assign events to a collection     | <br> - Based on event type |                            |
-| Assign approver to a collection   | <br> - admin               |                            |
-| Default event board live duration | <br> - Admin               | <br> - Based on event type |
-| View event boards by collection   | <br> - Admin, Approver     |                            |
-| Export notes by Collection        | <br> - Admin               |                            |
+| Type | Access | Role type assignment |
+| :---- | :---- | :---- |
+| Superuser or admin | \-All User access plus \-Create and manage lists \-Create and manage categories \-Create and manage other users | Debugging Ducks |
+| User | \- Can create account \- Can log in \- Can log out \- Create, edit, delete and archive lists \- Create, edit, delete and archive categories \- Manually add items to lists \- Rank items in lists \- Tick items off as purchased \- Set a budget for a category and/or an individual list \- View budget vs. actual costs \- Create user groups and invite other users to the group \- Share lists with group members \- Can search items \- Add items from searches to lists | Users who sign up to use the app |
+| Group members | \- View lists that have been shared \- Edit lists that have been shared | Signed up users who have been invited to join a group |
+| Guest | \- View Home Page \- View shared list via secure link that has been shared by a logged in user | Public: Users who haven’t signed up  |
 
-### Pages/Endpoint Functionality
+**List Categories**
 
-| Endpoint              | functionality                                                                                                                                                                     | comments                                                                                         |
-| :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
-| Create and post notes | <br> - Available to anyone with URL   <br> - Add sticky notes   <br> - Post sticky notes                                                                                          | <br> - Sticky note ‘feel’ is preferred  <br> - Easy to read and accessible  <br> - Good contrast |
-| Event board           | <br> - Once note is posted, redirect to live session  notes  <br> - Able to post more notes (redirect back or add directly?)  <br> - Live session ends at midnight – day of event | <br> - view live notes  <br> - search notes by text/hashtag                                      |
-| Admin page            | All admin functions  <br> - can also create another admin account                                                                                                                 | <br> - Requires auth  <br> - initial admin created by DB                                         |
-| Register as Approver  | <br> - users can register as approvers  <br> - once registered, approver can log in                                                                                               | Requires shecodes email address to be used                                                       |
-| Approver page         | Approver functions                                                                                                                                                                | Requires auth Easy to read, accessible, easy to use for new users                                |
-| Profile page          | <br> - All registered users  <br> - Can view their personal info  <br> - Can update their info                                                                                    | Requires auth                                                                                    |
+| Feature | Access | Notes/Conditions |
+| :---- | :---- | :---- |
+| Create categories | Users, Superuser/Admin | Categories can be customised (Family, friends, cousin brothers) |
+| Edit categories | Users, Superuser/Admin | Only the creator or admins can edit categories. |
+| Delete categories | Users, Superuser/Admin | Deletion prompts confirmation to avoid accidental removal. |
+| View categories | Users, Group Members | Group members can view categories in shared lists.  |
+| Assign categories to list items | Users, Group Members | Categories can be applied to organise items. |
 
-### Nice To Haves
+**List Individual**
 
-- Register during or after event; Sign up for additional events: Email address, Name, Event
-- History of my own notes as Registered user
-- Events I have registered for as Registered user
-- Be able to edit my own notes – as Registered user but only until its been approved
-- Bulk update sticky note status
-- QR code generation 
-- Use QR codes to access event as guest
+| Feature | Access | Notes/Conditions |
+| :---- | :---- | :---- |
+| Create a list | Users, Superuser/Admin | Lists are private by default unless shared. |
+| Edit a list | Users, Superuser/Admin | Only the list creator or group members with edit permissions can modify a list. |
+| Delete a list | Users, Superuser/Admin | Confirmation required to delete lists. Group members cannot delete shared lists. |
+| Archive a list | Users, Superuser/Admin | Users can archive a list if that Christmas has passed but they still want to keep the list for reference. |
+| View lists | Users, Group Members, Guest (via link) | Guests can view lists shared via secure links. |
+| Share a list | Users | Lists can be shared with group members or via a secure link for guests. |
+| Add collaborators to a list | Users | Requires users to be signed up and invited to the group. |
+| Filter lists | Users | Filter by categories, budget, etc. |
 
-## Technical Implementation
+**Items**
 
-> [!NOTE]  
-> What languages and frameworks will you be using? What kind of database will you be using? How will you deploy the website? Example Below.
+| Feature | Access | Notes/Conditions |
+| :---- | :---- | :---- |
+| Add items manually | Users | Items can include name, category, store, price, URL, and notes. |
+| Add items from a search | Users | Requires database integration (e.g., Amazon API) |
+| Edit items | Users, Group Members | Group members can edit items in shared lists. |
+| Delete items | Users, Group Members | Confirmation required to delete items to avoid accidental removal. |
+| Rank items | Users, Group Members | Items can be ranked by priority within a list. |
+| Mark items as purchased | Users, Group Members | Changes are reflected in shared lists immediately. |
+| View items | Users, Group Members, Gues (via link) | Guests can only view items in shared lists. |
+| Group items by category or store | Users | Enables easier navigation and shopping. |
 
-### Back-End
+**Budget**
 
-- Django / DRF API
-- Python
+| Feature | Access | Notes/Conditions |
+| :---- | :---- | :---- |
+| Set a budget for a list | Users | Budgets can be set for entire categories or individual lists. |
+| View budget vs. actual costs | Users | Automatically calculates based on item prices, favourite status (for estimates), and purchased status (for actuals) |
+| Edit budget | Users | Only the list creator or group members with edit permissions can modify the budget. |
+| Track spending | Users | Updates actual spending as items are marked as purchased. |
+| Alert for budget overruns | Users | Visual cues or notifications when spending exceeds the set budget. |
 
-### Front-End
+### Pages/endpoint functionality
 
-- React / JavaScript
-- HTML/CSS
+Must work for mobile first
 
-### Git & Deployment
-- Heroku
-- Netlify
-- GitHub
+Easy to read, accessible
 
-This application's back-end will be deployed to Heroku. The front-end will be deployed separately to Netlify.
- 
-We will also use Insomnia to ensure API endpoints are working smoothly (we will utilise a local and deployed environment in Insomnia).
+| Page | Functionality | Comments |
+| :---- | :---- | :---- |
+| *Home Page* | \- Shows an overview of the features available on the website \- If user is logged in, the home page defaults to the *List Landing Page* | Maybe include a link to a sample list which is viewable even if you’re not logged in? |
+| *Sign Up Page* | \- Sign up form for people to create a new account |  |
+| *Login Page* | \- Login form for people to login using their email & password |  |
+| *List Landing Page* | \- Shows all the categories and lists the user has \- Can create/edit/delete categories  \- Links to *All Lists Page, Category List Page, Individual List Page* & *My Wishlist Page* | For logged in users |
+| *All Lists Page* | \- Shows all the items on all the user’s lists in one page \- Can add/edit/delete items \- Filterable by person/list name, store, ranking, favourite, etc. | For logged in users |
+| *Category List Page* | \- Shows all items for all the lists in one category (e.g. Family) \- Can add/edit/delete items | For logged in users |
+| *Individual List Page* | \- Show all items in one individual ist (e.g. Mum) \- Can add/edit/delete items \- Can archive the list | For logged in users |
+| *My Wishlist Page* | \- Shows all items in the user’s own wishlist \- Can add/edit/delete items | For logged in users |
 
-## Target Audience
+### Nice to haves:
 
-> [!NOTE]  
-> Who is the website for? (approx 100 words). Example below.
+* **Wishlist Sharing and Shopping List Collaboration:** Users will be able to share wishlists and collaborate on shopping lists through shared user groups.  
+  * **Collaborative Editing/Viewing**: Shared lists can be collaboratively edited or viewed in real time.  
+  * Sharing Feature Availability Users can generate a shareable link for their wish list. The generated link is unique to each wish list and does not expose personal or sensitive data.  
+  * Access Permissions Only users with the shareable link can view the wish list.The link should not allow editing of the wish list unless the user is logged in as the owner.  
+  * Share via email Users can enter email addresses to send the wishlist directly to friends. Email includes a brief message and the shareable link. A success message is displayed after the email is sent. An error message is displayed if the email fails to send (e.g. invalid email address).  
+  * Social sharing Users can copy the shareable link to the clipboard via a "Copy Link" button.  
+* **Enhanced Item Search:** Logged-in and guest users will have the ability to search for items, with potential integration of external databases like Amazon APIs for expanded search options.  
+* **Visual Enhancements**: Include fun animations, such as twinkling snow, to add a festive touch. These animations will appear subtly to enhance the user experience without being intrusive.  
+* **Secret Santa Generator**: If time allows, the site will include a feature to randomly generate Secret Santa gifts with the ability to choose price brackets.  
+* **Personalised recommendations:** Users will see curated recommendations based on their wishlist or shopping list items.
 
-This website has two major target audiences: She Codes ‘Leaders, Volunteers & Mentors’, and ‘She Coders’ joining the one-day/short-term workshops. 
+## **Technical Implementation**
 
-**She Codes Leaders, Volunteers and Mentors** (administrators) will use this website to assign one-day workshop coders to specific events and/or collections where they can fill-out a “sticky note” win and paste it on the WinsWall. The administrators will then be able to sort, authorise and delete these stickies and easily download the data in a CSV file. This website is targeted towards this group in order to automate a normally menial task.
+Back-End:
 
-**She Coders** (laypeople) will use this website to post their Win on a WinWall board, keep track of what events they’ve attended and also view previously written wins. This website is targeted to this group in order to prevent loss of paper data (physical sticky notes) and also make the WinsWall more interactive.
+* Django / Django Rest Framework / API  
+* Token-based authentication  
+* SQLite  
+* Python  
+* Insomnia to ensure endpoints are working smoothly (for development and deployed environment)
 
-## Back-end Implementation
+Front-End:
+
+* React / JavaScript  
+* PostgreSQL  
+* HTML/CSS  
+* Responsive design principles for mobile-first  
+* Accessibility considerations
+
+Git & Deployment:
+
+* Heroku for backend deployment  
+* Netlify for frontend deployment  
+* GitHub for version control
+
+## **Target Audience**
+
+The Christmas Shopping List platform is designed for individuals, families, and groups who want to simplify their holiday shopping experience. It caters primarily to family members and friends looking to organise and share wishlists and shopping lists in a convenient and collaborative way. The site also has potential for corporate use, enabling teams to manage group gifting or Secret Santa events. With a focus on mobile-first design, the platform is tailored for users on the go, ensuring a seamless and intuitive experience across all devices. It’s perfect for anyone seeking to plan their Christmas shopping efficiently and stress-free.
+
+## **Backend Implementation**
+
 ### API Specification
 
-| HTTP Method | URL                                 | Purpose                                                                                                                                  | Request Body                                                                                                       | Successful Response Code | Authentication and Authorization                      |
-| :---------- | :---------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- | :----------------------- | :---------------------------------------------------- |
-| POST        | /login                              | Allow users to log in                                                                                                                    | ““Username”:”string”, “password”:”string”                                                                          | 200                      | Token auth                                            |
-| POST        | /logout                             | Allow users to log out ( end active session)                                                                                             | ““Username”:”string”, “password”:”string”                                                                          | 200                      | Will clear user log in session \- remove stored token |
-| POST        | /Register                           | Create new student or approver user                                                                                                      | “Username”:”string”, “FullName”: “string” “Email”:”string”,”Password”:”string”, ”Password2”:”string”,              | 201                      | Admin                                                 |
-| PUT         | /Profile/ID                         | Edit user                                                                                                                                | “Username”:”string”, “FullName”: “string” “Email”:”string”, “Avatar”:”string”,  “Bio”:”string”, “Socials”:”string” | 200                      | Admin, approver or student with matching ID           |
-| GET         | /Profile/ID                         | View User profile                                                                                                                        | NA                                                                                                                 | 200                      | Any                                                   |
-| DELETE      | /User/ID                            | Delete user                                                                                                                              | NA                                                                                                                 | 204                      | Admin, approver or student with matching ID           |
-| POST        | /EventCollection                    | Create new Event Collection                                                                                                              | “Title”:”string”, “IsExported”:”boolean” “Approver”: integer                                                       | 201                      | Admin                                                 |
-| PUT         | /EventCollection/Id                 | Update Event collection                                                                                                                  | “Title”:”string”, “IsExported”:”boolean”                                                                           | 200                      | Admin, Approver linked to event?                      |
-| DELETE      | /EventCollection/Id                 | Delete Event collection                                                                                                                  | NA                                                                                                                 | 204                      | Admin                                                 |
-| POST        | /EventBoard/                        | Create new Event board                                                                                                                   | “Title”: “string”, “StartDate”:”datetime”, “EndDate:”datetime”                                                     | 201                      | Admin, approvers                                      |
-| PUT         | /EventBoard/ID                      | Update Event board                                                                                                                       | “Title”: “string”, “StartDate”:”datetime”, “EndDate:”datetime”                                                     | 200                      | Admin, approvers                                      |
-| DELETE      | /EventBoard/ID                      | Delete Event board                                                                                                                       | NA                                                                                                                 | 204                      | Admin or author of event                              |
-| GET         | /EventBoard/ID                      | Get Event board details                                                                                                                  | NA                                                                                                                 | 200                      | Open access                                           |
-| POST        | /stickyNote/                        | Create a new sticky note as Guest user                                                                                                   | “WinComment”:”string”                                                                                              | 201                      | Open access                                           |
-| GET         | /stickyNotes/?Status=Live\&Event.ID | Get Sticky notes for an event  Use query params to filter by event ID and Status                                                         | NA                                                                                                                 | 200                      | Open access                                           |
-| GET         | /stickyNotes/?Event.ID              | Get Sticky notes for an event                                                                                                            | NA                                                                                                                 | 200                      | Admin, approvers                                      |
-| GET         | /stickyNotes/                       | Export sticky notes as CSV (eg:response.setContentType("text/csv")) Can optionally filter by: event ID, Status, isexported, collectionId | NA                                                                                                                 | 200                      | Admin                                                 |
-| PUT         | /stickyNotes/ID                     | Edit sticky note, update status of sticky note to Approved or Archived                                                                   | “WinComment”:”string”                                                                                              | 200                      | Admin, approvers                                      |
-| POST        | /StickyStatus                       | Create available statuses for stickyNotes                                                                                                | “StatusName”:”string”                                                                                              | 201                      | Admin                                                 |
-| GET         | /StickyStatus                       | Get all statuses                                                                                                                         | NA                                                                                                                 | 200                      | Admin                                                 |
+| HTTP Method | URL | Purpose | Request Body | Successful Response Code | Authentication and Authorisation |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| GET | 📕/category/ | Returns all categories | N/A | 200 OK | Must be logged in as a superuser |
+| POST | 📕/category/ | Create a new category | \_\_\_ | 201 Created | Must be logged in |
+| GET | 📕/category/user/ | Returns all categories and individual lists owned by the logged in user | N/A | 200 OK | Must be logged in |
+| GET | 📕/category/\<pk\> | Returns details of one category, incl. its lists and items | N/A | 200 OK | Must be logged in |
+| PUT | 📕/category/\<pk\> | Updates details of one category | \_\_\_ | 200 OK | Must be logged in Must be the category owner |
+| DELETE | 📕/category/\<pk\> | Deletes one category | N/A | 204 No Content | Must be logged in Must be the category owner |
+| GET | 📗/lists/ | Returns all individual lists | N/A | 200 OK | Must be logged in as a superuser |
+| POST | 📗/lists/ | Create a new individual list | \_\_\_ | 201 Created | Must be logged in |
+| GET | 📗/lists/user/ | Returns all individual lists owned by the logged in user | N/A | 200 OK | Must be logged in |
+| GET | 📗/lists/\<pk\> | Returns details of one list, incl. its items | N/A | 200 OK | Must be logged in |
+| PUT | 📗/lists/\<pk\> | Update details of one list | \_\_\_ | 200 OK | Must be logged in Must be the list owner |
+| DELETE | 📗/lists/\<pk\> | Deletes one list | N/A | 204 No Content | Must be logged in Must be the list owner |
+| GET | 📙/items/ | Returns all items | N/A | 200 OK | Must be logged in as a superuser |
+| POST | 📙/items/ | Create a new item | \_\_\_ | 201 Created | Must be logged in |
+| GET | 📙/items/\<pk\> | Returns details of one item | N/A | 200 OK | Must be logged in |
+| PUT | 📙/items/\<pk\> | Update details of one item | \_\_\_ | 200 OK | Must be logged in Must be the item owner |
+| PUT | 📙/items/bulk-update | Update details of multiple items | \_\_\_ | 200 OK | Must be logged in Must be the item owner |
+| DELETE | 📙/items/\<pk\> | Deletes one item | N/A | 204 No Content | Must be logged in Must be the item owner |
+| GET | 📘/users/ | Returns all users | N/A | 200 OK | Must be logged in as a superuser |
+| POST | 📘/users/ | Create a new user | {"username": "string”, "password": "string", “first\_name”: “string”, “last\_name”: “string”} | 201 Created | N/A |
+| GET | 📘/users/\<pk\> | Returns details of one user, their categories and their lists | N/A | 200 OK | Must be logged in as that user or a superuser |
+| PUT | 📘/users/\<pk\> | Updates details of one user | {"username": "string”, “first\_name”: “string”, “last\_name”: “string”} | 200 OK | Must be logged in as that user |
+| POST | /api-token-auth/ | Returns a token for a given valid username and password | {"username": "string”, "password": "string"} | 200 OK | N/A |
 
-### Object Definitions
+### API Specification Object Definitions
 
-> [!NOTE]  
-> Define the actual objects that your API returns. The example GET method above says it returns “all projects”, so we need to define what a “project” looks like. Example below.
+**CustomUser**
 
-#### Users
-| Field              | Data type |
-| :----------------- | :-------- |
-| *User\_ID (PK)*    |           |
-| *Username*         | string    |
-| FullName           | string    |
-| *Email*            | string    |
-| *Password*         | string    |
-| *Password2*        | string    |
-| Auth\_ID (FK)      | integer   |
-| StickyNoteId (FK)  | integer   |
-| Event\_Id (FK)     | integer   |
-| Collection\_Id(FK) | integer   |
-| Avatar             | string    |
-| Bio                | string    |
-| SocialLink         | string    |
+| Fields | Type | Keys | Optional? | Field Options |
+| :---- | :---- | :---- | :---- | :---- |
+| id | integer | PK | Auto |  |
+| first\_name | string |  | Optional | *blank*\=True |
+| last\_name | string |  | Optional | *blank*\=True |
+| email | string |  | Mandatory |  |
+| password | string |  | Mandatory |  |
 
-#### Sticky Notes
-| Field                   | Data Type |
-| :---------------------- | :-------- |
-| Sticky\_ID (PK)         | integer   |
-| WinComment              | string    |
-| Guest                   | boolean   |
-| UserId (FK)             | integer   |
-| Event\_Id (FK)          | integrer  |
-| Collection\_Id (FK)     | integrer  |
-| Sticky\_Status\_ID (FK) | integrer  |
+**ListCategory**
 
-> [!NOTE]  
-> ... etc
+| Fields | Type | Keys | Optional? | Field Options |
+| :---- | :---- | :---- | :---- | :---- |
+| id | integer | PK | Auto |  |
+| category\_name | string |  | Mandatory | *max\_length*\=255 |
+| category\_budget | integer |  | Optional | *blank*\=True, *null*\=True |
+| created\_at | datetime |  | Auto | *auto\_now\_add*\=True |
+| category\_owner | integer | FK | Mandatory | **CustomUser** \- *related\_name*\=”owned\_categories” |
+| modified\_at | datetime |  | Auto | *auto\_now*\=True, *blank*\=True, *null*\=True |
+| modified\_by | integer | FK | Optional | **CustomUser** \- *related\_name*\=”categories\_modified” *blank*\=True, *null*\=True |
+| archived\_at | datetime |  | Optional | *blank*\=True, *null*\=True |
+| archived\_by | integer | FK | Optional | **CustomUser** \- *related\_name*\=”categories\_archived” *blank*\=True, *null*\=True |
 
-### Database Schema
-> [!NOTE]  
-> Insert an image of your database schema (could be a photo of a hand-drawn schema or a screenshot of a schema created using a tool such as ​​https://drawsql.app/). Example below.
+**ListIndividual**
 
-![Our database schema](./img/schema.png)
+| Fields | Type | Keys | Optional? | Field Options |
+| :---- | :---- | :---- | :---- | :---- |
+| id | integer | PK | Auto |  |
+| category\_id | integer | FK | Mandatory | **ListCategory** \- *related\_name*\=”lists” |
+| list\_name | string |  | Mandatory |  |
+| individual\_budget | integer |  | Optional | *blank*\=True, *null*\=True |
+| image | string |  | Optional | *blank*\=True |
+| notes | string |  | Optional | *max\_length=255, blank*\=True |
+| created\_at | datetime |  | Auto | *auto\_now\_add*\=True |
+| list\_owner | integer | FK | Mandatory | **CustomUser** \- *related\_name*\=”owned\_lists” |
+| modified\_at | datetime |  | Auto | *auto\_now*\=True, *blank*\=True, *null*\=True |
+| modified\_by | integer | FK | Optional | **CustomUser** \- *related\_name*\=”lists\_modified” *blank*\=True, *null*\=True |
+| archived\_at | datetime |  | Optional | *blank*\=True, *null*\=True |
+| archived\_by | integer | FK | Optional | **CustomUser** \- *related\_name*\=”lists\_archived” *blank*\=True, *null*\=True |
 
-## Front-end Implementation
+**Items**
 
-### Wireframes
+| Fields | Type | Keys | Optional? | Field Options |
+| :---- | :---- | :---- | :---- | :---- |
+| id | integer | PK | Auto |  |
+| list\_id | integer | FK | Mandatory | **ListIndividual** \- *related\_name*\=”items” |
+| **name** | string |  | Mandatory | *max\_length*\=255 |
+| **store** | string |  | Optional | *max\_length*\=255, *blank*\=True |
+| **link** | string |  | Optional | *blank*\=True |
+| **image** | string |  | Optional | *blank*\=True |
+| **ranking** | integer |  | Mandatory |  |
+| favourite | boolean |  | Mandatory | *default*\=False |
+| purchased | boolean |  | Mandatory | *default*\=False |
+| **cost** | integer |  | Optional | *blank*\=True, *null*\=True |
+| **comments** | string |  | Optional | *max\_length=255, blank*\=True |
+| created\_at | datetime |  | Auto | *auto\_now\_add*\=True |
+| created\_by | integer | FK | Mandatory | **CustomUser** \- *related\_name*\=”owned\_items” |
+| modified\_at | datetime |  | Auto | *auto\_now*\=True, *blank*\=True, *null*\=True |
+| modified\_by | integer | FK | Optional | **CustomUser** \- *related\_name*\=”items\_modified” *blank*\=True, *null*\=True |
+| archived\_at | datetime |  | Optional | *blank*\=True, *null*\=True |
+| archived\_by | integer | FK | Optional | **CustomUser** \- *related\_name*\=”items\_archived” *blank*\=True, *null*\=True |
 
-> [!NOTE]  
-> Insert image(s) of your wireframes (could be a photo of hand-drawn wireframes or a screenshot of wireframes created using a tool such as https://www.mockflow.com/).
+### Database Schema 
 
-See all wireframes and how Admins, Approvers and Students would see the Win Wall website: https://www.figma.com/file/cvP0Kc7lAX39Fvo12C5aLa/Win-Wall?node-id=22%3A1345 
+***Draft ERD:***
 
-#### Home Page
-![](./img/homepage.png)
+## **![ERD image](/src/img/ERD.jpg)**
 
-#### Collection List Page
-![](./img/listpage.png)
+## **Frontend Implementation**
 
-> [!NOTE]  
-> etc...
+### Wireframes 
+
+| *Insert image(s) of your wireframes (could be a photo of hand-drawn wireframes or a screenshot of wireframes created using a tool such as [https://www.mockflow.com/](https://www.mockflow.com/)).* |
+| :---- |
+
+See all wireframes and how **Users** would see The Good List  website: [https://www.figma.com/design/8FIZ4PjFY4USxK9JDEdfKE/Debugging-Ducks-Group-Project?node-id=0-1\&p=f\&t=w5ulJ0tTVNpcYhfw-0](https://www.figma.com/design/8FIZ4PjFY4USxK9JDEdfKE/Debugging-Ducks-Group-Project?node-id=0-1&p=f&t=w5ulJ0tTVNpcYhfw-0) (Home Page, List Landing Page)
+
+[https://www.figma.com/design/2lgCJgiHLwREZIACwV52DN/Debugging-Ducks-Group-Project?node-id=0-1\&p=f\&t=izDl3HIGlKZURcfw-0](https://www.figma.com/design/2lgCJgiHLwREZIACwV52DN/Debugging-Ducks-Group-Project?node-id=0-1&p=f&t=izDl3HIGlKZURcfw-0) (List Page, Individual List Page)
+
+![Wireframe](/src/img/Wireframe.jpg)
+
+#### Home Page 
+
+![Homepage](/src/img/homepage.png)
+
+#### Sign Up Page
+
+![Sign Up Page](/src/img/signup-page.png)
+
+#### Login Page
+
+![Login Page](/src/img/login-page.png)
+
+#### Create Category Page
+
+![Create Category Page](/src/img/create-category.png)
+
+#### Shopping list page 
+
+Add image
+
+#### Wish list page
+
+Add image
+
+#### List landing page
+
+Add image
 
 ### Logo
-![](./img/logo.png)
 
-### Colours
-#### Primary
+![Logo Options](/src/img/logo-options.png)
 
-![](./img/primary.png)
+![Logo with quotation marks](/src/img/logo-quotations.png)
 
-#### Secondary
+|![The Good List logo](/src/img/Logo.svg) 
 
-![](./img/secondary.png)
+[https://github.com/SheCodesAus/debugging\_ducks\_frontend/blob/aafaedf4a1c51a7ec9556a259e0a27ac8d850446/src/img/Logo.svg](https://github.com/SheCodesAus/debugging_ducks_frontend/blob/aafaedf4a1c51a7ec9556a259e0a27ac8d850446/src/img/Logo.svg) |
+| :---- |
 
-### Font
+### Fonts and Colours 
 
-(We will create a ‘highlight-text’ font style in CSS with the glow effect as per the above - to use on hero section)
-Raleway
-Google fonts:
+**Colours:**  
 
-```css
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
-font-family: 'Raleway', sans-serif;
-```
-(When Raleway is not available the standard font to be used is the Calibri font family)
+Primary Colour:  Hex: `#d9bd80 (gold)` 
 
-![](./img/fonts.png)
+Secondary Colour: Hex: `#081f43 (navy blue)`  
+
+(For visual representation and accessibility of fonts related see below)  
+
+![Colours and Accessibility for MVP](/src/img/colours-MVP.png)
+
+**Fonts:**
+
+Primary Font: Lato, sans-serif
+
+Secondary Font: Quattrocento, serif
+
+We will use the **Lato** font family for all body text across the application. This font provides a clean, modern appearance suitable for both headings and body text.
+
+When Lato is not available, the fallback font will be **Arial**, sans-serif.
+
+We will use **Quattrocentro** for all headings across the application.
+
+#### Font weights and usage guidelines
+
+1. **Bold 700**
+  - To be used for prominent headings (e.g., hero sections, main titles).
+  - Not recommended for use below 9pt to maintain readability.
+2. **Regular 400**
+  - To be used for body test, supporting information, and paragraphs.
+  - Not recommended for use below 9pt to ensure legibility.
+  
+  ![Example font weight](/src/img/fonts-MVP.png)
+  

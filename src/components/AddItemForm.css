@@ -1,0 +1,138 @@
+.add-item-form-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #081f43;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.add-item-form h3 {
+    color: #d9bd80;
+    font-family: "Quattrocento", serif;
+    margin: 0 0 20px 0;
+    font-size: 1.8em;
+    width: 100%;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.form-group label {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: #d9bd80;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: auto;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #f8f8f8;
+    background-color: #f8f8f8;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    color: #081f43;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    padding: 10px 5px;
+    resize: vertical;
+    height: auto;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b08c5e;
+    background-color: #f8f8f8;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-button,
+.cancel-button {
+    padding: 10px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.submit-button {
+    background-color: #d9bd80;
+    color: #081f43;
+}
+
+.submit-button:hover {
+    background-color: #b08c5e;
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: #d9bd80;
+    border: 1px solid #d9bd80;
+}
+
+.cancel-button:hover {
+    background-color: rgba(217, 189, 128, 0.1);
+}
+
+/* Error styles */
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #f8f8f8;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .add-item-form-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .submit-button,
+    .cancel-button {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+
+    .add-item-form h3 {
+        font-size: 1.5em;
+    }
+} 

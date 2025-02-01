@@ -1,175 +1,233 @@
 /* Global Styles */
 body {
-    font-family: Lato, sans-serif;
-    background-color: #00173a;
-    color: #f8f8f8; /* Light text for better contrast */
-    margin: 0;
-    padding: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #00173a;
+  color: #f8f8f8; /* Light text for better contrast */
+  margin: 0;
+  padding: 0;
 }
- 
+
 /* 404 Page Container */
 .not-found {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    position: relative; /* Allows snowflakes to appear within the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  text-align: center;
+  position: relative; /* Allows snowflakes to appear within the page */
 }
 
-  /* 404 Text Card */
+/* 404 Text Card */
 .not-found-card {
-    background-color: #081f43; /* Match the theme */
-    border: 2px solid #d9bd80; /* Golden border */
-    border-radius: 10px; /* Rounded corners for the card */
-    padding: 20px 30px; /* Space around the text */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    max-width: 500px; /* Restrict the width for better readability */
-    margin: 20px auto; /* Center the card */
-    text-align: center; /* Center the text */
-    color: #f8f8f8; /* Light text color */
-}
-  
-.not-found-card h1 {
-    font-family: Lato, sans-serif;
-    font-size: 2.5rem; /* Make the title prominent */
-    color: #d9bd80; /* Golden title color */
-    margin-bottom: 15px; /* Add spacing below the title */
-}
-  
-.not-found-card p {
-    font-family: Lato, sans-serif;
-    font-size: 1.2rem;
-    margin: 0;
-    line-height: 1.5;
+  background-color: #081f43; /* Match the theme */
+  border-radius: 10px; /* Rounded corners for the card */
+  padding: 60px 40px; /* Space around the text */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  max-width: 700px; /* Restrict the width for better readability */
+  margin: 20px auto; /* Center the card */
+  text-align: center; /* Center the text */
+  color: #f8f8f8; /* Light text color */
 }
 
-  /* Link Back to Homepage */
+.not-found-card h1 {
+  font-family: "Quattrocento", serif;
+  font-size: 2rem; /* Make the title prominent */
+  color: #d9bd80; /* Golden title color */
+  margin-bottom: 15px; /* Add spacing below the title */
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap; /* Prevent the heading from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Optionally add ellipsis if heading overflows */
+}
+
+.not-found-card h1 .icon {
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+
+.not-found-card h1 .flip-icon {
+  transform: scaleX(-1);
+  display: inline-block;
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+
+.not-found-card p {
+  font-family: "Lato", sans-serif;
+  color: #f8f8f8;
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.5;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+/* Link Back to Homepage */
 div.not-found-card > a {
-    font-family: Lato, sans-serif;
-    font-size: 1.2rem;
-    color: #d9bd80; /* Golden color for the link */
-    text-decoration: none;
-    border: 2px solid #d9bd80;
-    padding: 10px 30px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-    min-width: 200px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  color: #00173a;
+  text-decoration: none;
+  border: 1px solid #d9bd80;
+  background-color: #d9bd80;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  min-width: 200px;
 }
-  
+
 div.not-found-card a:hover {
-    background-color: #b08c5e; /* Slightly darker gold on hover */
-    color: #081f43; /* Text changes to match background */
+  background-color: #b08c5e; /* Slightly darker gold on hover */
+  color: #081f43; /* Text changes to match background */
 }
-  
+
+/* Snowflakes */
 .snowflakes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000;
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
 .snowflake {
-    position: absolute;
+  position: absolute;
+  top: -10px;
+  color: #f8f8f8;
+  font-size: 2em;
+  user-select: none;
+  animation: fall 12s linear infinite, drift 15s ease-in-out infinite,
+    rotate 20s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
     top: -10px;
-    color: #f8f8f8;
-    font-size: 2em;
-    user-select: none;
-    animation: fall 12s linear infinite, drift 15s ease-in-out infinite,
-      rotate 20s linear infinite;
     opacity: 0.8;
   }
-  
-  @keyframes fall {
-    0% {
-      top: -10px;
-      opacity: 0.8;
-    }
-    100% {
-      top: 100vh;
-      opacity: 0.3;
-    }
+  100% {
+    top: 100vh;
+    opacity: 0.3;
   }
-  
-  @keyframes drift {
-    0% {
-      left: 0%;
-    }
-    25% {
-      left: 10%;
-    }
-    50% {
-      left: 20%;
-    }
-    75% {
-      left: 30%;
-    }
-    100% {
-      left: 0%;
-    }
+}
+
+@keyframes drift {
+  0% {
+    left: 0%;
   }
-  
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  25% {
+    left: 10%;
   }
-  
-  .snowflake:nth-child(1) {
-    font-size: 1.5em;
-    opacity: 0.5;
-    animation-duration: 12s, 15s, 20s;
-    animation-delay: 0s, 5s, 0s;
+  50% {
+    left: 20%;
   }
-  .snowflake:nth-child(2) {
-    font-size: 1.8em;
-    opacity: 0.7;
-    animation-duration: 14s, 16s, 22s;
-    animation-delay: 3s, 8s, 1s;
+  75% {
+    left: 30%;
   }
-  .snowflake:nth-child(3) {
-    font-size: 2.2em;
-    opacity: 0.9;
-    animation-duration: 16s, 18s, 24s;
-    animation-delay: 5s, 10s, 2s;
+  100% {
+    left: 0%;
   }
-  .snowflake:nth-child(4) {
-    font-size: 1.6em;
-    opacity: 0.6;
-    animation-duration: 13s, 17s, 21s;
-    animation-delay: 2s, 6s, 3s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
   }
-  .snowflake:nth-child(5) {
-    font-size: 2em;
-    opacity: 1;
-    animation-duration: 17s, 20s, 26s;
-    animation-delay: 7s, 12s, 4s;
+  100% {
+    transform: rotate(360deg);
   }
-  .snowflake:nth-child(6) {
-    font-size: 2.4em;
-    opacity: 0.95;
-    animation-duration: 15s, 18s, 20s;
-    animation-delay: 4s, 9s, 5s;
+}
+
+.snowflake:nth-child(1) {
+  font-size: 1.5em;
+  opacity: 0.5;
+  animation-duration: 12s, 15s, 20s;
+  animation-delay: 0s, 5s, 0s;
+}
+.snowflake:nth-child(2) {
+  font-size: 1.8em;
+  opacity: 0.7;
+  animation-duration: 14s, 16s, 22s;
+  animation-delay: 3s, 8s, 1s;
+}
+.snowflake:nth-child(3) {
+  font-size: 2.2em;
+  opacity: 0.9;
+  animation-duration: 16s, 18s, 24s;
+  animation-delay: 5s, 10s, 2s;
+}
+.snowflake:nth-child(4) {
+  font-size: 1.6em;
+  opacity: 0.6;
+  animation-duration: 13s, 17s, 21s;
+  animation-delay: 2s, 6s, 3s;
+}
+.snowflake:nth-child(5) {
+  font-size: 2em;
+  opacity: 1;
+  animation-duration: 17s, 20s, 26s;
+  animation-delay: 7s, 12s, 4s;
+}
+.snowflake:nth-child(6) {
+  font-size: 2.4em;
+  opacity: 0.95;
+  animation-duration: 15s, 18s, 20s;
+  animation-delay: 4s, 9s, 5s;
+}
+.snowflake:nth-child(7) {
+  font-size: 1.4em;
+  opacity: 0.4;
+  animation-duration: 18s, 20s, 30s;
+  animation-delay: 6s, 11s, 6s;
+}
+.snowflake:nth-child(8) {
+  font-size: 2.6em;
+  opacity: 1;
+  animation-duration: 13s, 14s, 18s;
+  animation-delay: 8s, 13s, 7s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .not-found-card {
+    padding: 15px 20px;
+    max-width: 90%; /* Allow more space on smaller screens */
   }
-  .snowflake:nth-child(7) {
-    font-size: 1.4em;
-    opacity: 0.4;
-    animation-duration: 18s, 20s, 30s;
-    animation-delay: 6s, 11s, 6s;
+
+  .not-found-card h1 {
+    font-size: 2rem; /* Slightly smaller font size for mobile */
   }
-  .snowflake:nth-child(8) {
-    font-size: 2.6em;
-    opacity: 1;
-    animation-duration: 13s, 14s, 18s;
-    animation-delay: 8s, 13s, 7s;
+
+  .not-found-card p {
+    font-size: 1rem; /* Adjust paragraph font size */
   }
-  
+
+  div.not-found-card > a {
+    font-size: 1rem; /* Smaller font for the link */
+    padding: 8px 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-card h1 {
+    font-size: 1.5rem; /* Smaller title font size for extra small screens */
+  }
+
+  .not-found-card p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  div.not-found-card > a {
+    font-size: 0.9rem; /* Adjust link font size */
+    padding: 6px 15px; /* Reduce padding */
+  }
+}
