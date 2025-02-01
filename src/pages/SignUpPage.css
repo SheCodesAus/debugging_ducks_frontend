@@ -1,16 +1,3 @@
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #00173a;
-  color: #f8f8f8;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-p {
-  margin: 0;
-}
-
 #signup-page {
   display: flex;
   justify-content: center;
@@ -193,12 +180,6 @@ p {
   background-color: #b08c5e;
 }
 
-.error {
-  color: #ff4d4d;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
-}
 #signup-container > div.sign-up-login-container {
   text-align: center;
   margin-top: 20px;
@@ -251,16 +232,16 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
   #signup-container {
-    width: 80%;  /* Increase width on smaller screens */
+    width: 80%; /* Increase width on smaller screens */
     padding: 30px 40px 30px 30px; /* Adjust padding */
   }
-  
+
   #signup-container h1 {
-    font-size: 1.8em;  /* Slightly smaller heading */
+    font-size: 1.8em; /* Slightly smaller heading */
   }
 
   #signup-container form > label {
-    font-size: 14px;  /* Slightly smaller font */
+    font-size: 14px; /* Slightly smaller font */
   }
 
   #signup-container form > input,
@@ -271,16 +252,16 @@ p {
 
 @media (max-width: 480px) {
   #signup-container {
-    width: 90%;  /* Maximize width for very small screens */
-    padding: 20px;  /* Reduced padding */
+    width: 90%; /* Maximize width for very small screens */
+    padding: 20px; /* Reduced padding */
   }
 
   #signup-container h1 {
-    font-size: 1.5em;  /* Even smaller heading */
+    font-size: 1.5em; /* Even smaller heading */
   }
 
   #signup-container form > label {
-    font-size: 12px;  /* Smaller label font */
+    font-size: 12px; /* Smaller label font */
   }
 
   #signup-container form > input,
@@ -290,6 +271,6 @@ p {
   }
 
   #signup-container > form > button {
-    padding: 8px 40px;  /* Adjust button size */
+    padding: 8px 40px; /* Adjust button size */
   }
 }

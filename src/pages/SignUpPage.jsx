@@ -37,7 +37,7 @@ function SignUpPage() {
           </h1>
           <SignUpForm />
           <div className="login-sign-up-container">
-            <p className="login-sign-up-text">Already have an account?</p>
+            <p>Already have an account?</p>
             <button
               className="toggle-form-button"
               onClick={() => navigate("/login")}

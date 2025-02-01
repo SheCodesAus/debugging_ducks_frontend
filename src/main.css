@@ -42,6 +42,8 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font), serif;
+  color: var(--gold);
+  display: inline-flex;
 }
 
 body,
@@ -81,14 +83,6 @@ img {
   height: auto;
 }
 
-a {
-  color: var(--gold);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--darkgold);
-}
-
 input,
 button,
 textarea,
@@ -96,8 +90,22 @@ select {
   font: inherit;
 }
 
-/* Custom Button Styling */
+/* --- CUSTOM GLOBAL STYLING --- */
 
+/* Links */
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  padding: 0px 5px;
+}
+a:hover {
+  background-color: var(--gold);
+  color: var(--lightnavy);
+  border-radius: 5px;
+}
+
+/* Buttons */
 button {
   font-family: var(--heading-font);
   text-align: center;
@@ -111,7 +119,21 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 button:hover {
   background-color: var(--darkgold);
+}
+
+/* Flourishes */
+.header-flourish {
+  margin: 0px 10px;
+  font-size: 0.6em;
+}
+.flip-flourish {
+  transform: scaleX(-1);
+}
+
+/* Errors */
+.error {
+  color: #ff4d4d;
+  text-align: center;
 }
