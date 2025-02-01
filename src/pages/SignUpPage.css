@@ -45,7 +45,7 @@ p {
   align-items: center;
   margin-bottom: 20px;
   font-family: "Quattrocento", serif;
-  color: #d9bd80; /* Golden color */
+  color: #d9bd80; 
 }
 
 #signup-container .signup-heading .icon {
@@ -244,52 +244,51 @@ p {
 }
 
 .signup-button:hover {
-  color: #b08c5e; /* Darker gold on hover */
+  color: #b08c5e;
   text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   #signup-container {
-    width: 80%;  /* Increase width on smaller screens */
-    padding: 30px 40px 30px 30px; /* Adjust padding */
+    width: 80%;  
+    padding: 30px 40px 30px 30px; 
   }
   
   #signup-container h1 {
-    font-size: 1.8em;  /* Slightly smaller heading */
+    font-size: 1.8em;  
   }
 
   #signup-container form > label {
-    font-size: 14px;  /* Slightly smaller font */
+    font-size: 14px; 
   }
 
   #signup-container form > input,
   #signup-container form > button {
-    font-size: 14px; /* Smaller font size for input fields and buttons */
+    font-size: 14px; 
   }
 }
 
 @media (max-width: 480px) {
   #signup-container {
-    width: 90%;  /* Maximize width for very small screens */
-    padding: 20px;  /* Reduced padding */
+    width: 90%; 
+    padding: 20px; 
   }
 
   #signup-container h1 {
-    font-size: 1.5em;  /* Even smaller heading */
+    font-size: 1.5em;  
   }
 
   #signup-container form > label {
-    font-size: 12px;  /* Smaller label font */
+    font-size: 12px;  
   }
 
   #signup-container form > input,
   #signup-container form > button {
-    font-size: 12px; /* Even smaller font for input fields and buttons */
-    padding: 8px 10px; /* Adjust padding for mobile devices */
+    font-size: 12px; 
+    padding: 8px 10px; 
   }
 
   #signup-container > form > button {
-    padding: 8px 40px;  /* Adjust button size */
+    padding: 8px 40px;  
   }
 }

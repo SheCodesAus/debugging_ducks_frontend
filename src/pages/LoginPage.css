@@ -159,12 +159,11 @@ p {
   text-decoration: underline;
 }
 
-/* Display "Don't have an account" and "Sign up here" inline */
 .login-sign-up-container {
-  display: flex; /* Flexbox layout */
-  align-items: center; /* Ensure vertical centering */
-  gap: 10px; /* Space between the text and button */
-  margin-top: 15px; /* Adjust space from the form */
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 15px; 
   justify-content: center;
 }
 #login-container > div.login-sign-up-container > p {
@@ -188,11 +187,10 @@ p {
   line-height: 1;
 }
 
-/* Update button hover styles */
 .login-container button:hover {
-  background-color: #b08c5e; /* Darker gold */
-  color: #081f43; /* Keep dark blue text on hover */
-  opacity: 0.9; /* Slight opacity for hover effect */
+  background-color: #b08c5e; 
+  color: #081f43; 
+  opacity: 0.9; 
   transition: all 0.3s ease;
 }
 

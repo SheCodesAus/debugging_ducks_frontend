@@ -64,7 +64,6 @@ function HomePage() {
   return (
     <>
       <div>
-        {/* Snowflakes Section */}
         <div className="snowflakes" aria-hidden="true">
           <div className="snowflake left">❅</div>
           <div className="snowflake right">❆</div>
@@ -78,7 +77,6 @@ function HomePage() {
 
         <div className="banner">
           <img src={BannerImage} alt="banner" className="banner-image" />
-          {/* Overlay Content */}
           <div className="banner-content">
             <h1>
               Welcome to your <br />
@@ -88,7 +86,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* About Section */}
         <div id="about" className="about-section">
           <h1>
             <span className="icon">꧁</span> About Us{" "}
@@ -103,7 +100,6 @@ function HomePage() {
           </p>
         </div>
 
-        {/* Features Section */}
         <div id="Features" className="Features-section">
           <div className="features-header">
             <h1>
@@ -127,7 +123,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Create list Section */}
         <div className="create list">
           <div id="create-list">
             <p>Ready to get started?</p>
@@ -137,7 +132,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Contact Section */}
         <div className="feedback-form">
           <img src={LogoImage} alt="logo" className="logo-image" />
           <h1>Contact Form</h1>
