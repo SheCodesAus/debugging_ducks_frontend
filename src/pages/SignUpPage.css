@@ -247,3 +247,49 @@ p {
   color: #b08c5e; /* Darker gold on hover */
   text-decoration: underline;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #signup-container {
+    width: 80%;  /* Increase width on smaller screens */
+    padding: 30px 40px 30px 30px; /* Adjust padding */
+  }
+  
+  #signup-container h1 {
+    font-size: 1.8em;  /* Slightly smaller heading */
+  }
+
+  #signup-container form > label {
+    font-size: 14px;  /* Slightly smaller font */
+  }
+
+  #signup-container form > input,
+  #signup-container form > button {
+    font-size: 14px; /* Smaller font size for input fields and buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  #signup-container {
+    width: 90%;  /* Maximize width for very small screens */
+    padding: 20px;  /* Reduced padding */
+  }
+
+  #signup-container h1 {
+    font-size: 1.5em;  /* Even smaller heading */
+  }
+
+  #signup-container form > label {
+    font-size: 12px;  /* Smaller label font */
+  }
+
+  #signup-container form > input,
+  #signup-container form > button {
+    font-size: 12px; /* Even smaller font for input fields and buttons */
+    padding: 8px 10px; /* Adjust padding for mobile devices */
+  }
+
+  #signup-container > form > button {
+    padding: 8px 40px;  /* Adjust button size */
+  }
+}
