@@ -157,7 +157,7 @@ h3 {
 .categories-header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start; 
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -372,7 +372,6 @@ h3 {
   color: #ff4d4d;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 600px) {
   .list-landing-container {
     padding: 20px;
@@ -430,4 +429,4 @@ h3 {
 .create-first-category-button:hover {
   background-color: #b08c5e;
   transform: translateY(-2px);
-}
+}                                                 

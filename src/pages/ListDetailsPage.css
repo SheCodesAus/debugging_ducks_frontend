@@ -305,7 +305,6 @@
     opacity: 1;
 }
 
-/* Item component styles */
 .item-component {
     display: grid !important;
     grid-template-columns: 80px 1fr 100px 80px 80px !important;
@@ -379,12 +378,10 @@ div.items-grid > div.item-component > div.item-rank {
     color: #d9bd80 !important;
 }
 
-/* Hide additional item details by default */
 .item-details {
     display: none;
 }
 
-/* Remove default item component styles that might interfere */
 .item-component {
     background: transparent !important;
     box-shadow: none !important;

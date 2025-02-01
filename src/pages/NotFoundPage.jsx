@@ -6,7 +6,6 @@ import "./NotFoundPage.css";
 function NotFoundPage() {
   return (
     <div className="not-found">
-      {/* Snowflakes Section */}
       <div className="snowflakes" aria-hidden="true">
         <div className="snowflake">❅</div>
         <div className="snowflake">❆</div>
@@ -18,7 +17,6 @@ function NotFoundPage() {
         <div className="snowflake">❆</div>
       </div>
 
-      {/* Card Container */}
       <div className="not-found-card">
         <h1>
           <span className="icon">꧁</span>404 - Page Not on The Good List!{" "}

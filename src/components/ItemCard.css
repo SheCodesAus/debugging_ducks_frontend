@@ -181,7 +181,6 @@
     opacity: 0.9;
 }
 
-/* Update header row to match */
 .items-header-row {
     grid-template-columns: 80px 1fr 100px 80px 120px !important;
 }

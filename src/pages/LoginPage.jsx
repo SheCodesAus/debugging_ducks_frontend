@@ -18,7 +18,6 @@ function LoginPage() {
     navigate("/");
   };
 
-  // If user is logged in, the following messasge will show.
   if (auth?.token) {
     return (
       <div className="login-page">
