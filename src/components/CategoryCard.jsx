@@ -3,7 +3,7 @@ import ListItem from "./ListItem";
 import LeftVector from "../img/vector-1.png";
 import RightVector from "../img/vector-2.png";
 
-function CategoryCard({ category, lists, onCreateList }) {
+function CategoryCard({ category, lists, onCreateList, onListClick }) {
   return (
     <div className="category-card">
       <div className="category-group">
