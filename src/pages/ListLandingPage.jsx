@@ -36,19 +36,11 @@ function ListLandingPage() {
     };
 
     return (
-        <div className="list-landing-container">
+        <div className="list-landing-page">
+            <div className="list-landing-container">
             {auth.token && (
                 <>
                     <div className="categories-section">
-                        <div className="categories-header">
-                            <h2>Your Categories</h2>
-                            <button 
-                                onClick={handleCreateCategory}
-                                className="create-category-button"
-                            >
-                                Create New Category
-                            </button>
-                        </div>
                         {categories && categories.length > 0 ? (
                             <CategoryList 
                                 categories={categories}
@@ -71,7 +63,7 @@ function ListLandingPage() {
                 </>
             )}
         </div>
-    );
+    </div>);
 }
 
 export default ListLandingPage;
