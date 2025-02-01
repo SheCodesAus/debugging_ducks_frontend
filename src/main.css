@@ -93,7 +93,6 @@ select {
 /* --- CUSTOM GLOBAL STYLING --- */
 
 /* Links */
-
 a {
   color: var(--gold);
   text-decoration: none;
@@ -121,6 +120,27 @@ button {
 }
 button:hover {
   background-color: var(--darkgold);
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+form label {
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+form input {
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 /* Flourishes */

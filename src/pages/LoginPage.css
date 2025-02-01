@@ -18,29 +18,7 @@
   margin-bottom: 20px;
 }
 
-.login-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: flex-start;
-}
-
-.login-container form label {
-  color: var(--gold);
-  margin-bottom: 5px;
-}
-
-.login-container form input {
-  padding: 0 5px;
-  border-radius: 5px;
-  border: 1px solid var(--white);
-  background-color: var(--white);
-  height: 40px;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.login-sign-up-container {
+.signup-text-container {
   display: flex; /* Flexbox layout */
   align-items: center; /* Ensure vertical centering */
   gap: 10px; /* Space between the text and button */

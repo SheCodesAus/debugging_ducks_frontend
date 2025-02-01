@@ -32,7 +32,7 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      <div id="login-container" className="login-container">
+      <div className="login-container">
         <div>
           <h1>
             <span className="header-flourish">꧁</span> Login{" "}
@@ -40,7 +40,7 @@ function LoginPage() {
           </h1>
           <LoginForm />
         </div>
-        <div className="sign-up-container">
+        <div className="signup-text-container">
           <p>Don't have an account?</p>
           <Link to="/signup">Sign up here</Link>
         </div>
