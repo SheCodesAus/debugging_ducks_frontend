@@ -1,21 +1,27 @@
 .add-item-form-container {
-    background-color: rgba(8, 31, 67, 0.95);
-    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #081f43;
     border-radius: 8px;
-    margin-top: 15px;
-    border: 1px solid #d9bd80;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
 }
 
 .add-item-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
 }
 
 .add-item-form h3 {
     color: #d9bd80;
     font-family: "Quattrocento", serif;
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
+    font-size: 1.8em;
+    width: 100%;
     text-align: center;
 }
 
@@ -23,59 +29,61 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-.form-row {
-    display: flex;
-    gap: 20px;
-}
-
-.form-row .form-group {
-    flex: 1;
+    width: 100%;
 }
 
 .form-group label {
-    color: #d9bd80;
     font-family: Lato, sans-serif;
-    font-size: 0.9em;
+    font-size: 16px;
+    color: #d9bd80;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: auto;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 8px;
-    border-radius: 4px;
+    padding: 0 5px;
+    font-size: 16px;
+    border-radius: 5px;
     border: 1px solid #d9bd80;
-    background-color: #d9bd80;
+    background-color: #ffffff;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
     color: #081f43;
-    font-family: Lato, sans-serif;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    padding: 10px 5px;
+    resize: vertical;
+    height: auto;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #b08c5e;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 60px;
+    background-color: #ffffff;
 }
 
 .form-buttons {
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
     margin-top: 10px;
 }
 
 .submit-button,
 .cancel-button {
-    padding: 8px 16px;
+    padding: 10px 60px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     font-family: Lato, sans-serif;
-    font-size: 0.9em;
+    font-size: 16px;
     transition: all 0.3s ease;
 }
 
@@ -106,6 +114,25 @@
 
 .error-message {
     color: #ff4d4d;
-    font-size: 0.8em;
-    margin-top: 2px;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .add-item-form-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .submit-button,
+    .cancel-button {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+
+    .add-item-form h3 {
+        font-size: 1.5em;
+    }
 } 

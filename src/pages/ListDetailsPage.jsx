@@ -215,6 +215,15 @@ function ListDetailsPage() {
 
                 {items.length > 0 ? (
                     <div className="items-grid">
+                        <div className="items-header-row">
+                            <div className="header-rank">Rank</div>
+                            <div className="header-item">Item</div>
+                            <div className="header-cost">Cost</div>
+                            <div className="header-favorite">♥</div>
+                            <div className="header-purchased">🎁
+                                <p className="header-delete"></p>
+                            </div>
+                        </div>
                         {items.map(item => (
                             <ItemCard
                                 key={item.id}

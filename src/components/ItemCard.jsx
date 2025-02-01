@@ -17,53 +17,50 @@ function ItemCard({
 }) {
     return (
         <div className={`item-component ${isPurchased ? 'purchased' : ''} ${isArchived ? 'archived' : ''}`}>
-            <input
-                type="checkbox"
-                checked={isPurchased}
-                onChange={onTogglePurchased}
-                className="item-checkbox"
+            <p className="item-rank">{rank}</p>
+            <p className="item-name">{itemName}</p>
+            <p className="item-cost">${cost|| '0.00'}</p>
+            <button
+                className={`item-favorite ${isFavorite ? "favorite" : ""}`}
+                onClick={onToggleFavorite}
                 disabled={isArchived}
-            />
-            <div className="item-content">
-                <div className="item-main">
-                    <p className="item-name">{itemName}</p>
-                    <p className="item-cost">${cost?.toFixed(2) || '0.00'}</p>
-                    <p className="item-rank">Rank: {rank}</p>
+            >
+                {isFavorite ? "♥" : "♡"}
+            </button>
+            <div className="item-actions">
+                <input
+                    type="checkbox"
+                    checked={isPurchased}
+                    onChange={onTogglePurchased}
+                    className="item-checkbox"
+                    disabled={isArchived}
+                />
+                {!isArchived && (
                     <button
-                        className={`item-favorite ${isFavorite ? "favorite" : ""}`}
-                        onClick={onToggleFavorite}
-                        disabled={isArchived}
+                        className="delete-button"
+                        onClick={onDelete}
+                        title="Delete Item"
                     >
-                        {isFavorite ? "♥" : "♡"}
+                        ×
                     </button>
-                    {!isArchived && (
-                        <button
-                            className="delete-button"
-                            onClick={onDelete}
-                            title="Archive Item"
-                        >
-                            ×
-                        </button>
-                    )}
-                </div>
-                
-                {(store || link || comments) && (
-                    <div className="item-details">
-                        {store && <p className="item-store">Store: {store}</p>}
-                        {link && (
-                            <a 
-                                href={link} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="item-link"
-                            >
-                                View Product
-                            </a>
-                        )}
-                        {comments && <p className="item-comments">{comments}</p>}
-                    </div>
                 )}
             </div>
+            {(store || link || comments) && (
+                <div className="item-details">
+                    {store && <p className="item-store">Store: {store}</p>}
+                    {link && (
+                        <a 
+                            href={link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="item-link"
+                        >
+                            View Product
+                        </a>
+                    )}
+                    {comments && <p className="item-comments">{comments}</p>}
+                </div>
+            )}
         </div>
     );
 }
