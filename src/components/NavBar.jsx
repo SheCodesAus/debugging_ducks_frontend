@@ -28,8 +28,13 @@ function NavBar() {
         <div className="links">
           <Link to="/">Home</Link>
           {auth.token && auth.user ? (
-            <Link to="#" onClick={handleLogout}>
-              Logout
+            <Link to="/lists">Lists</Link>
+          ) : (
+            <Link to="/signup">Sign Up</Link>
+          )}
+          {auth.token && auth.user ? (
+            <Link to="/" onClick={handleLogout}>
+              Log Out
             </Link>
           ) : (
             <Link to="/login">Login</Link>
