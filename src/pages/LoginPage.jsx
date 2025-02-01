@@ -18,7 +18,7 @@ function LoginPage() {
     navigate("/");
   };
 
-  // **Keep conditional rendering for "logged-in" and "login form" views**
+  // If user is logged in, the following messasge will show.
   if (auth?.token) {
     return (
       <div className="login-page">
@@ -37,38 +37,22 @@ function LoginPage() {
   }
 
   return (
-    <div id={isLoginForm ? "login-page" : "signup-page"} className="login-page">
-    <div id={isLoginForm ? "login-container" : "signup-container"} className="login-container">
-        {isLoginForm ? (
-          <div>
-            <h1 className="login-heading">
-              <span className="icon">꧁</span> Login{" "}
-              <span className="icon flip-icon">꧁</span>
-            </h1>
-            <LoginForm />
-          </div>
-        ) : (
-          <div className="signup-form">
-            <h1 className="signup-heading">
-              <span className="icon">꧁</span> Sign Up{" "}
-              <span className="icon flip-icon">꧁</span>
-            </h1>
-            <SignUpForm />
-          </div>
-        )}
-
-        {/* Move "Don't have an account" and "Sign up here" onto the same line */}
+    <div id="login-page" className="login-page">
+      <div id="login-container" className="login-container">
+        <div>
+          <h1 className="login-heading">
+            <span className="icon">꧁</span> Login{" "}
+            <span className="icon flip-icon">꧁</span>
+          </h1>
+          <LoginForm />
+        </div>
         <div className="login-sign-up-container">
-          <p className="login-sign-up-text">
-            {isLoginForm
-              ? "Don't have an account?"
-              : "Already have an account?"}
-          </p>
+          <p className="login-sign-up-text">Don't have an account?</p>
           <button
             className="toggle-form-button"
-            onClick={() => setIsLoginForm(!isLoginForm)}
+            onClick={() => navigate("/signup")}
           >
-            {isLoginForm ? "Sign up here" : "Login here"}
+            Sign up here
           </button>
         </div>
       </div>

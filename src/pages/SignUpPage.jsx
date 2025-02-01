@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
-import LoginForm from "../components/LoginForm"; // assuming you have a LoginForm component
-import "./LoginPage.css";
+import LoginForm from "../components/LoginForm";
+import SignUpForm from "../components/SignUpForm";
+import "./SignUpPage.css";
 
-function LoginPage() {
-  console.log("LoginPage rendered");
+function SignUpPage() {
+  console.log("SignUpPage rendered");
+
   const navigate = useNavigate();
   const { auth } = useAuth();
 
+  // If user is logged in, the following message will show.
   if (auth?.token) {
     return (
       <div className="login-page">
@@ -25,29 +28,27 @@ function LoginPage() {
   }
 
   return (
-    <div id="login-page" className="login-page">
-      <div id="login-container" className="login-container">
-        <h1 className="login-heading">
-          <span className="icon">꧁</span> Login{" "}
-          <span className="icon flip-icon">꧁</span>
-        </h1>
-        <h2>Login to your account</h2>
-        <LoginForm /> {/* Replace with your login form */}
-        {/* Sign Up Here Button */}
-        <div className="login-sign-up-container">
-          <p>
-            Don't have an account?{" "}
+    <div id="signup-page" className="login-page">
+      <div id="signup-container" className="login-container">
+        <div className="signup-form">
+          <h1 className="signup-heading">
+            <span className="icon">꧁</span> Sign Up{" "}
+            <span className="icon flip-icon">꧁</span>
+          </h1>
+          <SignUpForm />
+          <div className="login-sign-up-container">
+            <p className="login-sign-up-text">Already have an account?</p>
             <button
-              className="login-button" // You can apply the same class as in other buttons
-              onClick={() => navigate("/signup")}
+              className="toggle-form-button"
+              onClick={() => navigate("/login")}
             >
-              Sign Up Here
+              Login here
             </button>
-          </p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default LoginPage;
+export default SignUpPage;
