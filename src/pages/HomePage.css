@@ -338,19 +338,16 @@ textarea {
   }
 }
 
-/* Snowflakes from the left */
 .snowflake.left {
   animation: fall 12s linear infinite, drift 15s ease-in-out infinite,
     rotate 20s linear infinite;
 }
 
-/* Snowflakes from the right */
 .snowflake.right {
   animation: fall 12s linear infinite, driftRight 15s ease-in-out infinite,
     rotate 20s linear infinite;
 }
 
-/* Snowflakes variations */
 .snowflake:nth-child(1) {
   font-size: 1.5em;
   opacity: 0.5;

@@ -11,7 +11,6 @@ h1, h2, p {
     margin: 0;
 }
 
-/* List Page Container */
 .list-page {
     display: flex;
     flex-direction: column;
@@ -20,7 +19,6 @@ h1, h2, p {
     background-color: #00173a;
 }
 
-/* List Container */
 .list-container {
     width: 90%;
     max-width: 900px;
@@ -34,13 +32,11 @@ h1, h2, p {
     gap: 20px;
 }
 
-/* Titles and Headings */
 .list-container h1, .list-container h2 {
     font-family: "Quattrocento", serif;
     color: #d9bd80;
 }
 
-/* List Group */
 .list-group {
     display: flex;
     flex-direction: column;
@@ -92,7 +88,6 @@ h1, h2, p {
     color: #081f43;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .list-container {
         padding: 20px;

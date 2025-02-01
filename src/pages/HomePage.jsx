@@ -62,6 +62,7 @@ function HomePage() {
 
   return (
     <>
+
       {/* --- SNOWFLAKES ANIMATION --- */}
       <div className="snowflakes" aria-hidden="true">
         <div className="snowflake left">❅</div>
@@ -81,8 +82,19 @@ function HomePage() {
           <h1>The Good List</h1>
           <p>Welcome to your Christmas shopping companion</p>
           <button onClick={handleCallToAction}>Start Now</button>
+
+      <div>
+        <div className="snowflakes" aria-hidden="true">
+          <div className="snowflake left">❅</div>
+          <div className="snowflake right">❆</div>
+          <div className="snowflake left">❄</div>
+          <div className="snowflake right">❅</div>
+          <div className="snowflake left">❆</div>
+          <div className="snowflake right">❄</div>
+          <div className="snowflake left">❅</div>
+          <div className="snowflake right">❆</div>
         </div>
-      </div>
+
 
       {/* --- ABOUT SECTION --- */}
       <div id="about" className="about-section">
@@ -97,26 +109,49 @@ function HomePage() {
       {/* --- FEATURES SECTION --- */}
       <div id="Features" className="Features-section">
         <div className="features-header">
+
           <h1>
             <span className="icon">꧁</span> Features{" "}
             <span className="icon flip-icon">꧁</span>
           </h1>
         </div>
+
         <div className="List-img">
           <div className="item-img">
             <img src={FeaturesImage} alt="Feature 1" />
             <p>Accompanying Text Here</p>
+
+
+        <div id="Features" className="Features-section">
+          <div className="features-header">
+            <h1>
+              <span className="icon">꧁</span> Features{" "}
+              <span className="icon flip-icon">꧁</span>
+            </h1>
+
           </div>
           <div className="item-img">
             <img src={FeaturesImage} alt="Feature 2" />
             <p>Accompanying Text Here</p>
           </div>
+
           <div className="item-img">
             <img src={FeaturesImage} alt="Feature 3" />
             <p>Accompanying Text Here</p>
+
+        </div>
+
+        <div className="create list">
+          <div id="create-list">
+            <p>Ready to get started?</p>
+            <button onClick={handleCreateList} className="create-list-button">
+              {getButtonText()}
+            </button>
+
           </div>
         </div>
       </div>
+
 
       {/* --- CONTACT FORM --- */}
       <div className="feedback-form">
