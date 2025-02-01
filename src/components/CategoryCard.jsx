@@ -1,14 +1,21 @@
 import PropTypes from 'prop-types';
-import ListItem from './ListItem';
 
-function CategoryCard({ category, lists, onCreateList }) {
+function CategoryCard({ category, lists, onCreateList, onListClick }) {
     return (
         <div className="category-card">
             <h3>{category.category_name}</h3>
             <p>Budget: ${category.category_budget}</p>
             <div className="category-lists">
                 {lists.map(list => (
-                    <ListItem key={list.id} list={list} />
+                    <div 
+                        key={list.id} 
+                        className="list-header"
+                        onClick={() => onListClick(list.id)}
+                    >
+                                <h4>{list.list_name}</h4>
+                                <p>Budget: ${list.individual_budget}</p>
+                                {list.notes && <p className="list-notes">{list.notes}</p>}
+                            </div>
                 ))}
                 <button 
                     onClick={() => onCreateList(category.id, category.category_name)}
@@ -24,7 +31,8 @@ function CategoryCard({ category, lists, onCreateList }) {
 CategoryCard.propTypes = {
     category: PropTypes.object.isRequired,
     lists: PropTypes.array.isRequired,
-    onCreateList: PropTypes.func.isRequired
+    onCreateList: PropTypes.func.isRequired,
+    onListClick: PropTypes.func.isRequired
 };
 
 export default CategoryCard; 
