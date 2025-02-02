@@ -35,6 +35,41 @@ function ListLandingPage() {
     navigate("/create-category");
   };
 
+  const handleCreateWishlistCategory = async () => {
+    // Check if my "Wishlist" category already exists
+    const existingWishlistCategory = categories.find(
+      (category) => category.name === "My Wishlist");
+
+    if (existingWishlistCategory) {
+      alert ("My Wishlist already exists.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/category/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Token ${auth.token}`,
+        },
+        body: JSON.stringify({ 
+          name: "My Wishlist",
+          wishlist: true,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create wishlist category");
+      }
+
+      alert("Wishlist category created! You can now add lists under 'My Wishlist'.");
+      window.location.reload(); // Refresh page to reflect the new category
+    } catch (error) {
+      console.error("Error creating wishlist:", error);
+      alert("Error creating wishlist. Please try again.");
+    }
+  };
+
   const handleListClick = (listId) => {
     navigate(`/list/${listId}`);
   };
@@ -48,6 +83,13 @@ function ListLandingPage() {
       <div className="list-landing-container">
         {auth.token && (
           <>
+          <button
+                onClick={handleCreateWishlistCategory}
+                className="create-wishlist-button"
+              >
+                Create My Wishlist
+              </button>
+              
             <div className="categories-section">
               {categories && categories.length > 0 ? (
                 <CategoryList
