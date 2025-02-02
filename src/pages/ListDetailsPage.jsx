@@ -1,10 +1,10 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAuth } from "../hooks/use-auth";
 import ItemCard from "../components/ItemCard";
 import AddItemForm from "../components/AddItemForm";
 import "./ListDetailsPage.css";
-import Snowflakes from "../components/Snowflakes"; 
+import Snowflakes from "../components/Snowflakes";
 
 function ListDetailsPage() {
   const { id } = useParams();
@@ -202,14 +202,12 @@ function ListDetailsPage() {
       <Snowflakes />
 
       <div className="list-details-header">
-        <button onClick={handleGoBack} className="back-button">
-          ← Back to Lists
-        </button>
+        <Link to="/lists">← Back to Lists</Link>
         <div className="list-header-content">
-          <h2>{list.list_name}</h2>
+          <h1>{list.list_name}</h1>
           <div className="list-info">
             {/* <p>Budget: ${list.individual_budget}</p> */}
-            {list.notes && <p className="list-notes">{list.notes}</p>}
+            {list.notes && <p>{list.notes}</p>}
           </div>
         </div>
       </div>
