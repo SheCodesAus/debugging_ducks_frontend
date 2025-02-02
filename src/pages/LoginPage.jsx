@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import LoginForm from "../components/LoginForm";
 import "./LoginPage.css";
+import Snowflakes from "../components/Snowflakes";
 
 function LoginPage() {
   console.log("LoginPage rendered");
@@ -16,14 +17,14 @@ function LoginPage() {
     navigate("/");
   };
 
-
-  // If user is logged in, the following message will show.
-
   if (auth?.token) {
     return (
-      <div className="login-page">
+      <div className="login-page logged-in">
         <div className="login-container">
-          <h1>Welcome back!</h1>
+          <h1 className="welcome-back-header">
+            <span className="header-flourish">꧁</span> Welcome back!
+            <span className="header-flourish flip-flourish">꧁</span>
+          </h1>
           <p>You are already logged in.</p>
           <button onClick={() => navigate("/")}>Home</button>
           <button onClick={handleLogout}>Log Out</button>
@@ -34,6 +35,9 @@ function LoginPage() {
 
   return (
     <div className="login-page">
+      {/* Snowflakes Component */}
+      <Snowflakes />
+
       <div className="login-container">
         <div>
           <h1>

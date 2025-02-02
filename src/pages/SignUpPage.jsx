@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import SignUpForm from "../components/SignUpForm";
 import "./SignUpPage.css";
+import Snowflakes from "../components/Snowflakes";
 
 function SignUpPage() {
   console.log("SignUpPage rendered");
@@ -35,6 +36,9 @@ function SignUpPage() {
 
   return (
     <div className="signup-page">
+      {/* Snowflakes Component */}
+      <Snowflakes />
+      
       <div className="signup-container">
         <h1>
           <span className="header-flourish">꧁</span> Sign Up{" "}

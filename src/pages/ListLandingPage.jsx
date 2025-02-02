@@ -4,6 +4,7 @@ import useCategories from "../hooks/use-categories";
 import { useAuth } from "../hooks/use-auth";
 import CategoryList from "../components/CategoryList";
 import "./ListLandingPage.css";
+import Snowflakes from "../components/Snowflakes"; 
 
 function ListLandingPage() {
   const { id } = useParams();
@@ -46,32 +47,42 @@ function ListLandingPage() {
 
     // Check if my "Wishlist" category already exists
     const existingWishlistCategory = categories.find(
-      (category) => category.category_name.toLowerCase() === "my wishlist" && category.wishlist === true);
+      (category) =>
+        category.category_name.toLowerCase() === "my wishlist" &&
+        category.wishlist === true
+    );
 
     if (existingWishlistCategory) {
-      alert ("My Wishlist already exists.");
+      alert("My Wishlist already exists.");
       return;
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/category/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Token ${token}`,
-        },
-        body: JSON.stringify({ 
-          category_name: "My Wishlist",
-          wishlist: true,
-        }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/category/`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Token ${token}`,
+          },
+          body: JSON.stringify({
+            category_name: "My Wishlist",
+            wishlist: true,
+          }),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json(); // Backend-specific error message
-        throw new Error(errorData.detail || "Failed to create wishlist category");
-    }
+        throw new Error(
+          errorData.detail || "Failed to create wishlist category"
+        );
+      }
       const createdCategory = await response.json();
-      alert("Wishlist category created! You can now add lists under 'My Wishlist'.");
+      alert(
+        "Wishlist category created! You can now add lists under 'My Wishlist'."
+      );
       window.location.reload(); // Refresh page to reflect the new category
     } catch (error) {
       console.error("Error creating wishlist:", error);
@@ -89,15 +100,18 @@ function ListLandingPage() {
 
   return (
     <div className="list-landing-page">
+      {/* Snowflakes Component */}
+      <Snowflakes />
+
       <div className="list-landing-container">
         {auth.token && (
           <>
-          <button
-                onClick={handleCreateWishlistCategory}
-                className="create-wishlist-button"
-              >
-                Create My Wishlist
-              </button>
+            <button
+              onClick={handleCreateWishlistCategory}
+              className="create-wishlist-button"
+            >
+              Create My Wishlist
+            </button>
 
             <div className="categories-section">
               {categories && categories.length > 0 ? (

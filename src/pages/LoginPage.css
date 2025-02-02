@@ -16,14 +16,82 @@
 
 .login-container h1 {
   margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.login-container h1 .header-flourish {
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+
+.not-found-card h1 .flip-icon {
+  transform: scaleX(-1);
+  display: inline-block;
+  font-size: 0.6em;
+  margin: 0 5px;
 }
 
 .signup-text-container {
-  display: flex; /* Flexbox layout */
-  align-items: center; /* Ensure vertical centering */
-  gap: 10px; /* Space between the text and button */
-  margin-top: 15px; /* Adjust space from the form */
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 15px; 
   justify-content: center;
+}
+
+.login-page.logged-in {
+  margin-top: 50px;
+}
+
+.login-page.logged-in .login-container {
+  max-width: 600px; 
+  padding: 60px;
+  height: 350px;
+}
+
+.welcome-back-header {
+  font-size: 2rem;
+  color: var(--gold);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.welcome-back-header .header-flourish,
+.welcome-back-header .flip-flourish {
+  font-size: 1.2em;  
+}
+
+.login-page.logged-in .login-container p {
+  font-family: var(--body-font);
+  font-size: 1em; 
+  color: var(--white);
+  margin-top: 10px; 
+  margin-bottom: 20px; 
+}
+
+.login-page.logged-in .login-container button {
+  margin: 10px; 
+  margin-top: 20px; 
+}
+
+.login-page.logged-in .login-container button:first-of-type {
+  margin-right: 20px; 
+}
+
+.login-page.logged-in .login-container button:last-of-type {
+  margin-left: 20px; 
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px;
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 480px) {
