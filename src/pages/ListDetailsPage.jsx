@@ -212,27 +212,7 @@ function ListDetailsPage() {
         </div>
       </div>
 
-      <div className="list-items">
-        <div className="list-items-header">
-          <h3>Items</h3>
-          <div className="list-actions">
-            <button
-              onClick={() => setShowAddForm(true)}
-              className="add-item-button"
-            >
-              Add Item
-            </button>
-          </div>
-        </div>
-
-        {showAddForm && (
-          <AddItemForm
-            onSubmit={handleAddItem}
-            onCancel={() => setShowAddForm(false)}
-            currentRanking={items.length + 1}
-          />
-        )}
-
+      <div className="list-items-container">
         {items.length > 0 ? (
           <div className="items-grid">
             <div className="items-header-row">
@@ -267,6 +247,18 @@ function ListDetailsPage() {
           <div className="empty-items">
             <p>No items in this list yet.</p>
           </div>
+        )}
+
+        {!showAddForm && (
+          <button onClick={() => setShowAddForm(true)}>Add Item</button>
+        )}
+
+        {showAddForm && (
+          <AddItemForm
+            onSubmit={handleAddItem}
+            onCancel={() => setShowAddForm(false)}
+            currentRanking={items.length + 1}
+          />
         )}
       </div>
     </div>

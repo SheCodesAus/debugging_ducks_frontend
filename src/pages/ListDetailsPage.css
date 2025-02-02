@@ -1,8 +1,12 @@
+/* --- LIST DETAILS CONTAINER ON DESKTOP --- */
+
 .list-details-container {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
+
+/* --- UTILITIES --- */
 
 .list-details-loading,
 .list-details-error,
@@ -16,10 +20,12 @@
   color: #dc3545;
 }
 
+/* --- LIST DETAILS HEADER ON DESKTOP --- */
+
 .list-details-header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--gold);
+  /* border-bottom: 2px solid var(--gold); */
 }
 
 .list-header-content {
@@ -35,36 +41,11 @@
   align-items: center;
 }
 
-.list-items-header {
+/* --- LIST ITEMS CONTAINER ON DESKTOP --- */
+
+.list-items-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.list-items-header h3 {
-  margin: 0;
-  color: #b08c5e;
-}
-
-.list-actions {
-  display: flex;
-  gap: 1rem;
-}
-
-.add-item-button {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  background: #d9bd80;
-  color: #081f43;
-  border: none;
-}
-
-.add-item-button:hover {
-  background: #b08c5e;
+  flex-direction: column;
 }
 
 .add-item-form {
@@ -94,38 +75,7 @@
   resize: vertical;
 }
 
-.form-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-}
-
-.form-actions button {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.form-actions button[type="submit"] {
-  background: #28a745;
-  color: white;
-  border: none;
-}
-
-.form-actions button[type="submit"]:hover {
-  background: #218838;
-}
-
-.form-actions button[type="button"] {
-  background: #6c757d;
-  color: white;
-  border: none;
-}
-
-.form-actions button[type="button"]:hover {
-  background: #5a6268;
-}
+/* --- ITEMS GRID ON DESKTOP --- */
 
 .items-grid {
   display: flex;
@@ -194,14 +144,6 @@
 
 .delete-item-button:hover {
   background: #c82333;
-}
-
-.empty-items {
-  text-align: center;
-  padding: 3rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  color: #666;
 }
 
 .items-header-row {
@@ -373,6 +315,16 @@ div.items-grid > div.item-component > div.item-rank {
   align-items: center;
   width: 100%;
   accent-color: #d9bd80;
+}
+
+/* --- EMPTY ITEMS MESSAGE BOX --- */
+
+.empty-items {
+  text-align: center;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #666;
 }
 
 @media (max-width: 768px) {
