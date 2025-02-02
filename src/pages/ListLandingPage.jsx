@@ -4,6 +4,7 @@ import useCategories from "../hooks/use-categories";
 import { useAuth } from "../hooks/use-auth";
 import CategoryList from "../components/CategoryList";
 import "./ListLandingPage.css";
+import postCategory from "../api/post-category";
 
 function ListLandingPage() {
   const { id } = useParams();
@@ -50,7 +51,7 @@ function ListLandingPage() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Token ${auth.token}`,
+          "Authorization": `Token ${token}`,
         },
         body: JSON.stringify({ 
           name: "My Wishlist",
@@ -89,7 +90,7 @@ function ListLandingPage() {
               >
                 Create My Wishlist
               </button>
-              
+
             <div className="categories-section">
               {categories && categories.length > 0 ? (
                 <CategoryList
