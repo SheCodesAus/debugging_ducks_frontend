@@ -189,7 +189,7 @@ function ListDetailsPage() {
                 <div className="list-header-content">
                     <h2>{list.list_name}</h2>
                     <div className="list-info">
-                        <p>Budget: ${list.individual_budget}</p>
+                        {/* <p>Budget: ${list.individual_budget}</p> */}
                         {list.notes && <p className="list-notes">{list.notes}</p>}
                     </div>
                 </div>
@@ -227,8 +227,10 @@ function ListDetailsPage() {
                         {items.map(item => (
                             <ItemCard
                                 key={item.id}
+                                itemId={item.id}
+                                listId={id}
                                 itemName={item.name}
-                                cost={item.cost}
+                                cost={parseFloat(item.cost) || 0}
                                 rank={item.ranking || items.length}
                                 isFavorite={item.favourite || false}
                                 isPurchased={item.purchased || false}

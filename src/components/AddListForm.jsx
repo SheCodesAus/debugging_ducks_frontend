@@ -64,7 +64,7 @@ function AddListForm({ categoryId, categoryName, onListCreated }) {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="individual_budget">Individual Budget ($):</label>
               <input
                 type="number"
@@ -76,7 +76,7 @@ function AddListForm({ categoryId, categoryName, onListCreated }) {
                 min="0"
                 required
               />
-            </div>
+            </div> */}
 
             {errors.submit && <p className="error">{errors.submit}</p>}
 
