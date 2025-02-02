@@ -46,7 +46,7 @@ function ListLandingPage() {
 
     // Check if my "Wishlist" category already exists
     const existingWishlistCategory = categories.find(
-      (category) => category.name === "My Wishlist");
+      (category) => category.category_name.toLowerCase() === "my wishlist" && category.wishlist === true);
 
     if (existingWishlistCategory) {
       alert ("My Wishlist already exists.");
