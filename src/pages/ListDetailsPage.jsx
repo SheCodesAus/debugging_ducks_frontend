@@ -208,7 +208,7 @@ function ListDetailsPage() {
         <div className="list-header-content">
           <h2>{list.list_name}</h2>
           <div className="list-info">
-            <p>Budget: ${list.individual_budget}</p>
+            {/* <p>Budget: ${list.individual_budget}</p> */}
             {list.notes && <p className="list-notes">{list.notes}</p>}
           </div>
         </div>
