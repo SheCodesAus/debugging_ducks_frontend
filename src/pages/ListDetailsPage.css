@@ -48,33 +48,6 @@
   flex-direction: column;
 }
 
-.add-item-form {
-  background: #081f43;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-}
-
-.add-item-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.add-item-form input,
-.add-item-form textarea {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.add-item-form textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
 /* --- ITEMS GRID ON DESKTOP --- */
 
 .items-grid {
