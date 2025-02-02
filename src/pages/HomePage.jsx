@@ -6,6 +6,7 @@ import useLists from "../hooks/use-lists";
 import LogoImage from "../img/Logo.svg";
 import FeaturesImage from "../img/features-stand-in.webp";
 import z from "zod";
+import Snowflakes from "../components/Snowflakes.jsx";
 
 const contactformSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -57,7 +58,7 @@ function HomePage() {
       state: { categoryId, categoryName },
     });
   };
-  
+
   const handleCallToAction = () => {
     if (auth.token) {
       navigate("/lists");
@@ -68,17 +69,7 @@ function HomePage() {
 
   return (
     <>
-      {/* --- SNOWFLAKES ANIMATION --- */}
-      <div className="snowflakes" aria-hidden="true">
-        <div className="snowflake left">❅</div>
-        <div className="snowflake right">❆</div>
-        <div className="snowflake left">❄</div>
-        <div className="snowflake right">❅</div>
-        <div className="snowflake left">❆</div>
-        <div className="snowflake right">❄</div>
-        <div className="snowflake left">❅</div>
-        <div className="snowflake right">❆</div>
-      </div>
+      <Snowflakes />
 
       {/* --- WELCOME BANNER --- */}
       <div className="banner">
