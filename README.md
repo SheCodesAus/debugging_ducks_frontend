@@ -1,6 +1,8 @@
 # The Good List
 > Debugging Ducks
 
+Deployed Website : https://the-good-list.netlify.app/
+
 ## Table of Contents
 
 - [The Good List](#the-good-list)
