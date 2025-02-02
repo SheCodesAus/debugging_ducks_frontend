@@ -1,6 +1,6 @@
 .snowflakes {
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -9,8 +9,8 @@
 }
 
 .snowflake {
-  position: absolute;
-  top: -10px;
+  /* position: absolute;
+  top: -10px; */
   color: #f8f8f8;
   font-size: 2em;
   user-select: none;
