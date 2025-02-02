@@ -21,9 +21,12 @@ function LoginPage() {
 
   if (auth?.token) {
     return (
-      <div className="login-page">
+      <div className="login-page logged-in">
         <div className="login-container">
-          <h1>Welcome back!</h1>
+          <h1 className="welcome-back-header">
+            <span className="header-flourish">꧁</span> Welcome back!
+            <span className="header-flourish flip-flourish">꧁</span>
+          </h1>
           <p>You are already logged in.</p>
           <button onClick={() => navigate("/")}>Home</button>
           <button onClick={handleLogout}>Log Out</button>

@@ -16,12 +16,27 @@
 
 .signup-container h1 {
   margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.signup-container h1 .header-flourish {
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+
+.signup-container h1 .flip-icon {
+ transform: scaleX(-1);
+  display: inline-block;
+  font-size: 0.6em;
+  margin: 0 5px;
 }
 
 .login-text-container {
-  display: flex; /* Flexbox layout */
-  align-items: center; /* Ensure vertical centering */
-  gap: 10px; /* Space between the text and button */
-  margin-top: 15px; /* Adjust space from the form */
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 15px; 
   justify-content: center;
 }
