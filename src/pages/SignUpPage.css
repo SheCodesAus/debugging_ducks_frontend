@@ -25,3 +25,10 @@
   margin-top: 15px; /* Adjust space from the form */
   justify-content: center;
 }
+
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 30px;
+    margin: 20px;
+  }
+}

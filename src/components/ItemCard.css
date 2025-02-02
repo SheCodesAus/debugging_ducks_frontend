@@ -11,6 +11,32 @@
     position: relative;
 }
 
+@media (max-width: 1024px) {
+    .item-component {
+        grid-template-columns: 60px 1fr 80px 60px 100px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .item-component {
+        grid-template-columns: 50px 1fr 60px 50px !important;
+    }
+    .item-rank { 
+        display: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .item-component {
+        grid-template-columns: 40px 1fr 50px !important;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    .item-cost, .item-rank, .item-member {
+        display: none;
+    }
+}
+
 .item-component:hover {
     background-color: #0a2654 !important;
 }
