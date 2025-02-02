@@ -4,7 +4,6 @@ import useCategories from "../hooks/use-categories";
 import { useAuth } from "../hooks/use-auth";
 import CategoryList from "../components/CategoryList";
 import "./ListLandingPage.css";
-import postCategory from "../api/post-category";
 
 function ListLandingPage() {
   const { id } = useParams();
@@ -37,6 +36,14 @@ function ListLandingPage() {
   };
 
   const handleCreateWishlistCategory = async () => {
+    // Ensure token is available
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("You must be logged in to create a wishlist.");
+      navigate("/login");
+      return;
+    }
+
     // Check if my "Wishlist" category already exists
     const existingWishlistCategory = categories.find(
       (category) => category.name === "My Wishlist");
@@ -54,20 +61,21 @@ function ListLandingPage() {
           "Authorization": `Token ${token}`,
         },
         body: JSON.stringify({ 
-          name: "My Wishlist",
+          category_name: "My Wishlist",
           wishlist: true,
         }),
       });
 
       if (!response.ok) {
-        throw new Error("Failed to create wishlist category");
-      }
-
+        const errorData = await response.json(); // Backend-specific error message
+        throw new Error(errorData.detail || "Failed to create wishlist category");
+    }
+      const createdCategory = await response.json();
       alert("Wishlist category created! You can now add lists under 'My Wishlist'.");
       window.location.reload(); // Refresh page to reflect the new category
     } catch (error) {
       console.error("Error creating wishlist:", error);
-      alert("Error creating wishlist. Please try again.");
+      alert(`Error creating wishlist: ${error.message}`);
     }
   };
 

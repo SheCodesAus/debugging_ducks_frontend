@@ -104,22 +104,6 @@ h3 {
   margin: 20px 0px 10px 0px;
 }
 
-.list-landing-container .create-list-button:hover {
-  color: #b08c5e;
-  text-decoration: underline;
-}
-
-.list-landing-container .create-wishlist-button {
-  background: none;
-  border: none;
-  color: #d9bd80;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  margin: 20px 0px 10px 0px;
-}
-
 .list-landing-container .create-wishlist-button:hover {
   color: #b08c5e;
   text-decoration: underline;
