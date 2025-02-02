@@ -18,68 +18,19 @@
   margin-bottom: 20px;
 }
 
-
 .signup-text-container {
   display: flex; /* Flexbox layout */
   align-items: center; /* Ensure vertical centering */
   gap: 10px; /* Space between the text and button */
   margin-top: 15px; /* Adjust space from the form */
-
-.error {
-  color: #ff4d4d;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.toggle-form-button {
-  background: none;
-  border: none;
-  color: #d9bd80;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.toggle-form-button:hover {
-  color: #b08c5e;
-  text-decoration: underline;
-}
-
-.login-sign-up-container {
-  display: flex;
-  align-items: center; 
-  gap: 10px; 
-  margin-top: 15px; 
   justify-content: center;
 }
-
 
 @media (max-width: 480px) {
   .login-container {
     padding: 30px;
     max-width: 90%;
   }
-
-.toggle-form-button {
-  background: none;
-  border: none;
-  color: #d9bd80;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  margin: 0;
-  padding: 5px 10px;
-  line-height: 1;
-}
-
-.login-container button:hover {
-  background-color: #b08c5e; 
-  color: #081f43; 
-  opacity: 0.9; 
-  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
