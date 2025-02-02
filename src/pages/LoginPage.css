@@ -51,7 +51,6 @@
   height: 350px;
 }
 
-/* Specific styles for the "Welcome back!" header */
 .welcome-back-header {
   font-size: 2rem;
   color: var(--gold);
@@ -59,38 +58,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Adds spacing between the text and the flourishes */
+  gap: 10px; 
 }
 
-/* Flourish styles for "Welcome back!" */
 .welcome-back-header .header-flourish,
 .welcome-back-header .flip-flourish {
-  font-size: 1.2em;  /* Larger size for the flourishes */
+  font-size: 1.2em;  
 }
 
 .login-page.logged-in .login-container p {
   font-family: var(--body-font);
-  font-size: 1em; /* Adjust the font size */
-  color: var(--white);/* Change the text color */
-  margin-top: 10px; /* Add some spacing above the paragraph */
-  margin-bottom: 20px; /* Space out the paragraph from the buttons */
+  font-size: 1em; 
+  color: var(--white);
+  margin-top: 10px; 
+  margin-bottom: 20px; 
 }
 
-/* Button spacing */
 .login-page.logged-in .login-container button {
   margin: 10px; 
-  margin-top: 20px; /* Add some space around each button */
+  margin-top: 20px; 
 }
 
 .login-page.logged-in .login-container button:first-of-type {
-  margin-right: 20px; /* Adds space to the right of the 'Home' button */
+  margin-right: 20px; 
 }
 
 .login-page.logged-in .login-container button:last-of-type {
-  margin-left: 20px; /* Adds space to the left of the 'Log Out' button */
+  margin-left: 20px; 
 }
 
-/* Additional responsive adjustments if needed */
 @media (max-width: 480px) {
   .login-container {
     padding: 30px;
