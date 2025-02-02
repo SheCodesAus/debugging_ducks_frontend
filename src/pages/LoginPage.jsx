@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import LoginForm from "../components/LoginForm";
 import "./LoginPage.css";
+import Snowflakes from "../components/Snowflakes";
 
 function LoginPage() {
   console.log("LoginPage rendered");
@@ -34,6 +35,9 @@ function LoginPage() {
 
   return (
     <div className="login-page">
+      {/* Snowflakes Component */}
+      <Snowflakes />
+
       <div className="login-container">
         <div>
           <h1>
