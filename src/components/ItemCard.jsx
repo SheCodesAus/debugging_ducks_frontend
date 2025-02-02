@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import "./ItemCard.css";
 
 function ItemCard({ 
+    itemId,
+    listId,
     itemName, 
     cost, 
     rank, 
@@ -15,11 +18,19 @@ function ItemCard({
     onTogglePurchased,
     onDelete
 }) {
+    const navigate = useNavigate();
+
+    const handleNameClick = () => {
+        navigate(`/list/${listId}/item/${itemId}/edit`, {
+            state: { listId }
+        });
+    };
+
     return (
         <div className={`item-component ${isPurchased ? 'purchased' : ''} ${isArchived ? 'archived' : ''}`}>
             <p className="item-rank">{rank}</p>
-            <p className="item-name">{itemName}</p>
-            <p className="item-cost">${cost|| '0.00'}</p>
+            <p className="item-name" onClick={handleNameClick}>{itemName}</p>
+            <p className="item-cost">${typeof cost === 'number' ? cost.toFixed(2) : parseFloat(cost || 0).toFixed(2)}</p>
             <button
                 className={`item-favorite ${isFavorite ? "favorite" : ""}`}
                 onClick={onToggleFavorite}
@@ -66,6 +77,8 @@ function ItemCard({
 }
 
 ItemCard.propTypes = {
+    itemId: PropTypes.number.isRequired,
+    listId: PropTypes.number.isRequired,
     itemName: PropTypes.string.isRequired,
     cost: PropTypes.number,
     rank: PropTypes.number.isRequired,

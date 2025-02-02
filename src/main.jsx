@@ -11,6 +11,7 @@ import ListLandingPage from "./pages/ListLandingPage";
 import CreateListPage from "./pages/CreateListPage";
 import CreateCategoryPage from "./pages/CreateCategoryPage";
 import ListDetailsPage from "./pages/ListDetailsPage";
+import EditItemPage from "./pages/EditItemPage";
 
 // Import components (navbar, etc.)
 import NavBar from "./components/NavBar";
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <LoginPage /> },
       { path: "/lists", element: <ListLandingPage /> },
       { path: "/list/:id", element: <ListDetailsPage /> },
+      { path: "/list/:listId/item/:itemId/edit", element: <EditItemPage /> },
       { path: "/create-list", element: <CreateListPage /> },
       { path: "/create-category", element: <CreateCategoryPage /> },
       { path: "*", element: <NotFoundPage /> },
