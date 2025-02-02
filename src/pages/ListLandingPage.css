@@ -93,6 +93,24 @@ h3 {
   height: 40px;
 }
 
+.list-landing-container .create-wishlist-button {
+  font-family: var(--heading-font);
+  text-align: center;
+  background-color: var(--gold);
+  color: var(--lightnavy);
+  width: auto;
+  padding: 10px 60px;
+  margin: 15px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.list-landing-container .create-wishlist-button:hover {
+  background-color: var(--darkgold);
+}
+
 .list-landing-container .create-list-button {
   background: none;
   border: none;
@@ -104,7 +122,7 @@ h3 {
   margin: 20px 0px 10px 0px;
 }
 
-.list-landing-container .create-list-button:hover {
+.list-landing-container .create-wishlist-button:hover {
   color: #b08c5e;
   text-decoration: underline;
 }
