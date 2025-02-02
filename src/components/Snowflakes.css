@@ -9,8 +9,8 @@
 }
 
 .snowflake {
-  /* position: absolute;
-  top: -10px; */
+  position: absolute;
+  top: -10px;
   color: #f8f8f8;
   font-size: 2em;
   user-select: none;
