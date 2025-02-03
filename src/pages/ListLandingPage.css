@@ -11,36 +11,6 @@
   text-align: center;
 }
 
-.list-landing-heading {
-  margin: 0;
-  font-size: 2em;
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-family: "Quattrocento", serif;
-  color: #d9bd80;
-}
-
-.list-landing-heading .icon {
-  font-size: 0.6em;
-  margin: 0 5px;
-}
-
-.list-landing-heading .flip-icon {
-  transform: scaleX(-1);
-  display: inline-block;
-  margin-left: 10px;
-}
-
-.list-landing-heading .icon:first-child {
-  margin-right: 10px;
-}
-
-.list-landing-heading .icon,
-.list-landing-heading .flip-icon {
-  vertical-align: middle;
-}
-
 .list-landing-container .create-list-button {
   background: none;
   border: none;
@@ -52,6 +22,7 @@
   margin: 20px 0px 10px 0px;
 }
 
+/* Start of CategoryCard styling */
 .category-group {
   justify-content: center;
 }
@@ -61,27 +32,6 @@
   height: 1.5rem;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-.categories-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.categories-section {
-  margin: 20px 0;
-  padding-left: 10px;
-}
-
-.categories-section h2 {
-  color: #d9bd80;
-  font-family: "Quattrocento", serif;
-  margin-bottom: 30px;
-  text-align: left;
-  font-size: 1.8em;
 }
 
 .category-card {
@@ -113,20 +63,16 @@
   font-size: 0.9em;
 }
 
-.lists-section h2 {
-  color: #d9bd80;
-  font-family: "Quattrocento", serif;
-  margin-bottom: 20px;
-}
-
 .category-lists {
   padding-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* End of CategoryCard styling */
 
-.list-item {
+/* Styling for ListItem component which is not being used anywhere - to be deleted? */
+/* .list-item {
   background: none;
   border: none;
   padding: 8px 0;
@@ -142,7 +88,7 @@
   color: #f8f8f8;
   font-size: 1em;
   margin-bottom: 4px;
-}
+} 
 
 .list-notes {
   color: rgba(248, 248, 248, 0.6) !important;
@@ -156,8 +102,9 @@
   padding: 8px 0;
   margin-bottom: 5px;
   align-items: center;
-}
+} */
 
+/* Start of CategoryCard styling */
 .list-header {
   display: flex;
   align-items: center;
@@ -180,8 +127,10 @@
   text-align: center;
   /* flex-grow: 1; */
 }
+/* End of CategoryCard styling */
 
-.expand-icon {
+/* Styling for ListItem component which is not being used anywhere - to be deleted? */
+/* .expand-icon {
   color: #d9bd80;
   font-size: 0.8em;
   transition: transform 0.3s ease;
@@ -196,28 +145,9 @@
   margin-top: 10px;
   padding: 10px;
   border-left: 2px solid rgba(217, 189, 128, 0.3);
-}
+} */
 
-@media (max-width: 600px) {
-  .list-landing-container {
-    padding: 20px;
-    width: 100%;
-  }
-  .list-landing-heading {
-    font-size: 1.5em;
-  }
-}
-
-@media (max-width: 400px) {
-  .list-landing-heading {
-    font-size: 1.3em;
-  }
-  .list-landing-container form input,
-  .create-list-button {
-    font-size: 14px;
-    padding: 8px;
-  }
-}
+/* --- EMPTY CATEGORIES BOX ON DESKTOP --- */
 
 .empty-categories {
   padding: 3rem;
@@ -227,20 +157,19 @@
   margin: 20px 0px;
 }
 
-.create-first-category-button {
-  background-color: #d9bd80;
-  color: #081f43;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  font-family: "Lato", sans-serif;
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 600px) {
+  .list-landing-container {
+    padding: 20px;
+    width: 100%;
+  }
 }
 
-.create-first-category-button:hover {
-  background-color: #b08c5e;
-  transform: translateY(-2px);
+@media (max-width: 400px) {
+  .list-landing-container form input,
+  .create-list-button {
+    font-size: 14px;
+    padding: 8px;
+  }
 }

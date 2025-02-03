@@ -30,7 +30,7 @@ function CategoryCard({ category, lists, onCreateList, onListClick }) {
           >
             <h4>{list.list_name}</h4>
             {/* <p>Budget: ${list.individual_budget}</p> */}
-            {list.notes && <p className="list-notes">{list.notes}</p>}
+            {/* {list.notes && <p className="list-notes">{list.notes}</p>} */}
           </div>
         ))}
         <button

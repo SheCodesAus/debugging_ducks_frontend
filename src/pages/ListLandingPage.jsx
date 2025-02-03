@@ -113,7 +113,7 @@ function ListLandingPage() {
           Create My Wishlist
         </button>
 
-        <div className="categories-section">
+        <div className="categories-grid">
           {categories && categories.length > 0 ? (
             <CategoryList
               categories={categories}
@@ -127,8 +127,9 @@ function ListLandingPage() {
               <p>Create your wishlist or category to get started!</p>
             </div>
           )}
-          <button onClick={handleCreateCategory}>Create New Category</button>
         </div>
+
+        <button onClick={handleCreateCategory}>Create New Category</button>
       </div>
     </div>
   );
