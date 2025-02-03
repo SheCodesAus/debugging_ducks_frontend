@@ -113,6 +113,8 @@
   max-width: 500px;
   height: auto;
   object-fit: cover;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
 }
 
 .List-img p {
