@@ -295,10 +295,11 @@ div.items-grid > div.item-component > div.item-rank {
 .empty-items {
   text-align: center;
   padding: 3rem;
-  background: #f8f9fa;
+  background: var(--lightnavy);
   border-radius: 8px;
-  color: #666;
 }
+
+/* --- MEDIA QUERIES --- */
 
 @media (max-width: 768px) {
   .list-info {

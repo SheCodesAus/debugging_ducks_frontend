@@ -245,7 +245,7 @@ function ListDetailsPage() {
           </div>
         ) : (
           <div className="empty-items">
-            <p>No items in this list yet.</p>
+            <p>No items in this list yet</p>
           </div>
         )}
 
