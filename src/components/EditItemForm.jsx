@@ -18,9 +18,15 @@ function EditItemForm({ itemId, onSubmit, onCancel }) {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(true);
 
+    console.log('EditItemForm rendered with itemId:', itemId);
+    console.log('Auth token:', auth.token);
+
     useEffect(() => {
+        console.log('useEffect triggered with itemId:', itemId, 'and token:', auth.token);
+        
         const fetchItem = async () => {
             try {
+                console.log('Attempting to fetch item with URL:', `${import.meta.env.VITE_API_URL}/items/${itemId}/`);
                 const response = await fetch(`${import.meta.env.VITE_API_URL}/items/${itemId}/`, {
                     headers: {
                         'Authorization': `Token ${auth.token}`,
@@ -49,7 +55,10 @@ function EditItemForm({ itemId, onSubmit, onCancel }) {
         };
 
         if (auth.token) {
+            console.log('Token exists, calling fetchItem');
             fetchItem();
+        } else {
+            console.log('No token available, skipping fetch');
         }
     }, [itemId, auth.token]);
 
@@ -146,7 +155,7 @@ function EditItemForm({ itemId, onSubmit, onCancel }) {
 }
 
 EditItemForm.propTypes = {
-    itemId: PropTypes.string.isRequired,
+    itemId: PropTypes.number.isRequired,
     onSubmit: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired
 };
