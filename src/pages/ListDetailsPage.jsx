@@ -220,10 +220,8 @@ function ListDetailsPage() {
               <div className="header-item">Item</div>
               <div className="header-cost">Cost</div>
               <div className="header-favorite">♥</div>
-              <div className="header-purchased">
-                🎁
-                <p className="header-delete"></p>
-              </div>
+              <div className="header-purchased">🎁</div>
+              <div className="header-delete">x</div>
             </div>
             {items.map((item) => (
               <ItemCard
@@ -245,7 +243,7 @@ function ListDetailsPage() {
           </div>
         ) : (
           <div className="empty-items">
-            <p>No items in this list yet.</p>
+            <p>No items in this list yet</p>
           </div>
         )}
 
