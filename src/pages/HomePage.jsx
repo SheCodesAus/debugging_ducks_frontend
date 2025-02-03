@@ -103,15 +103,15 @@ function HomePage() {
         <div className="List-img">
           <div className="item-img">
             <img src={FeaturesImage} alt="Feature 1" />
-            <p>Accompanying Text Here</p>
+            <p>Stay organised this Christmas - create shopping lists and wishlists in seconds!</p>
           </div>
           <div className="item-img">
             <img src={FeaturesImage} alt="Feature 2" />
-            <p>Accompanying Text Here</p>
+            <p>Effortless organisation - group your lists by family, friends, or occasions!</p>
           </div>
           <div className="item-img">
             <img src={FeaturesImage} alt="Feature 3" />
-            <p>Accompanying Text Here</p>
+            <p>Prioritise, favourite, and track your gifts - stress-free shopping made easy!</p>
           </div>
         </div>
 
