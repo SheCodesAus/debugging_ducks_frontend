@@ -7,7 +7,11 @@ export const useAuth = () => {
 
   console.log("Returning auth state and functions from useAuth:", context);
 
-  if (!context || typeof context.login !== "function" || typeof context.signup !== "function") {
+  if (
+    !context ||
+    typeof context.login !== "function" ||
+    typeof context.signup !== "function"
+  ) {
     throw new Error("useAuth must be used within an AuthProvider");
   }
 

@@ -1,33 +1,33 @@
 .edit-item-page {
-    display: flex;
-    justify-content: center;
-    height: auto;
+  display: flex;
+  justify-content: center;
+  height: auto;
 }
 
 .edit-item-container {
-    max-width: 400px;
-    padding: 40px;
-    margin: 40px;
-    background-color: var(--lightnavy);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  width: 400px;
+  padding: 40px;
+  margin: 40px;
+  background-color: var(--lightnavy);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .edit-item-container h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 480px) {
-    .edit-item-container {
-        padding: 30px;
-        max-width: 90%;
-    }
-} 
+  .edit-item-container {
+    padding: 30px;
+    max-width: 90%;
+  }
+}
 
 @media (max-width: 768px) {
-    .login-page {
-        height: auto;
-        padding: 40px 20px;
-    }
+  .login-page {
+    height: auto;
+    padding: 40px 20px;
+  }
 }

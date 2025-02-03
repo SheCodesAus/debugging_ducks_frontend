@@ -1,0 +1,56 @@
+/* --- PAGE BACKGROUND --- */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  
+  /* --- SLEIGH ANIMATION --- */
+  .sleigh {
+    width: 120px; /* Adjust sleigh size */
+    position: absolute;
+    top: 40%;
+    left: -150px; /* Start off-screen */
+    animation: moveSleigh 6s linear infinite, floatSleigh 3s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 10px var(--gold)); /* Sleigh glow effect */
+  }
+  
+  /* Sleigh moves left to right across the screen */
+  @keyframes moveSleigh {
+    0% { left: -150px; }
+    100% { left: 100vw; }
+  }
+  
+  /* Sleigh gently moves up & down to mimic flying */
+  @keyframes floatSleigh {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* --- LOADING TEXT ANIMATION --- */
+  .loading-text {
+    position: absolute;
+    bottom: 10%;
+    color: var(--gold);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Quattrocento", serif;
+    animation: fadeText 3s ease-in-out infinite;
+  }
+  
+  /* Text fades in and out */
+  @keyframes fadeText {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
