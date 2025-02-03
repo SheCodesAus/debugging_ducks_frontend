@@ -26,7 +26,7 @@ function EditItemPage() {
             <div className="edit-item-container">
                 <h1>Edit Item</h1>
                 <EditItemForm
-                    itemId={itemId}
+                    itemId={parseInt(itemId)}
                     onSubmit={handleItemUpdated}
                     onCancel={handleCancel}
                 />
