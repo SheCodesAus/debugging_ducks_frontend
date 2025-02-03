@@ -27,18 +27,18 @@ function NavBar() {
 
         {/* Links container */}
         <div className="links">
-          <Link to="/">Home</Link>
+          <Link to="/">🌟 Home</Link>
           {auth.token && auth.user ? (
-            <Link to="/lists">Lists</Link>
+            <Link to="/lists">🌟 Lists</Link>
           ) : (
-            <Link to="/signup">Sign Up</Link>
+            <Link to="/signup">🌟 Sign Up</Link>
           )}
           {auth.token && auth.user ? (
             <Link to="/" onClick={handleLogout}>
-              Log Out
+              🌟 Log Out
             </Link>
           ) : (
-            <Link to="/login">Login</Link>
+            <Link to="/login">🌟 Login</Link>
           )}
         </div>
       </nav>

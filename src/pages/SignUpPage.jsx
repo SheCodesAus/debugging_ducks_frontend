@@ -17,12 +17,14 @@ function SignUpPage() {
     navigate("/");
   };
 
-  // If user is logged in, the following message will show.
   if (auth?.token) {
     return (
-      <div className="signup-page">
+      <div className="signup-page logged-in">
         <div className="signup-container">
-          <h1>You are already logged in!</h1>
+          <h1>
+            <span className="header-flourish">꧁</span> You are already logged
+            in! <span className="header-flourish flip-flourish">꧁</span>
+          </h1>
           <p>
             Log out if you wish to access a different account. Otherwise,
             explore the site!
@@ -38,7 +40,6 @@ function SignUpPage() {
     <div className="signup-page">
       {/* Snowflakes Component */}
       <Snowflakes />
-      
       <div className="signup-container">
         <h1>
           <span className="header-flourish">꧁</span> Sign Up{" "}

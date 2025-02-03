@@ -20,6 +20,8 @@ function LoginPage() {
   if (auth?.token) {
     return (
       <div className="login-page logged-in">
+        {/* Snowflakes Component */}
+        <Snowflakes />
         <div className="login-container">
           <h1 className="welcome-back-header">
             <span className="header-flourish">꧁</span> Welcome back!
