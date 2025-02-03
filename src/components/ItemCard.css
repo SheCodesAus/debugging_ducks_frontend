@@ -140,11 +140,12 @@
 }
 
 .item-favorite:hover {
+  background: none;
   transform: scale(1.1);
 }
 
 .item-favorite.favorite {
-  color: #d9bd80 !important;
+  color: var(--gold) !important;
 }
 
 .delete-button {
