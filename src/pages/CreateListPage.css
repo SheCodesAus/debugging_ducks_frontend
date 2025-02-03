@@ -1,16 +1,3 @@
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #00173a;
-  color: #f8f8f8;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-p {
-  margin: 0;
-}
-
 .create-list-page {
   display: flex;
   justify-content: center;
@@ -119,13 +106,6 @@ p {
 
 .create-list-container .create-list-button:hover {
   background-color: #b08c5e;
-}
-
-.error {
-  color: #ff4d4d;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
 }
 
 .toggle-form-button {
@@ -261,33 +241,6 @@ p {
 .form-group textarea {
   min-height: 80px;
   resize: vertical;
-}
-
-button[type="submit"] {
-  background-color: #d9bd80;
-  color: #081f43;
-  padding: 10px 60px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 26px;
-  margin-bottom: 4px;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-button[type="submit"]:hover {
-  background-color: #b08c5e;
-}
-
-.error {
-  color: #ff4d4d;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
 }
 
 @media (max-width: 600px) {

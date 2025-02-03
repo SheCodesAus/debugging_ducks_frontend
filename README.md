@@ -1,6 +1,8 @@
 # The Good List
 > Debugging Ducks
 
+Deployed Website : https://the-good-list.netlify.app/
+
 ## Table of Contents
 
 - [The Good List](#the-good-list)
@@ -39,7 +41,13 @@ We are committed to delivering a stylish, user-friendly interface that reflects 
 
 ## **Features**
 
-| *To meet the tight timelines for delivery, we proposed structuring the development into two focused phases: Phase 1: Core MVP Features This phase will focus on delivering the essential functionalities that form the backbone of the Christmas Shopping List platform. These features will enable the client and users to begin testing and using the platform effectively and providing feedback. By prioritising the absolute minimum viable features, we can ensure timely delivery while maintaining high standards of quality and usability. Phase 2: Enhanced Functionality  Once the core features are live, we will proceed to introduce additional functionalities that expand the platform’s capabilities. These features will be informed by client priorities and user feedback gathered during Phase 1 testing. Phase 3: Nice-to-have additional functionality We understand the importance of delivering a comprehensive product; however, given the project timeline, it is unlikely we will have sufficient time to incorporate the “nice-to-have” features.  To maximise the value delivered within Phase 1, our client identified the top three features that are most critical to the platform’s success. This allowed us to focus development efforts on what matters most to the client and users. Collaboration in this prioritisation ensured delivery of a high-impact product, with the flexibility to build on it further in subsequent phases.  The first three of the below features have been agreed upon for the MVP: Logged in users can create an individual shopping list in a category (e.g., family, friends) or their own wishlist and manually add/edit/remove items on the list. Rank items on an individual shopping list or wishlist and mark items as favourite options or purchased. Add a budget limit to a category or an individual list and compare estimated and actual costs. Create user groups and share lists with other people for collaboration. Pledging for joint presents. Search catalog of shopping sites for ideas to add to the shopping or wish list.  Secret Santa* |
+| *To meet the tight timelines for delivery, we proposed structuring the development into two focused phases: 
+
+**Phase 1:** **Core MVP Features** This phase will focus on delivering the essential functionalities that form the backbone of the Christmas Shopping List platform. These features will enable the client and users to begin testing and using the platform effectively and providing feedback. By prioritising the absolute minimum viable features, we can ensure timely delivery while maintaining high standards of quality and usability. 
+
+**Phase 2: Enhanced Functionality ** Once the core features are live, we will proceed to introduce additional functionalities that expand the platform’s capabilities. These features will be informed by client priorities and user feedback gathered during Phase 1 testing. 
+
+**Phase 3: Nice-to-have additional functionality** We understand the importance of delivering a comprehensive product; however, given the project timeline, it is unlikely we will have sufficient time to incorporate the “nice-to-have” features.  To maximise the value delivered within Phase 1, our client identified the top three features that are most critical to the platform’s success. This allowed us to focus development efforts on what matters most to the client and users. Collaboration in this prioritisation ensured delivery of a high-impact product, with the flexibility to build on it further in subsequent phases.  The first three of the below features have been agreed upon for the MVP: Logged in users can create an individual shopping list in a category (e.g., family, friends) or their own wishlist and manually add/edit/remove items on the list. Rank items on an individual shopping list or wishlist and mark items as favourite options or purchased. Add a budget limit to a category or an individual list and compare estimated and actual costs. Create user groups and share lists with other people for collaboration. Pledging for joint presents. Search catalog of shopping sites for ideas to add to the shopping or wish list.  Secret Santa* |
 | :---- |
 
 ## **MVP Features:**

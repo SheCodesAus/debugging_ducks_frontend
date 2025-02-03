@@ -25,6 +25,7 @@ const signupSchema = z
 function SignUpForm() {
   const navigate = useNavigate();
   const { signup } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
   const [credentials, setCredentials] = useState({
     username: "",
     email: "",
@@ -57,6 +58,8 @@ function SignUpForm() {
       return;
     }
 
+    setIsLoading(true);
+
     try {
       const data = await postSignup(credentials);
       console.log("Signup successful:", data);
@@ -75,59 +78,61 @@ function SignUpForm() {
       setErrors({ api: error.message });
       console.error("Signup failed:", error);
       alert("Signup failed. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          name="username"
-          value={credentials.username}
-          onChange={handleChange}
-          autoComplete="username"
-        />
-        {errors.username && <span className="error">{errors.username}</span>}
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          value={credentials.email}
-          onChange={handleChange}
-          autoComplete="email"
-        />
-        {errors.email && <span className="error">{errors.email}</span>}
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={credentials.password}
-          onChange={handleChange}
-          autoComplete="new-password"
-        />
-        {errors.password && <span className="error">{errors.password}</span>}
-      </div>
-      <div>
-        <label htmlFor="confirmPassword">Confirm Password:</label>
-        <input
-          type="password"
-          name="confirmPassword"
-          value={credentials.confirmPassword}
-          onChange={handleChange}
-          autoComplete="new-password"
-        />
-        {errors.confirmPassword && (
-          <span className="error">{errors.confirmPassword}</span>
-        )}
-      </div>
+      <label htmlFor="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        value={credentials.username}
+        onChange={handleChange}
+        autoComplete="username"
+      />
+      {errors.username && <p className="error">{errors.username}</p>}
+      <label htmlFor="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        value={credentials.email}
+        onChange={handleChange}
+        autoComplete="email"
+      />
+      {errors.email && <p className="error">{errors.email}</p>}
+      <label htmlFor="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        value={credentials.password}
+        onChange={handleChange}
+        autoComplete="new-password"
+      />
+      {errors.password && <p className="error">{errors.password}</p>}
+      <label htmlFor="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Enter your password again"
+        value={credentials.confirmPassword}
+        onChange={handleChange}
+        autoComplete="new-password"
+      />
+      {errors.confirmPassword && (
+        <p className="error">{errors.confirmPassword}</p>
+      )}
       <button type="submit">Sign Up</button>
-      {errors.api && <span className="error">{errors.api}</span>}
+      {errors.api && <p className="error">{errors.api}</p>}
     </form>
   );
 }

@@ -65,7 +65,7 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="login-form">
+    <form onSubmit={handleSubmit}>
       <label htmlFor="username">Username:</label>
       <input
         type="text"
@@ -86,7 +86,7 @@ function LoginForm() {
       />
       {errors && <p className="error">{errors}</p>}{" "}
       {/* Display error messages */}
-      <button type="submit" className="login-button" disabled={isLoading}>
+      <button type="submit" disabled={isLoading}>
         {isLoading ? "Logging in..." : "Login"}
       </button>
     </form>

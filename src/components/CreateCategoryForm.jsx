@@ -52,7 +52,7 @@ function CreateCategoryForm({ onCategoryCreated }) {
                 required
               />
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="category_budget">Category Budget ($):</label>
               <input
                 type="number"
@@ -64,7 +64,7 @@ function CreateCategoryForm({ onCategoryCreated }) {
                 min="0"
                 required
               />
-            </div>
+            </div> */}
 
             {errors.submit && <p className="error">{errors.submit}</p>}
 
