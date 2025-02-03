@@ -1,4 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useLoading, LoadingProvider } from "./context/LoadingContext";
+import SleighLoading from "./components/SleighLoading";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -64,9 +66,13 @@ const router = createBrowserRouter([
 console.log("Router configuration:", router);
 
 function App() {
+    const { isLoading } = useLoading(); // Access global loading state here
     return (
         <AuthProvider>
+            <LoadingProvider>
+            {isLoading && <SleighLoading />}
             <RouterProvider router={router} />
+            </LoadingProvider>
         </AuthProvider>
     );
 }
