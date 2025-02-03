@@ -1,6 +1,6 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { useEffect } from 'react';
 import EditItemForm from '../components/EditItemForm';
+import { Navigate } from 'react-router-dom';
 
 function EditItemPage() {
     const navigate = useNavigate();
@@ -8,11 +8,10 @@ function EditItemPage() {
     const { itemId } = useParams();
     const listId = location.state?.listId;
 
-    useEffect(() => {
-        if (!listId) {
-            navigate('/lists');
-        }
-    }, [listId, navigate]);
+    // If no listId, use Navigate component instead of navigate function
+    if (!listId) {
+        return <Navigate to="/lists" replace />;
+    }
 
     const handleItemUpdated = (item) => {
         console.log("Item updated:", item);
@@ -22,11 +21,6 @@ function EditItemPage() {
     const handleCancel = () => {
         navigate(`/list/${listId}`);
     };
-
-    // If no listId, render nothing while the useEffect handles navigation
-    if (!listId) {
-        return null;
-    }
 
     return (
         <div className="edit-item-page">
