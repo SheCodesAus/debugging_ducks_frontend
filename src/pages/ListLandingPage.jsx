@@ -2,9 +2,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import useLists from "../hooks/use-lists";
 import useCategories from "../hooks/use-categories";
 import { useAuth } from "../hooks/use-auth";
+import Snowflakes from "../components/Snowflakes";
 import CategoryList from "../components/CategoryList";
+import CategoryCard from "../components/CategoryCard";
 import "./ListLandingPage.css";
-import Snowflakes from "../components/Snowflakes"; 
 
 function ListLandingPage() {
   const { id } = useParams();
@@ -98,50 +99,36 @@ function ListLandingPage() {
     return lists ? lists.filter((list) => list.category_id === categoryId) : [];
   };
 
+  // If user is not logged in, redirect to home page
+  if (!auth.token) {
+    navigate("/");
+  }
+
   return (
     <div className="list-landing-page">
-      {/* Snowflakes Component */}
       <Snowflakes />
 
       <div className="list-landing-container">
-        {auth.token && (
-          <>
-            <button
-              onClick={handleCreateWishlistCategory}
-              className="create-wishlist-button"
-            >
-              Create My Wishlist
-            </button>
+        <button onClick={handleCreateWishlistCategory}>
+          Create My Wishlist
+        </button>
 
-            <div className="categories-section">
-              {categories && categories.length > 0 ? (
-                <CategoryList
-                  categories={categories}
-                  onCreateList={handleCreateList}
-                  getListsByCategory={getListsByCategory}
-                  onListClick={handleListClick}
-                />
-              ) : (
-                <div className="empty-categories">
-                  <p>You don&apos;t have any categories yet.</p>
-                  <p>Create your first category to get started!</p>
-                  <button
-                    onClick={handleCreateCategory}
-                    className="create-first-category-button"
-                  >
-                    Create Your First Category
-                  </button>
-                </div>
-              )}
-              <button
-                onClick={handleCreateCategory}
-                className="create-category-button"
-              >
-                Create New Category
-              </button>
+        <div className="categories-section">
+          {categories && categories.length > 0 ? (
+            <CategoryList
+              categories={categories}
+              onCreateList={handleCreateList}
+              getListsByCategory={getListsByCategory}
+              onListClick={handleListClick}
+            />
+          ) : (
+            <div className="empty-categories">
+              <p>You don&apos;t have a wishlist or any categories yet.</p>
+              <p>Create your wishlist or category to get started!</p>
             </div>
-          </>
-        )}
+          )}
+          <button onClick={handleCreateCategory}>Create New Category</button>
+        </div>
       </div>
     </div>
   );

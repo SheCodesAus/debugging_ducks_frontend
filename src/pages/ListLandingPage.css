@@ -1,28 +1,14 @@
 .list-landing-page {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #00173a;
+  height: auto;
 }
 
 .list-landing-container {
   width: 90%;
   max-width: 600px;
-  padding: 40px 50px 40px 40px;
-  background-color: #00173a;
-  border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  padding: 40px;
   text-align: center;
-  margin-top: 0px;
-}
-
-.list-landing-container h1,
-.list-landing-container h2 {
-  font-family: "Quattrocento", serif;
-  margin-bottom: 20px;
-  color: #d9bd80;
-  align-items: center;
 }
 
 .list-landing-heading {
@@ -55,58 +41,6 @@
   vertical-align: middle;
 }
 
-.list-landing-container p {
-  font-family: "Lato", sans-serif;
-  color: #f8f8f8;
-  margin-top: 15px;
-}
-
-.list-landing-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
-  align-items: flex-start;
-}
-
-.list-landing-container form label {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  color: #d9bd80;
-  margin-bottom: 5px;
-  display: inline-block;
-  width: auto;
-}
-
-.list-landing-container form input {
-  padding: 0 5px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #f8f8f8;
-  background-color: #f8f8f8;
-  width: 100%;
-  margin-bottom: 10px;
-  height: 40px;
-}
-
-.list-landing-container .create-wishlist-button {
-  font-family: var(--heading-font);
-  text-align: center;
-  background-color: var(--gold);
-  color: var(--lightnavy);
-  width: auto;
-  padding: 10px 60px;
-  margin: 15px auto;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.list-landing-container .create-wishlist-button:hover {
-  background-color: var(--darkgold);
-}
-
 .list-landing-container .create-list-button {
   background: none;
   border: none;
@@ -116,25 +50,6 @@
   cursor: pointer;
   transition: color 0.3s ease;
   margin: 20px 0px 10px 0px;
-}
-
-.list-landing-container .create-wishlist-button:hover {
-  color: #b08c5e;
-  text-decoration: underline;
-}
-
-.toggle-form-button {
-  background: none;
-  border: none;
-  color: #d9bd80;
-  font-family: "Quattrocento", serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.toggle-form-button:hover {
-  color: #b08c5e;
 }
 
 .category-group {
@@ -159,25 +74,6 @@
 .categories-section {
   margin: 20px 0;
   padding-left: 10px;
-}
-
-.create-category-button {
-  background-color: #d9bd80;
-  color: #081f43;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  width: fit-content;
-  align-self: flex-start;
-}
-
-.create-category-button:hover {
-  background-color: #b08c5e;
-  color: #081f43;
-  opacity: 0.9;
 }
 
 .categories-section h2 {
@@ -317,7 +213,6 @@
     font-size: 1.3em;
   }
   .list-landing-container form input,
-  .create-category-button,
   .create-list-button {
     font-size: 14px;
     padding: 8px;
@@ -325,22 +220,11 @@
 }
 
 .empty-categories {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
+  padding: 3rem;
   text-align: center;
-  background-color: rgba(217, 189, 128, 0.1);
+  background-color: var(--lightnavy);
   border-radius: 8px;
-  margin: 20px;
-}
-
-.empty-categories p {
-  color: #d9bd80;
-  font-family: "Lato", sans-serif;
-  margin: 5px 0;
-  font-size: 1.1em;
+  margin: 20px 0px;
 }
 
 .create-first-category-button {
