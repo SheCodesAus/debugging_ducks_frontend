@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, useEffect } from 'react-router-dom';
 import EditItemForm from '../components/EditItemForm';
 
 function EditItemPage() {
@@ -6,6 +6,12 @@ function EditItemPage() {
     const location = useLocation();
     const { itemId } = useParams();
     const listId = location.state?.listId;
+
+    useEffect(() => {
+        if (!listId) {
+            navigate('/lists');
+        }
+    }, [listId, navigate]);
 
     const handleItemUpdated = (item) => {
         console.log("Item updated:", item);
@@ -16,8 +22,8 @@ function EditItemPage() {
         navigate(`/list/${listId}`);
     };
 
+    // If no listId, render nothing while the useEffect handles navigation
     if (!listId) {
-        navigate('/lists');
         return null;
     }
 

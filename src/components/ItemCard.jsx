@@ -21,9 +21,11 @@ function ItemCard({
   const navigate = useNavigate();
 
   const handleNameClick = () => {
-    navigate(`/list/${listId}/item/${itemId}/edit`, {
-      state: { listId },
-    });
+    if (listId) {
+      navigate(`/list/${listId}/item/${itemId}/edit`, {
+        state: { listId: listId }
+      });
+    }
   };
 
   return (
