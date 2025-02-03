@@ -106,24 +106,24 @@ function HomePage() {
         <div className="List-img">
           <div className="item-img">
             <img src={FeatureCreateList} alt="Feature 1" />
-            <p>Stay organised this Christmas - create shopping lists and wishlists in seconds!</p>
+            <p>
+              Stay organised this Christmas - create shopping lists and
+              wishlists in seconds!
+            </p>
           </div>
           <div className="item-img">
             <img src={FeatureCategories} alt="Feature 2" />
-            <p>Effortless organisation - group your lists by family, friends, or occasions!</p>
+            <p>
+              Effortless organisation - group your lists by family, friends, or
+              occasions!
+            </p>
           </div>
           <div className="item-img">
             <img src={FeatureList} alt="Feature 3" />
-            <p>Prioritise, favourite, and track your gifts - stress-free shopping made easy!</p>
-          </div>
-        </div>
-
-        <div className="create list">
-          <div id="create-list">
-            <p>Ready to get started?</p>
-            <button onClick={handleCreateList} className="create-list-button">
-              {getButtonText()}
-            </button>
+            <p>
+              Prioritise, favourite, and track your gifts - stress-free shopping
+              made easy!
+            </p>
           </div>
         </div>
       </div>
