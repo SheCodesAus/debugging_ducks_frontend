@@ -48,119 +48,46 @@
   flex-direction: column;
 }
 
-/* --- ITEMS GRID ON DESKTOP --- */
+/* --- ITEMS GRID BOX ON DESKTOP --- */
 
 .items-grid {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  /* gap: 0.5rem; */
   max-width: 100%;
-  background: #081f43;
+  background: var(--lightnavy);
+  border: 1px solid var(--gold);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-.item-card {
-  background: #081f43;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-  position: relative;
-}
-
-.item-card:hover {
-  transform: translateY(-2px);
-}
-
-.item-card h4 {
-  margin: 0 0 1rem 0;
-  color: #333;
-}
-
-.item-card p {
-  margin: 0.5rem 0;
-  color: #666;
-}
-
-.item-notes {
-  font-style: italic;
-  color: #888;
-}
-
-.item-status {
-  margin-top: 1rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid #e0e0e0;
-  font-weight: 500;
-}
-
-.delete-item-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.25rem 0.5rem;
-  background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.875rem;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.item-card:hover .delete-item-button {
-  opacity: 1;
-}
-
-.delete-item-button:hover {
-  background: #c82333;
-}
+/* --- ITEMS HEADER ROW ON DESKTOP --- */
 
 .items-header-row {
   display: grid;
-  grid-template-columns: 80px 1fr 100px 80px 80px !important;
+  grid-template-columns: 60px 1fr 100px 60px 60px 60px;
   gap: 1rem;
   padding: 0.75rem 1rem;
-  background: #00173a;
-  color: #d9bd80;
+  background: var(--navy);
+  color: var(--gold);
   font-weight: bold;
-  align-items: center;
+  /* align-items: center;  */
   border-radius: 8px 8px 0 0;
-  border: 1px solid #d9bd80;
-  height: 48px;
+  border-bottom: 1px solid var(--gold);
 }
 
 .header-rank,
 .header-item,
 .header-cost,
 .header-favorite,
-.header-purchased {
+.header-purchased,
+.header-delete {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0;
   height: 100%;
-}
-
-.header-delete {
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  width: 100%;
-  background: none;
-  color: #d9bd80;
-  cursor: pointer;
-  font-size: 1.2em;
-  padding: 0;
-  margin: 0;
-  opacity: 0.7;
-  transition: all 0.2s ease;
-}
-
-.header-rank {
-  justify-content: center;
 }
 
 .header-item {
@@ -169,125 +96,6 @@
 
 .header-cost {
   justify-content: flex-end;
-  padding-right: 1.5rem;
-}
-
-.header-favorite,
-.header-purchased,
-.header-delete {
-  justify-content: center;
-  font-size: 1.2em;
-}
-
-.delete-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: none;
-  border: none;
-  color: #d9bd80;
-  cursor: pointer;
-  font-size: 1.2em;
-  padding: 0;
-  margin: 0;
-  opacity: 0.7;
-  transition: all 0.2s ease;
-}
-
-.delete-button:hover {
-  color: #ff4d4d;
-  opacity: 1;
-}
-
-.item-component {
-  display: grid !important;
-  grid-template-columns: 80px 1fr 100px 80px 80px !important;
-  gap: 1rem;
-  align-items: center;
-  padding: 1rem;
-  margin: 0;
-  border-radius: 0;
-  border-bottom: 1px solid rgba(217, 189, 128, 0.2);
-  color: white !important;
-}
-
-.item-component:hover {
-  background-color: #0a2654 !important;
-}
-
-div.items-grid > div.item-component > div.item-rank {
-  text-align: center;
-  justify-self: center;
-  color: white !important;
-  width: 100%;
-}
-
-.item-content {
-  display: contents !important;
-}
-
-.item-main {
-  display: contents !important;
-}
-
-.item-name {
-  text-align: left;
-  margin: 0 !important;
-  color: white !important;
-}
-
-.item-cost {
-  text-align: right;
-  margin: 0 !important;
-  justify-self: end;
-  padding-right: 1.5rem;
-  color: white !important;
-}
-
-.item-favorite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: white !important;
-  font-size: 1.2em;
-}
-
-.item-favorite button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  margin: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  font-size: 1.2em;
-}
-
-.item-favorite.favorite {
-  color: #d9bd80 !important;
-}
-
-.item-details {
-  display: none;
-}
-
-.item-component {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.item-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  accent-color: #d9bd80;
 }
 
 /* --- EMPTY ITEMS MESSAGE BOX --- */
@@ -295,10 +103,11 @@ div.items-grid > div.item-component > div.item-rank {
 .empty-items {
   text-align: center;
   padding: 3rem;
-  background: #f8f9fa;
+  background: var(--lightnavy);
   border-radius: 8px;
-  color: #666;
 }
+
+/* --- MEDIA QUERIES --- */
 
 @media (max-width: 768px) {
   .list-info {
