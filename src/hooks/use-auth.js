@@ -13,5 +13,3 @@ export const useAuth = () => {
 
   return context; // Includes auth, login, logout, and signup
 };
-
-export default useAuth;
