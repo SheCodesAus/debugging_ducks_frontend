@@ -2,10 +2,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+import SignUpPage from "./pages/SignUpPage";
 import CreateListPage from "./pages/CreateListPage";
 import ListLandingPage from "./pages/ListLandingPage";
 import CreateCategoryPage from "./pages/CreateCategoryPage";
+import ListDetailsPage from "./pages/ListDetailsPage";
+import EditItemPage from "./pages/EditItemPage";
 import { AuthProvider } from "./components/AuthProvider";
 
 // Error component for route errors
@@ -39,7 +41,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "signup",
-                element: <SignupPage />,
+                element: <SignUpPage />,
                 errorElement: <ErrorPage />,
             },
             {
@@ -55,6 +57,16 @@ const router = createBrowserRouter([
             {
                 path: "create-category",
                 element: <CreateCategoryPage />,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: "list/:id",
+                element: <ListDetailsPage />,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: "list/:listId/item/:itemId/edit",
+                element: <EditItemPage />,
                 errorElement: <ErrorPage />,
             },
         ],
