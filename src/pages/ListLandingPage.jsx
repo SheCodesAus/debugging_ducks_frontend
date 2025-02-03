@@ -19,7 +19,7 @@ function ListLandingPage() {
   const navigate = useNavigate();
 
   if (listsLoading || categoriesLoading) {
-    return <div>Loading...</div>;
+    return <div>Loading your lists... Please wait!</div>;
   }
 
   if (listsError || categoriesError) {
