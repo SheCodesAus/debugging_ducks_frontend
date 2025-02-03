@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import putItem from "../api/put-item";
 import { useAuth } from "../hooks/use-auth";
 import "../pages/EditItemPage.css";
+import SleighLoading from "./SleighLoading";
 
 function EditItemForm({ itemId, onSubmit, onCancel }) {
   const { auth } = useAuth();
@@ -105,7 +106,7 @@ function EditItemForm({ itemId, onSubmit, onCancel }) {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <SleighLoading />;
   if (errors.fetch) return <div className="error">{errors.fetch}</div>;
 
   return (

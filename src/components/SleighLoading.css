@@ -15,42 +15,89 @@
   
   /* --- SLEIGH ANIMATION --- */
   .sleigh {
-    width: 120px; /* Adjust sleigh size */
+    width: 300px;
     position: absolute;
     top: 40%;
-    left: -150px; /* Start off-screen */
-    animation: moveSleigh 6s linear infinite, floatSleigh 3s ease-in-out infinite;
-    filter: drop-shadow(0px 0px 10px var(--gold)); /* Sleigh glow effect */
+    left: -150px;
+    animation: moveSleigh 6s linear infinite 1.5s,
+               floatSleigh 3s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 15px var(--gold))
+           brightness(1.2);
+    opacity: 0;
+    animation-fill-mode: forwards;
+    mix-blend-mode: screen;
   }
   
-  /* Sleigh moves left to right across the screen */
+  /* Sleigh moves left to right across the screen with fade in */
   @keyframes moveSleigh {
-    0% { left: -150px; }
-    100% { left: 100vw; }
+    0% { 
+      left: -150px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% { 
+      left: 100vw;
+      opacity: 1;
+    }
   }
   
   /* Sleigh gently moves up & down to mimic flying */
   @keyframes floatSleigh {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-20px); }
   }
   
   /* --- LOADING TEXT ANIMATION --- */
   .loading-text {
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     color: var(--gold);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    font-family: "Quattrocento", serif;
-    animation: fadeText 3s ease-in-out infinite;
+    font-family: var(--heading-font);
+    animation: fadeTextIn 1s ease-in-out forwards;
+    text-shadow: 0 0 10px var(--gold),
+                 0 0 20px var(--gold),
+                 0 0 30px var(--navy);
+    letter-spacing: 1px;
+    opacity: 0;
   }
   
-  /* Text fades in and out */
-  @keyframes fadeText {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+  /* Text fades in and stays visible */
+  @keyframes fadeTextIn {
+    0% { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .sleigh {
+      width: 220px;
+    }
+    
+    .loading-text {
+      font-size: 1.5rem;
+      bottom: 25%;
+      padding: 0 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sleigh {
+      width: 180px;
+    }
+    
+    .loading-text {
+      font-size: 1.2rem;
+    }
   }
   

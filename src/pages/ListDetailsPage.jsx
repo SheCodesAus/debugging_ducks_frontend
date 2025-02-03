@@ -5,6 +5,7 @@ import ItemCard from "../components/ItemCard";
 import AddItemForm from "../components/AddItemForm";
 import "./ListDetailsPage.css";
 import Snowflakes from "../components/Snowflakes";
+import SleighLoading from "../components/SleighLoading";
 
 function ListDetailsPage() {
   const { id } = useParams();
@@ -185,7 +186,7 @@ function ListDetailsPage() {
   };
 
   if (loading) {
-    return <div className="list-details-loading">Loading...</div>;
+    return <SleighLoading />;
   }
 
   if (error) {
