@@ -5,6 +5,7 @@ import { useAuth } from "../hooks/use-auth";
 import Snowflakes from "../components/Snowflakes";
 import CategoryList from "../components/CategoryList";
 import CategoryCard from "../components/CategoryCard";
+import SleighLoading from "../components/SleighLoading";
 import "./ListLandingPage.css";
 
 function ListLandingPage() {
@@ -19,7 +20,7 @@ function ListLandingPage() {
   const navigate = useNavigate();
 
   if (listsLoading || categoriesLoading) {
-    return <div>Loading your lists... Please wait!</div>;
+    return <SleighLoading />;
   }
 
   if (listsError || categoriesError) {

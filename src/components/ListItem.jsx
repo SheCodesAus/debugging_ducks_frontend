@@ -3,6 +3,7 @@ import { useState } from "react";
 import ItemCard from "./ItemCard";
 import AddItemForm from "./AddItemForm";
 import useItems from "../hooks/use-items";
+import SleighLoading from "./SleighLoading";
 
 function ListItem({ list }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -58,7 +59,7 @@ function ListItem({ list }) {
     }
   };
 
-  if (isLoading) return <div>Loading items...</div>;
+  if (isLoading) return <SleighLoading />;
   if (error) return <div>Error loading items: {error.message}</div>;
 
   return (
