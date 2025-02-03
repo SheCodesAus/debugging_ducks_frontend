@@ -175,8 +175,8 @@
 }
 
 .list-form-container {
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 3000px;
   padding: 40px;
   background-color: #081f43;
   border-radius: 8px;

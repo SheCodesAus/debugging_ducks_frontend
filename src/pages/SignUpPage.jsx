@@ -20,6 +20,8 @@ function SignUpPage() {
   if (auth?.token) {
     return (
       <div className="signup-page logged-in">
+        {/* Snowflakes Component */}
+        <Snowflakes />
         <div className="signup-container">
           <h1>
             <span className="header-flourish">꧁</span> You are already logged

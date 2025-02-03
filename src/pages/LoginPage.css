@@ -41,10 +41,6 @@
   justify-content: center;
 }
 
-.login-page.logged-in {
-  margin-top: 50px;
-}
-
 .login-page.logged-in .login-container {
   max-width: 600px; 
   padding: 60px;
