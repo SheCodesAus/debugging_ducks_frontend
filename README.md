@@ -28,7 +28,7 @@ Deployed Website : https://the-good-list.netlify.app/
       - [Create Category Page](#create-category-page)
       - [Shopping list page](#shopping-list-page)
       - [Wish list page](#wish-list-page)
-      - [List landing page](#list-landing-page)
+      - [List page](#list-page)
     - [Logo](#logo)
     - [Fonts and Colours](#fonts-and-colours)
       - [Font weights and usage guidelines](#font-weights-and-usage-guidelines)
@@ -315,15 +315,15 @@ See all wireframes and how **Users** would see The Good List  website: [https://
 
 #### Shopping list page 
 
-Add image
+![Shopping List](src/img/FeatureList.png)
 
 #### Wish list page
 
-Add image
+![Wish List](src/img/FeatureCreateList.png)
 
-#### List landing page
+#### List page
 
-Add image
+![List page](src/img/FeatureList.png)
 
 ### Logo
 
