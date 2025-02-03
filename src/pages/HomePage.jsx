@@ -5,6 +5,9 @@ import { useAuth } from "../hooks/use-auth.js";
 import useLists from "../hooks/use-lists";
 import LogoImage from "../img/Logo.svg";
 import FeaturesImage from "../img/features-stand-in.webp";
+import FeatureCategories from "../img/FeatureCategories.png";
+import FeatureCreateList from "../img/FeatureCreateList.png";
+import FeatureList from "../img/FeatureList.png";
 import z from "zod";
 import Snowflakes from "../components/Snowflakes.jsx";
 
@@ -102,15 +105,15 @@ function HomePage() {
 
         <div className="List-img">
           <div className="item-img">
-            <img src={FeaturesImage} alt="Feature 1" />
+            <img src={FeatureCreateList} alt="Feature 1" />
             <p>Stay organised this Christmas - create shopping lists and wishlists in seconds!</p>
           </div>
           <div className="item-img">
-            <img src={FeaturesImage} alt="Feature 2" />
+            <img src={FeatureCategories} alt="Feature 2" />
             <p>Effortless organisation - group your lists by family, friends, or occasions!</p>
           </div>
           <div className="item-img">
-            <img src={FeaturesImage} alt="Feature 3" />
+            <img src={FeatureList} alt="Feature 3" />
             <p>Prioritise, favourite, and track your gifts - stress-free shopping made easy!</p>
           </div>
         </div>
