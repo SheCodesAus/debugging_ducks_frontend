@@ -23,5 +23,4 @@ async function putItem(itemId, itemData) {
     }
 }
 
-
 export default putItem; 

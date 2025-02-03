@@ -146,10 +146,9 @@ function EditItemForm({ itemId, onSubmit, onCancel }) {
 }
 
 EditItemForm.propTypes = {
-    itemId: PropTypes.string.isRequired,
+    itemId: PropTypes.number.isRequired,
     onSubmit: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired
 };
-
 
 export default EditItemForm;

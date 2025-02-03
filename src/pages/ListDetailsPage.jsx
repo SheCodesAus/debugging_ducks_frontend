@@ -226,6 +226,8 @@ function ListDetailsPage() {
             {items.map((item) => (
               <ItemCard
                 key={item.id}
+                itemId={item.id}
+                listId={parseInt(id)}
                 itemName={item.name}
                 cost={item.cost}
                 rank={item.ranking || items.length}
