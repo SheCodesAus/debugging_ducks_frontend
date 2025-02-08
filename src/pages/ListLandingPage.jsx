@@ -38,6 +38,13 @@ function ListLandingPage() {
     navigate("/create-category");
   };
 
+  // Check if my "Wishlist" category already exists
+  const existingWishlistCategory = categories.find(
+    (category) =>
+      category.category_name.toLowerCase() === "my wishlist" &&
+      category.wishlist === true
+  );
+
   const handleCreateWishlistCategory = async () => {
     // Ensure token is available
     const token = localStorage.getItem("token");
@@ -46,13 +53,6 @@ function ListLandingPage() {
       navigate("/login");
       return;
     }
-
-    // Check if my "Wishlist" category already exists
-    const existingWishlistCategory = categories.find(
-      (category) =>
-        category.category_name.toLowerCase() === "my wishlist" &&
-        category.wishlist === true
-    );
 
     if (existingWishlistCategory) {
       alert("My Wishlist already exists.");
@@ -110,9 +110,13 @@ function ListLandingPage() {
       <Snowflakes />
 
       <div className="list-landing-container">
-        <button onClick={handleCreateWishlistCategory}>
-          Create My Wishlist
-        </button>
+        {!existingWishlistCategory ? (
+          <button onClick={handleCreateWishlistCategory}>
+            Create My Wishlist
+          </button>
+        ) : (
+          <></>
+        )}
 
         <div className="categories-grid">
           {categories && categories.length > 0 ? (
