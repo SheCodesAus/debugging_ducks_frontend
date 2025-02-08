@@ -35,36 +35,35 @@ function AddListForm({ categoryId, categoryName, onListCreated }) {
   };
 
   return (
-    <div className="list-form-page">
-      <div className="list-form-container">
-        <h2 className="list-form-heading">
-          <span className="header-flourish">꧁</span>
-          New List for {categoryName}
-          <span className="header-flourish flip-flourish">꧁</span>
-        </h2>
+    <div className="list-form-container">
+      <h1>
+        <span className="header-flourish">꧁</span>
+        New List for {categoryName}
+        <span className="header-flourish flip-flourish">꧁</span>
+      </h1>
 
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="list_name">List Name:</label>
-            <input
-              type="text"
-              id="list_name"
-              name="list_name"
-              value={formData.list_name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="notes">Notes:</label>
-            <textarea
-              id="notes"
-              name="notes"
-              value={formData.notes}
-              onChange={handleChange}
-            />
-          </div>
-          {/* <div className="form-group">
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="list_name">List Name:</label>
+          <input
+            type="text"
+            id="list_name"
+            name="list_name"
+            value={formData.list_name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="notes">Notes:</label>
+          <textarea
+            id="notes"
+            name="notes"
+            value={formData.notes}
+            onChange={handleChange}
+          />
+        </div>
+        {/* <div className="form-group">
               <label htmlFor="individual_budget">Individual Budget ($):</label>
               <input
                 type="number"
@@ -78,11 +77,10 @@ function AddListForm({ categoryId, categoryName, onListCreated }) {
               />
             </div> */}
 
-          {errors.submit && <p className="error">{errors.submit}</p>}
+        {errors.submit && <p className="error">{errors.submit}</p>}
 
-          <button type="submit">Create List</button>
-        </form>
-      </div>
+        <button type="submit">Create List</button>
+      </form>
     </div>
   );
 }

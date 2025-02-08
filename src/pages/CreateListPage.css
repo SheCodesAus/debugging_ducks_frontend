@@ -1,43 +1,22 @@
 .create-list-page {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #00173a;
-}
-
-.list-form-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #00173a;
-  padding: 20px;
+  height: auto;
 }
 
 .list-form-container {
-  width: fit-content;
   min-width: 400px;
-  max-width: 90%;
   padding: 40px;
-  background-color: #081f43;
+  margin: 40px;
+  background-color: var(--lightnavy);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.list-form-heading {
+.list-form-container h1 {
   margin: 0 0 30px;
   font-size: 2em;
-  text-align: center;
-  font-family: "Quattrocento", serif;
-  color: #d9bd80;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-  width: auto;
 }
 
 .form-group {
