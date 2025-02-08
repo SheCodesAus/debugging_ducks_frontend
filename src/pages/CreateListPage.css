@@ -224,31 +224,6 @@
   margin-bottom: 15px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #d9bd80;
-  font-family: "Lato", sans-serif;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0 5px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #f8f8f8;
-  background-color: #f8f8f8;
-  width: 100%;
-  margin-bottom: 10px;
-  height: 40px;
-  color: #081f43;
-}
-
-.form-group textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
 @media (max-width: 600px) {
   .list-form-container {
     padding: 30px;

@@ -130,8 +130,8 @@ function HomePage() {
 
       {/* --- CONTACT FORM --- */}
       <div className="feedback-form">
-        <img src={LogoImage} alt="The Good List logo" className="logo-image" />
-        <h1>Contact Form</h1>
+        <img src={LogoImage} alt="The Good List logo" />
+        <h2>Contact Form</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
