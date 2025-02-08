@@ -1,11 +1,3 @@
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #00173a;
-  color: #f8f8f8; 
-  margin: 0;
-  padding: 0;
-}
-
 .not-found {
   display: flex;
   flex-direction: column;
@@ -13,30 +5,30 @@ body {
   align-items: center;
   height: 95vh;
   text-align: center;
-  position: relative; 
+  position: relative;
 }
 
 .not-found-card {
-  background-color: #081f43; 
-  border-radius: 10px; 
-  padding: 60px 40px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  background-color: #081f43;
+  border-radius: 10px;
+  padding: 60px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   max-width: 700px;
-  margin: 20px auto; 
-  text-align: center; 
-  color: #f8f8f8; 
+  margin: 20px auto;
+  text-align: center;
+  color: #f8f8f8;
 }
 
 .not-found-card h1 {
   font-family: "Quattrocento", serif;
-  font-size: 2rem; 
-  color: #d9bd80; 
-  margin-bottom: 15px; 
+  font-size: 2rem;
+  color: #d9bd80;
+  margin-bottom: 15px;
   display: inline-flex;
   align-items: center;
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 .not-found-card h1 .icon {
@@ -63,57 +55,27 @@ body {
   padding-top: 25px;
 }
 
-div.not-found-card > a {
-  font-family: "Lato", sans-serif;
-  font-size: 1.2rem;
-  color: #00173a;
-  text-decoration: none;
-  border: 1px solid #d9bd80;
-  background-color: #d9bd80;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  min-width: 200px;
-}
-
-div.not-found-card a:hover {
-  background-color: #b08c5e; 
-  color: #081f43; 
-}
-
 @media (max-width: 768px) {
   .not-found-card {
     padding: 15px 20px;
-    max-width: 90%; 
+    max-width: 90%;
   }
 
   .not-found-card h1 {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   .not-found-card p {
-    font-size: 1rem; 
-  }
-
-  div.not-found-card > a {
-    font-size: 1rem; 
-    padding: 8px 20px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .not-found-card h1 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .not-found-card p {
-    font-size: 0.9rem; 
-  }
-
-  div.not-found-card > a {
-    font-size: 0.9rem; 
-    padding: 6px 15px; 
+    font-size: 0.9rem;
   }
 }

@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./NotFoundPage.css";
-import Snowflakes from "../components/Snowflakes"; 
+import Snowflakes from "../components/Snowflakes";
 
 function NotFoundPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="not-found">
       {/* Snowflakes Component */}
@@ -11,8 +13,8 @@ function NotFoundPage() {
 
       <div className="not-found-card">
         <h1>
-          <span className="icon">꧁</span>404 - Page Not on The Good List!{" "}
-          <span className="icon flip-icon">꧁</span>
+          <span className="header-flourish">꧁</span>404 - Page Not on The Good
+          List! <span className="header-flourish flip-flourish">꧁</span>
         </h1>
         <p>
           Looks like this page is on Santa's naughty list and disappeared into
@@ -20,7 +22,7 @@ function NotFoundPage() {
           your shopping list or head back home to continue your festive
           adventure.
         </p>
-        <Link to="/">Return to Homepage</Link>
+        <button onClick={() => navigate("/")}>Return to Homepage</button>
       </div>
     </div>
   );
