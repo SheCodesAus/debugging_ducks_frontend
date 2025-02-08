@@ -95,13 +95,11 @@ function HomePage() {
       </div>
 
       {/* --- FEATURES SECTION --- */}
-      <div id="Features" className="Features-section">
-        <div className="features-header">
-          <h1>
-            <span className="icon">꧁</span> Features{" "}
-            <span className="icon flip-icon">꧁</span>
-          </h1>
-        </div>
+      <div className="features-section">
+        <h2>
+          <span className="header-flourish">꧁</span> Features{" "}
+          <span className="header-flourish flip-flourish">꧁</span>
+        </h2>
 
         <div className="List-img">
           <div className="item-img">
